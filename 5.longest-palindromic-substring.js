@@ -14,8 +14,8 @@ var longestPalindrome = function (s) {
   const dp = Array.from({ length: len }, () => []);
   let lps = "";
   for (let j = 0; j < len; ++j) {
-    for (let i = 0; i <= j; ++i) {
-      //classic  deduce
+    for (let i = j; i >= 0; --i) {
+      //classic  deduce, also check [516] longest palindromic subsequence
       if (s[i] === s[j] && (j - i <= 1 || dp[i + 1][j - 1] === true)) {
         dp[i][j] = true;
         const substr = s.slice(i, j + 1);
