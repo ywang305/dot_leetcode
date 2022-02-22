@@ -14,3 +14,7 @@ cn login use account/password
 - [132.palindrome-partitioning-ii](./132.palindrome-partitioning-ii.js) \
   双 DP \
   `dp2[j] = Math.min(dp2[j], dp2[i - 1] + 1);`
+- [134.gas-station](./134.gas-station.js) \
+  贪婪：从前往后找，找到第一个满足条件的，就是结果
+- [135.candy](./135.candy.js) \
+  贪婪， 按照条件两边扫描更新结果
