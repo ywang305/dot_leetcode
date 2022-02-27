@@ -18,3 +18,7 @@ cn login use account/password
   贪婪：从前往后找，找到第一个满足条件的，就是结果
 - [135.candy](./135.candy.js) \
   贪婪， 按照条件两边扫描更新结果
+- [139.word-break](./139.word-break.js) \
+  经典 DP[i]： s[0, i)是否可以分割,左开右闭, 设初始[0,0)空字符串 true
+- [140.word-break-ii](./140.word-break-ii.js) \
+  经典 DFS, 吃吐
