@@ -27,4 +27,4 @@ cn login use account/password
 - [152.maximum-product-subarray](./152.maximum-product-subarray.js) \
   easy DP
 - [153.find-minimum-in-rotated-sorted-array](./153.find-minimum-in-rotated-sorted-array.js) \
-  Binary Search, 利用 res 记录所有可能出现的最小值
+  Binary Search, 利用 res 记录所有可能出现的最小值: 如果有序 left 就是最小值， 如果右边无序 最小值可能在 left,mid 或者右边， 如果左边无序 最小值可能在 mid 或者左边
