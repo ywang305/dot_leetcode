@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=153 lang=javascript
+ * @lc app=leetcode id=154 lang=javascript
  *
- * [153] Find Minimum in Rotated Sorted Array
+ * [154] Find Minimum in Rotated Sorted Array II
  */
 
 // @lc code=start
@@ -10,8 +10,8 @@
  * @return {number}
  */
 var findMin = function (nums) {
-  let i = 0;
-  let j = nums.length - 1;
+  let i = 0,
+    j = nums.length - 1;
   let res = nums[0];
   while (i <= j) {
     const m = parseInt(i + (j - i) / 2);
@@ -22,6 +22,10 @@ var findMin = function (nums) {
     } else if (nums[m] < nums[j]) {
       // left side is unsorted, min could be on num[m] or left side, yet may still greater than res
       j = m - 1;
+    } else if (nums[m] === nums[j] && m !== j) {
+      --j;
+    } else if (nums[m] === nums[i] && m !== i) {
+      ++i;
     } else {
       break;
     }
@@ -29,4 +33,3 @@ var findMin = function (nums) {
   return res;
 };
 // @lc code=end
-findMin([3, 1, 2]);
