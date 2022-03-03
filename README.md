@@ -32,3 +32,5 @@ cn login use account/password
   Binary Search 变种（有重复元素）, 额外处理重复情况
 - [156.binary-tree-upside-down.js](./156.binary-tree-upside-down.js) \
   [premium](156.binary-tree-upsidedown.md)
+- [159.longest-substring-with-at-most-k-distinct-characters](./159.longest-substring-with-at-most-k-distinct-characters.js) \
+  sliding window, 左右指针 + hashmap， hashmap 记录 char 和 last index
