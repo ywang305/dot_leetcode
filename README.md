@@ -30,4 +30,5 @@ cn login use account/password
   Binary Search 变种（无重复元素）, 比较 pivot 和 right 判断哪边 unsorted， 注意 min 值 可能位于 pivot
 - [154.find-minimum-in-rotated-sorted-array-ii](./154.find-minimum-in-rotated-sorted-array-ii.js) \
   Binary Search 变种（有重复元素）, 额外处理重复情况
-- [156.binary-tree-upsidedown.md](156.binary-tree-upsidedown.md)
+- [156.binary-tree-upside-down.js](./156.binary-tree-upside-down.js) \
+  [premium](156.binary-tree-upsidedown.md) \
