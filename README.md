@@ -31,4 +31,4 @@ cn login use account/password
 - [154.find-minimum-in-rotated-sorted-array-ii](./154.find-minimum-in-rotated-sorted-array-ii.js) \
   Binary Search 变种（有重复元素）, 额外处理重复情况
 - [156.binary-tree-upside-down.js](./156.binary-tree-upside-down.js) \
-  [premium](156.binary-tree-upsidedown.md) \
+  [premium](156.binary-tree-upsidedown.md)
