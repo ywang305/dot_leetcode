@@ -36,3 +36,5 @@ cn login use account/password
   sliding window, 左右指针 + hashmap， hashmap 记录 char 和 last index
 - [161.one-edit-distance](./161.one-edit-distance.js) \
   String, 分两种情况：字符串长度相等 或 相差 1。 找出第一个不同的位置，根据两种情况 分别比较之后子串是否相等
+- [162.find-peak-element](./162.find-peak-element.js) \
+  Binary Search 非标准变种， 注意 i<j 和 j = m 变化
