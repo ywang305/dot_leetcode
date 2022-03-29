@@ -40,3 +40,19 @@ cn login use account/password
   Binary Search 非标准变种， 注意 i<j 和 j = m 变化
 - [163.missing-ranges](./163.missing-ranges.js) \
   [premium] array, 注意边界条件
+- [164.maximum-gap](./164.maximum-gap.js) \
+  [Bucket Sort, 3:00](https://www.youtube.com/watch?v=YPTqKIgVk-k) 桶排（线性）性能前提是数字均匀分布，数组能均匀映射到各个桶内, 本题大数据分布`1 <= nums.length <= 105, 0 <= nums[i] <= 109`， 桶排性能比较好。\
+  本题 tick： （1） num->bucket 映射函数，(涉及 interval- 见解`bucketIndexMappingFunc`) (2) 鸽洞原理，“这是因为所有的数字要尽量平均分配到每个桶中，而不是都拥挤在一个桶中，这样保证了最大值和最小值一定不会在同一个桶中，具体的证明博主也不会”。\
+  重点理解 bucket sort, bucketIndexMappingFunc, 鸽洞原理不重要
+
+- [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) \
+  ```
+    bucket sort
+    trick: ( 和传统的bucket sort 的index value 反过来！), index 是 计数，value 是 num list，
+     因为count是bounded，buckets是有界的。num可能非常大，buckets很长，很多空位置浪费了。
+    e.g. 1,1,1,2,2,100,100
+      buckets:
+        values: []    []  [2,100]  [1]   []    []   []
+        index:  0     1     2      3     4     5     6
+    [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
+  ```
