@@ -44,7 +44,8 @@ cn login use account/password
   [Bucket Sort, 3:00](https://www.youtube.com/watch?v=YPTqKIgVk-k) 桶排（线性）性能前提是数字均匀分布，数组能均匀映射到各个桶内, 本题大数据分布`1 <= nums.length <= 105, 0 <= nums[i] <= 109`， 桶排性能比较好。\
   本题 tick： （1） num->bucket 映射函数，(涉及 interval- 见解`bucketIndexMappingFunc`) (2) 鸽洞原理，“这是因为所有的数字要尽量平均分配到每个桶中，而不是都拥挤在一个桶中，这样保证了最大值和最小值一定不会在同一个桶中，具体的证明博主也不会”。\
   重点理解 bucket sort, bucketIndexMappingFunc, 鸽洞原理不重要
-
+- [167.two-sum-ii-input-array-is-sorted](./167.two-sum-ii-input-array-is-sorted.js) \
+  Binary Search, 简单版
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) \
   ```
     bucket sort
