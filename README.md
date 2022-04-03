@@ -45,7 +45,9 @@ cn login use account/password
   本题 tick： （1） num->bucket 映射函数，(涉及 interval- 见解`bucketIndexMappingFunc`) (2) 鸽洞原理，“这是因为所有的数字要尽量平均分配到每个桶中，而不是都拥挤在一个桶中，这样保证了最大值和最小值一定不会在同一个桶中，具体的证明博主也不会”。\
   重点理解 bucket sort, bucketIndexMappingFunc, 鸽洞原理不重要
 - [167.two-sum-ii-input-array-is-sorted](./167.two-sum-ii-input-array-is-sorted.js) \
-  Binary Search, 简单版
+  Binary Search, 退化版 每次++i 或 --j
+- [174.dungeon-game](./174.dungeon-game.js) \
+  DP, 逆向推正是本题的精髓所在, 因为是求起点的状态
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) \
   ```
     bucket sort
