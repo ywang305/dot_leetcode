@@ -49,10 +49,12 @@ cn login use account/password
 - [174.dungeon-game](./174.dungeon-game.js) \
   DP, 逆向推正是本题的精髓所在, 因为是求起点的状态
 - [186.reverse-words-in-a-string](./186.reverse-words-in-a-string.js) \
-  array, 双指针，先整体反转， 再反转每个单词
+  array, 反转数组， 再反转每个单词
 - [188.best-time-to-buy-and-sell-stock-iv](./188.best-time-to-buy-and-sell-stock-iv.js) \
   DP, 3 维!， `dp[act次数][day]{no_hold, hold}`, \
   交易次数 act k=0 是实际不可呢的情况(至少得有一次交易吧)，但是需要初始化。 只有买入才会消耗一个交易次数，所以本次买入状态`dp[act][day]`取决于 dp`[act-1][day-1]`; 其他情况 `dp[act][day]` 取决于本次 act 维度`·`dp[act][day-1]`
+- [189.rotate-array](./189.rotate-array.js) \
+  array, 反转数组， 再反转左右半部分
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) \
   ```
     bucket sort
