@@ -55,6 +55,8 @@ cn login use account/password
   交易次数 act k=0 是实际不可呢的情况(至少得有一次交易吧)，但是需要初始化。 只有买入才会消耗一个交易次数，所以本次买入状态`dp[act][day]`取决于 dp`[act-1][day-1]`; 其他情况 `dp[act][day]` 取决于本次 act 维度`·`dp[act][day-1]`
 - [189.rotate-array](./189.rotate-array.js) \
   array, 反转数组， 再反转左右半部分
+- [198.house-robber.js](./198.house-robber.js) \
+  DP, easy 经典 to be or not to be
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) \
   ```
     bucket sort
