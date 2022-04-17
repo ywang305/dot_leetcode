@@ -57,6 +57,8 @@ cn login use account/password
   array, 反转数组， 再反转左右半部分
 - [198.house-robber.js](./198.house-robber.js) \
   DP, easy 经典 to be or not to be
+- [200.number-of-islands](./200.number-of-islands.js) \
+  UnionFind
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) \
   ```
     bucket sort
