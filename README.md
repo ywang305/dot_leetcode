@@ -10,6 +10,12 @@ username cookie (recommand )
 
 - [3.longest-substring-without-repeating-characters](./3.longest-substring-without-repeating-characters.js) #双指针哈西 \
   双指针 + Hash 记录位置, 注意更新 i 时候要比较并取最大值
+- [4.median-of-two-sorted-arrays](./4.median-of-two-sorted-arrays.js) #BS \
+  <details>
+  <summary>ok</summary>
+
+  </details>
+
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
