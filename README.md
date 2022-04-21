@@ -11,9 +11,18 @@ username cookie (recommand )
 - [3.longest-substring-without-repeating-characters](./3.longest-substring-without-repeating-characters.js) #双指针哈西 \
   双指针 + Hash 记录位置, 注意更新 i 时候要比较并取最大值
 - [4.median-of-two-sorted-arrays](./4.median-of-two-sorted-arrays.js) #BS \
+  hard BS， 长度 分奇偶2种情况讨论， median 和 nums1，nums2的分割点存在“此消彼长”关系（见图），分割点关联着2个数组总长的median位置。
+  nums1 比 nums2 长， 只在nums2上做二分搜索（见图）
+  ref [video: Median of Two Sorted Arrays - Binary Search - Leetcode 4 ](https://www.youtube.com/watch?v=q6IEA26hvXc)
   <details>
-  <summary>ok</summary>
+    <summary>total len is ODD case</summary>
 
+    ![image](https://user-images.githubusercontent.com/24782000/164467122-91bb478e-ac8d-418c-a34e-be03ee6e79ef.png)
+    </details>
+  <details>
+    <summary>total len is EVEN case</summary>
+
+    ![image](https://user-images.githubusercontent.com/24782000/164467532-039cd926-9524-4a8f-9d68-192169111477.png)
   </details>
 
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
