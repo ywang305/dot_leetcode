@@ -11,20 +11,25 @@ username cookie (recommand )
 - [3.longest-substring-without-repeating-characters](./3.longest-substring-without-repeating-characters.js) #双指针哈西 \
   双指针 + Hash 记录位置, 注意更新 i 时候要比较并取最大值
 - [4.median-of-two-sorted-arrays](./4.median-of-two-sorted-arrays.js) #BS \
-  hard BS， 长度 分奇偶2种情况讨论， median 和 nums1，nums2的分割点存在“此消彼长”关系（见图），分割点关联着2个数组总长的median位置。
-  nums1 比 nums2 长， 只在nums2上做二分搜索（见图）
+  hard BS， 长度 分奇偶 2 种情况讨论， median 和 nums1，nums2 的分割点存在“此消彼长”关系（见图），分割点关联着 2 个数组总长的 median 位置。
+  nums1 比 nums2 长， 只在 nums2 上做二分搜索（见图）
   ref [video: Median of Two Sorted Arrays - Binary Search - Leetcode 4 ](https://www.youtube.com/watch?v=q6IEA26hvXc)
   <details>
     <summary>total len is ODD case</summary>
 
-    ![image](https://user-images.githubusercontent.com/24782000/164467122-91bb478e-ac8d-418c-a34e-be03ee6e79ef.png)
+  ![image](https://user-images.githubusercontent.com/24782000/164467122-91bb478e-ac8d-418c-a34e-be03ee6e79ef.png)
     </details>
   <details>
     <summary>total len is EVEN case</summary>
 
-    ![image](https://user-images.githubusercontent.com/24782000/164467532-039cd926-9524-4a8f-9d68-192169111477.png)
+  ![image](https://user-images.githubusercontent.com/24782000/164467532-039cd926-9524-4a8f-9d68-192169111477.png)
   </details>
 
+- [5.longest-palindromic-substring](./5.longest-palindromic-substring.js) #DP \
+  经典 DP, `s[i] === s[j] && (j - i <= 2 || dp[i + 1][j - 1] === true`
+- [11.container-with-most-water](./11.container-with-most-water.js) #Greedy \
+  简单 Greedy， 两边缩减
+- [17.letter-combinations-of-a-phone-number](./17.letter-combinations-of-a-phone-number.js) #DFS, #组合 \
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
