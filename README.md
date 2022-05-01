@@ -29,7 +29,13 @@ username cookie (recommand )
   经典 DP, `s[i] === s[j] && (j - i <= 2 || dp[i + 1][j - 1] === true`
 - [11.container-with-most-water](./11.container-with-most-water.js) #Greedy \
   简单 Greedy， 两边缩减
-- [17.letter-combinations-of-a-phone-number](./17.letter-combinations-of-a-phone-number.js) #DFS, #组合 \
+- [17.letter-combinations-of-a-phone-number](./17.letter-combinations-of-a-phone-number.js) #DFS, #组合
+- [22.generate-parentheses](./22.generate-parentheses.js) #DFS
+  经典 DFS
+- [23.merge-k-sorted-lists](./23.merge-k-sorted-lists.js) #分治 \
+  俩俩 merge， 效率 T = nlogk。 如果 brute， T = nk
+- [30.substring-with-concatenation-of-all-words](./30.substring-with-concatenation-of-all-words.js) #双指针哈西 \
+  sliding window 变种， 参见[youtube](https://www.youtube.com/watch?v=ddSzsLUSPrQ)理解题意
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \

@@ -14,8 +14,9 @@ var generateParenthesis = function (n) {
   // 这个比Grandyang 方法好多了
   const dfs = (path, left, right) => {
     if (left > n || left < right) return;
-    if (left + right === 2 * n) {
+    if (left === n && right === n) {
       res.push(path);
+      return;
     }
     dfs(path + "(", left + 1, right);
     dfs(path + ")", left, right + 1);
