@@ -39,16 +39,16 @@ username cookie (recommand )
 - [31.next-permutation](./31.next-permutation.js) #Array \
   Array 技巧
 - [32.longest-valid-parentheses](./32.longest-valid-parentheses.js) #DP \
-  较难， 关键理解
+  较难， 关键: 结合 leetcode solution example，理解以下推导过程，
 
   ```js
-  else if (s[i - dp[i - 1] - 1] === "(") {
-    dp[i] = dp[i - 1] + (dp[i - dp[i - 1] - 2] ?? 0) + 2;
+  else if (s[i - dp[i - 1] - 1] === "(") { // i - dp[i - 1] - 1 是匹配的左括号index
+    dp[i] = dp[i - 1] + (dp[i - dp[i - 1] - 2] ?? 0) + 2; // i - dp[i - 1] - 2 匹配的左括号index再前一个dp状态
   }
   ```
 
   <details>
-    <summary>leetcode solution</summary>
+    <summary>leetcode solution example</summary>
 
   ![image](src="blob:https://leetcode.com/66dffa22-11b0-4433-ab06-63630f1a0a78")
   </details>
