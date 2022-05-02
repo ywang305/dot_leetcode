@@ -18,7 +18,7 @@ username cookie (recommand )
     <summary>total len is ODD case</summary>
 
   ![image](https://user-images.githubusercontent.com/24782000/164467122-91bb478e-ac8d-418c-a34e-be03ee6e79ef.png)
-    </details>
+  </details>
   <details>
     <summary>total len is EVEN case</summary>
 
@@ -36,6 +36,23 @@ username cookie (recommand )
   俩俩 merge， 效率 T = nlogk。 如果 brute， T = nk
 - [30.substring-with-concatenation-of-all-words](./30.substring-with-concatenation-of-all-words.js) #双指针哈西 \
   sliding window 变种， 参见[youtube](https://www.youtube.com/watch?v=ddSzsLUSPrQ)理解题意
+- [31.next-permutation](./31.next-permutation.js) #Array \
+  Array 技巧
+- [32.longest-valid-parentheses](./32.longest-valid-parentheses.js) #DP \
+  较难， 关键理解
+
+  ```js
+  else if (s[i - dp[i - 1] - 1] === "(") {
+    dp[i] = dp[i - 1] + (dp[i - dp[i - 1] - 2] ?? 0) + 2;
+  }
+  ```
+
+  <details>
+    <summary>leetcode solution</summary>
+
+  ![image](src="blob:https://leetcode.com/66dffa22-11b0-4433-ab06-63630f1a0a78")
+  </details>
+
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
