@@ -15,8 +15,10 @@ var longestValidParentheses = function (s) {
   for (let i = 0; i < s.length; ++i) {
     if (s[i] === ")") {
       if (s[i - 1] === "(") {
+        // 处理 ...'(',')'
         dp[i] = (dp[i - 2] ?? 0) + 2;
       } else if (s[i - dp[i - 1] - 1] === "(") {
+        // 处理 ...'(' ... ), ')'
         dp[i] = dp[i - 1] + (dp[i - dp[i - 1] - 2] ?? 0) + 2;
       }
     }
