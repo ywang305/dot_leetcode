@@ -39,7 +39,7 @@ username cookie (recommand )
 - [31.next-permutation](./31.next-permutation.js) #Array \
   Array 技巧
 - [32.longest-valid-parentheses](./32.longest-valid-parentheses.js) #DP \
-  较难， 关键: 结合 leetcode solution example，理解以下推导过程，
+  较难， 关键: 结合 leetcode solution example，理解连续有效括号时的推导过程，
 
   ```js
   else if (s[i - dp[i - 1] - 1] === "(") { // i - dp[i - 1] - 1 是匹配的左括号index
@@ -50,7 +50,7 @@ username cookie (recommand )
   <details>
     <summary>leetcode solution example</summary>
 
-  ![image](src="blob:https://leetcode.com/66dffa22-11b0-4433-ab06-63630f1a0a78")
+    <img width="870" alt="image" src="https://user-images.githubusercontent.com/24782000/166184265-80f2e7c7-5279-40bc-a2e1-3968b9131a76.png">
   </details>
 
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
