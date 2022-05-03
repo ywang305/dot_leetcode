@@ -53,6 +53,12 @@ username cookie (recommand )
     <img width="870" alt="image" src="https://user-images.githubusercontent.com/24782000/166184265-80f2e7c7-5279-40bc-a2e1-3968b9131a76.png">
   </details>
 
+- [33.search-in-rotated-sorted-array](./33.search-in-rotated-sorted-array.js) #BS \
+  经典 旋转数组
+- [34.find-first-and-last-position-of-element-in-sorted-array](./34.find-first-and-last-position-of-element-in-sorted-array.js) #BS \
+  经典 BS lowerBound/upperBound, [关于二分查找，我有话说](https://mp.weixin.qq.com/s/YciCyjT6peM9FWfSUww8Ww)
+- [37.sudoku-solver](./37.sudoku-solver.js) #DFS \
+  经典 DFS
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
