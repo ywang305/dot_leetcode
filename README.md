@@ -59,6 +59,10 @@ username cookie (recommand )
   经典 BS lowerBound/upperBound, [关于二分查找，我有话说](https://mp.weixin.qq.com/s/YciCyjT6peM9FWfSUww8Ww)
 - [37.sudoku-solver](./37.sudoku-solver.js) #DFS \
   经典 DFS
+- [39.combination-sum](./39.combination-sum.js) #DFS #组合 \
+  组合变种， 包括重复元素， every time go from i
+- [40.combination-sum-ii](./40.combination-sum-ii.js) #DFS #组合 \
+  组合变种, 跳过重复的元素(如果相邻相等 continue), every time go from i+1
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
