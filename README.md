@@ -63,6 +63,10 @@ username cookie (recommand )
   组合变种， 包括重复元素， every time go from i
 - [40.combination-sum-ii](./40.combination-sum-ii.js) #DFS #组合 \
   组合变种, 跳过重复的元素(如果相邻相等 continue), every time go from i+1
+- [42.trapping-rain-water](./42.trapping-rain-water.js) #双指针 #DP \
+  两种解法 （1） DP 空间（n) 比较好理解， （2） 双指针 空间（1）。 [ref:youtube](https://www.youtube.com/watch?v=ZI2z5pq0TqA), key: 对每个位置，找到最大的左右墙壁高度
+- [44.wildcard-matching](./44.wildcard-matching.js) #DP \
+  [grandyang 的解法](https://grandyang.com/leetcode/44/)
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
