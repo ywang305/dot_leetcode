@@ -25,7 +25,7 @@ username cookie (recommand )
   ![image](https://user-images.githubusercontent.com/24782000/164467532-039cd926-9524-4a8f-9d68-192169111477.png)
   </details>
 
-- [5.longest-palindromic-substring](./5.longest-palindromic-substring.js) #DP #字符串 DP \
+- [5.longest-palindromic-substring](./5.longest-palindromic-substring.js) #DP #字符串-DP \
   经典 DP, `s[i] === s[j] && (j - i <= 2 || dp[i + 1][j - 1] === true`
 - [11.container-with-most-water](./11.container-with-most-water.js) #Greedy \
   简单 Greedy， 两边缩减
@@ -62,19 +62,21 @@ username cookie (recommand )
 - [39.combination-sum](./39.combination-sum.js) #DFS #组合 \
   组合变种， 包括重复元素， every time go from i
 - [40.combination-sum-ii](./40.combination-sum-ii.js) #DFS #组合 \
-  组合变种, 跳过重复的元素(如果相邻相等 continue), every time go from i+1
+  组合变种, 跳过重复的元素, `if (i > start && candidates[i] === candidates[i - 1]) continue; `
 - [42.trapping-rain-water](./42.trapping-rain-water.js) #双指针 #DP \
   两种解法 （1） DP 空间（n) 比较好理解， （2） 双指针 空间（1）。 [ref:youtube](https://www.youtube.com/watch?v=ZI2z5pq0TqA), key: 对每个位置，找到最大的左右墙壁高度
-- [44.wildcard-matching](./44.wildcard-matching.js) #DP #字符串 DP \
+- [44.wildcard-matching](./44.wildcard-matching.js) #DP #字符串-DP \
   [grandyang 的解法](https://grandyang.com/leetcode/44/)
 - [45.jump-game-ii](./45.jump-game-ii.js) #DP #Greedy \
-  DP T(n^2); Greedy T(n), greedy is better, [youtube neetcode](https://www.youtube.com/watch?v=dJ7sWiOoK7g), 类似于 BFS
+  DP T(n^2); Greedy T(n), greedy is better, [youtube neetcode](https://www.youtube.com/watch?v=dJ7sWiOoK7g), 类似于 BFS, 每次算出 reachFarthest
+- [55.jump-game](./55.jump-game.js) #Greedy \
+  每次算出 reachFarthest,
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
   DP + backtracking \
   注意 dp 内 j i 的顺序， 先决定 j 再向前决定 i。
-- [132.palindrome-partitioning-ii](./132.palindrome-partitioning-ii.js) #DP #字符串 DP \
+- [132.palindrome-partitioning-ii](./132.palindrome-partitioning-ii.js) #DP #字符串-DP \
   双 DP, `dp2[j] = Math.min(dp2[j], dp2[i - 1] + 1);`
 - [134.gas-station](./134.gas-station.js) #Greedy \
   贪婪：从前往后找，找到第一个满足条件的，就是结果

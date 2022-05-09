@@ -10,13 +10,28 @@
  * @return {number[][]}
  */
 var permute = function (nums) {
-  if (nums.length <= 1) return nums.map((e) => [e]);
+  // if (nums.length <= 1) return nums.map((e) => [e]);
+  // const res = [];
+  // for (let i = 0; i < nums.length; ++i) {
+  //   permute(nums.slice(0, i).concat(nums.slice(i + 1))).forEach((list) => {
+  //     res.push(list.concat(nums[i]));
+  //   });
+  // }
+  // return res;
+
   const res = [];
-  for (let i = 0; i < nums.length; ++i) {
-    permute(nums.slice(0, i).concat(nums.slice(i + 1))).forEach((list) => {
-      res.push(list.concat(nums[i]));
-    });
-  }
+  const dfs = (start) => {
+    if (start === nums.length) {
+      res.push([...nums]);
+      return;
+    }
+    for (let i = start; i < nums.length; ++i) {
+      [nums[i], nums[start]] = [nums[start], nums[i]];
+      dfs(start + 1);
+      [nums[i], nums[start]] = [nums[start], nums[i]];
+    }
+  };
+  dfs(0);
   return res;
 };
 // @lc code=end

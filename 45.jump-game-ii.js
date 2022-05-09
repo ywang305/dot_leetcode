@@ -26,11 +26,12 @@ var jump = function (nums) {
     right = 0;
   while (right < nums.length - 1) {
     cnt++;
-    const originRight = right;
-    for (let i = left; i <= originRight; ++i) {
-      right = Math.max(right, i + nums[i]);
+    let reachFarthest = right + 1;
+    for (let i = left; i <= right; ++i) {
+      reachFarthest = Math.max(reachFarthest, i + nums[i]);
     }
-    left = originRight + 1;
+    left = right + 1;
+    right = reachFarthest;
   }
   return cnt;
 };
