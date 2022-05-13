@@ -69,6 +69,8 @@ username cookie (recommand )
   [grandyang 的解法](https://grandyang.com/leetcode/44/)
 - [45.jump-game-ii](./45.jump-game-ii.js) #DP #Greedy \
   DP T(n^2); Greedy T(n), greedy is better, [youtube neetcode](https://www.youtube.com/watch?v=dJ7sWiOoK7g), 类似于 BFS, 每次算出 reachFarthest
+- [51.n-queens](./51.n-queens.js) #DFS
+  经典 DFS, 吃吐
 - [55.jump-game](./55.jump-game.js) #Greedy \
   每次算出 reachFarthest,
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
@@ -123,6 +125,8 @@ username cookie (recommand )
   DP, easy 经典 to be or not to be
 - [200.number-of-islands](./200.number-of-islands.js) #UnionFind \
   UnionFind
+- [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium\
+  建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket \
   ```
     bucket sort
