@@ -77,6 +77,10 @@ username cookie (recommand )
   区间问题排除 no overlap 的 2 种情况， overlap 的情况 动态更新 start/end
 - [60.permutation-sequence](./60.permutation-sequence.js) #DFS #排列 \
   不能用经典的吃吐， 应为对字母次序有要求
+- [62.unique-paths](./62.unique-paths.js) #DP \
+  经典 DP
+- [63.unique-paths-ii](./63.unique-paths-ii.js) #DP \
+  经典 DP
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
