@@ -73,6 +73,8 @@ username cookie (recommand )
   经典 DFS, 吃吐
 - [55.jump-game](./55.jump-game.js) #Greedy \
   每次算出 reachFarthest,
+- [57.insert-interval](./57.insert-interval.js) #Array \
+  区间问题排除 no overlap 的 2 种情况， overlap 的情况 动态更新 start/end
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
@@ -104,7 +106,7 @@ username cookie (recommand )
   String, 分两种情况：字符串长度相等 或 相差 1。 找出第一个不同的位置，根据两种情况 分别比较之后子串是否相等
 - [162.find-peak-element](./162.find-peak-element.js) #BS \
   Binary Search 非标准变种， 注意 i<j 和 j = m 变化
-- [163.missing-ranges](./163.missing-ranges.js) #premium \
+- [163.missing-ranges](./163.missing-ranges.js) #premium #Array\
   [premium] array, 注意边界条件
 - [164.maximum-gap](./164.maximum-gap.js) #Bucket \
   [Bucket Sort, 3:00](https://www.youtube.com/watch?v=YPTqKIgVk-k) 桶排（线性）性能前提是数字均匀分布，数组能均匀映射到各个桶内, 本题大数据分布`1 <= nums.length <= 105, 0 <= nums[i] <= 109`， 桶排性能比较好。\
@@ -125,7 +127,7 @@ username cookie (recommand )
   DP, easy 经典 to be or not to be
 - [200.number-of-islands](./200.number-of-islands.js) #UnionFind \
   UnionFind
-- [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium\
+- [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket \
   ```
@@ -138,3 +140,5 @@ username cookie (recommand )
         index:  0     1     2      3     4     5     6
     [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
   ```
+- [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #DP \
+  Hard [思路 tricky](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dong-tai-gui-hua-by-clearlife-99kq/)
