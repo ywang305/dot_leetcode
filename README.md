@@ -75,6 +75,8 @@ username cookie (recommand )
   每次算出 reachFarthest,
 - [57.insert-interval](./57.insert-interval.js) #Array \
   区间问题排除 no overlap 的 2 种情况， overlap 的情况 动态更新 start/end
+- [60.permutation-sequence](./60.permutation-sequence.js) #DFS #排列 \
+  不能用经典的吃吐， 应为对字母次序有要求
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
@@ -129,7 +131,7 @@ username cookie (recommand )
   UnionFind
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
-- [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket \
+- [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket
   ```
     bucket sort
     trick: ( 和传统的bucket sort 的index value 反过来！), index 是 计数，value 是 num list，
