@@ -148,5 +148,7 @@ username cookie (recommand )
         index:  0     1     2      3     4     5     6
     [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
   ```
+- [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind \
+  关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
 - [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #DP \
   Hard [思路 tricky](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dong-tai-gui-hua-by-clearlife-99kq/)
