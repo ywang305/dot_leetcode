@@ -81,6 +81,8 @@ username cookie (recommand )
   经典 DP
 - [63.unique-paths-ii](./63.unique-paths-ii.js) #DP \
   经典 DP
+- [64.minimum-path-sum](./64.minimum-path-sum.js) #DP \
+  经典 DP
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \

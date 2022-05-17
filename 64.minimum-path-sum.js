@@ -10,17 +10,16 @@
  * @return {number}
  */
 var minPathSum = function (grid) {
-  const len = grid.length;
-  const dp = Array.from({ length: len }, () => []);
-  dp[0][0] = grid[0][0];
-  for (let i = 0; i < len; ++i) {
-    for (let j = 0; j < len; ++j) {
-      if (!i && !j) continue;
-      dp[i][j] =
-        grid[i][j] +
-        Math.min(dp[Math.max(i - 1, 0)][j], dp[i][Math.max(j - 1, 0)]);
+  const m = grid.length,
+    n = grid[0].length;
+  for (let i = 0; i < m; ++i) {
+    for (let j = 0; j < n; ++j) {
+      if (i === 0 && j === 0) continue;
+      if (i === 0) grid[i][j] += grid[i][j - 1];
+      else if (j === 0) grid[i][j] += grid[i - 1][j];
+      else grid[i][j] += Math.min(grid[i - 1][j], grid[i][j - 1]);
     }
   }
-  return dp[len - 1][len - 1];
+  return grid[m - 1][n - 1];
 };
 // @lc code=end
