@@ -137,6 +137,8 @@ username cookie (recommand )
   UnionFind
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
+- [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
+  DFS + Memo 经典
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket
   ```
     bucket sort
@@ -148,7 +150,7 @@ username cookie (recommand )
         index:  0     1     2      3     4     5     6
     [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
   ```
-- [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind \
+- [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind #premium \
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
 - [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #DP \
   Hard [思路 tricky](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dong-tai-gui-hua-by-clearlife-99kq/)
