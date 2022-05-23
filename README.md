@@ -83,6 +83,12 @@ username cookie (recommand )
   经典 DP
 - [64.minimum-path-sum](./64.minimum-path-sum.js) #DP \
   经典 DP
+- [69.sqrtx](./69.sqrt-x.rb) #BS \
+  easy 经典 binary search
+- [71.simplify-path](./71.simplify-path.rb) #String \
+  经典 stack
+- [72.edit-distance](./72.edit-distance.js) #DP \
+  难, `Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1` dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]分别对应插入/删除/替换(trick)
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
