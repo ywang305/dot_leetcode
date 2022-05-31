@@ -76,7 +76,7 @@ username cookie (recommand )
 - [57.insert-interval](./57.insert-interval.js) #Array \
   区间问题排除 no overlap 的 2 种情况， overlap 的情况 动态更新 start/end
 - [60.permutation-sequence](./60.permutation-sequence.js) #DFS #排列 \
-  不能用经典的吃吐， 应为对字母次序有要求
+  hard, 不能用经典的吃吐(or I don't know how)， 对字母次序有要求
 - [62.unique-paths](./62.unique-paths.js) #DP \
   经典 DP
 - [63.unique-paths-ii](./63.unique-paths-ii.js) #DP \
@@ -89,6 +89,18 @@ username cookie (recommand )
   经典 stack
 - [72.edit-distance](./72.edit-distance.js) #DP \
   难, `Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1` dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]分别对应插入/删除/替换(trick)
+- [74.search-a-2d-matrix](./74.search-a-2d-matrix.js) #BS \
+  经典 highbound
+- [75.sort-colors](./75.sort-colors.js) #QuickSort \
+  quickSort 变种， 思想一样
+- [76.minimum-window-substring](./76.minimum-window-substring.js) #双指针哈西 \
+  hard, 双指针哈西-变种， 配合额外控制变量 needCnt
+- [77.combinations](./77.combinations.js) #组合 \
+  经典
+- [78.subsets](./78.subsets.js) #组合 \
+  不太容易想到(想了好久, mind 一度陷入经典组合的框架)
+- [79.word-search](./79.word-search.js) #DFS \
+  经典 2d-map
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
@@ -120,7 +132,7 @@ username cookie (recommand )
   String, 分两种情况：字符串长度相等 或 相差 1。 找出第一个不同的位置，根据两种情况 分别比较之后子串是否相等
 - [162.find-peak-element](./162.find-peak-element.js) #BS \
   Binary Search 非标准变种， 注意 i<j 和 j = m 变化
-- [163.missing-ranges](./163.missing-ranges.js) #premium #Array\
+- [163.missing-ranges](./163.missing-ranges.js) #premium #Array \
   [premium] array, 注意边界条件
 - [164.maximum-gap](./164.maximum-gap.js) #Bucket \
   [Bucket Sort, 3:00](https://www.youtube.com/watch?v=YPTqKIgVk-k) 桶排（线性）性能前提是数字均匀分布，数组能均匀映射到各个桶内, 本题大数据分布`1 <= nums.length <= 105, 0 <= nums[i] <= 109`， 桶排性能比较好。\
@@ -141,8 +153,12 @@ username cookie (recommand )
   DP, easy 经典 to be or not to be
 - [200.number-of-islands](./200.number-of-islands.js) #UnionFind \
   UnionFind
+- [212.word-search-ii](./212.word-search-ii.js) #Trie \
+  hard, 没有那么难。 Trie + DFS
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
+- [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
+  经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket
@@ -158,5 +174,14 @@ username cookie (recommand )
   ```
 - [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind #premium \
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
+- [1143.longest-common-subsequence](./1143.longest-common-subsequence.js) #DP #字符串-DP \
+  DP, 经典
+  ```js
+  if (text1[i - 1] === text2[j - 1]) {
+    dp[i][j] = dp[i - 1][j - 1] + 1;
+  } else {
+    dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+  }
+  ```
 - [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #DP \
   Hard [思路 tricky](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dong-tai-gui-hua-by-clearlife-99kq/)
