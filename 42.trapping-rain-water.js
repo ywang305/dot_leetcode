@@ -10,16 +10,22 @@
  * @return {number}
  */
 var trap = function (height) {
-  let res = 0;
-  let bottleneck = 0;
-  let left = 0,
-    right = height.length - 1;
-  while (left < right) {
-    const lower = height[height[left] < height[right] ? left++ : right--];
-    bottleneck = Math.max(bottleneck, lower);
-    res += bottleneck - lower;
+  // Monotopic decreasing stack
+  const stack = [];
+  let sum = 0;
+  for (let i = 0; i < height.length; ++i) {
+    while (height[i] > height[stack.at(-1)]) {
+      const cur = stack.pop();
+      if (!stack.length) break;
+      const left = stack.at(-1);
+      const right = i;
+      sum +=
+        (Math.min(height[left], height[right]) - height[cur]) *
+        (right - left - 1);
+    }
+    stack.push(i);
   }
-  return res;
+  return sum;
 
   /**
     // dp 清晰

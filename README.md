@@ -63,8 +63,9 @@ username cookie (recommand )
   组合变种， 包括重复元素， every time go from i
 - [40.combination-sum-ii](./40.combination-sum-ii.js) #DFS #组合 \
   组合变种, 跳过重复的元素, `if (i > start && candidates[i] === candidates[i - 1]) continue; `
-- [42.trapping-rain-water](./42.trapping-rain-water.js) #双指针 #DP \
-  两种解法 （1） DP 空间（n) 比较好理解， （2） 双指针 空间（1）。 [ref:youtube](https://www.youtube.com/watch?v=ZI2z5pq0TqA), key: 对每个位置，找到最大的左右墙壁高度
+- [42.trapping-rain-water](./42.trapping-rain-water.js) #单调栈 #DP \
+  解法 （1） DP 空间（n) 比较好理解， （2） 双指针 空间（1）。 [ref:youtube](https://www.youtube.com/watch?v=ZI2z5pq0TqA), key: 对每个位置，找到最大的左右墙壁高度 \
+  （3）[单调递减栈，简洁代码](https://leetcode.cn/problems/trapping-rain-water/solution/trapping-rain-water-by-ikaruga/)
 - [44.wildcard-matching](./44.wildcard-matching.js) #DP #字符串-DP \
   [grandyang 的解法](https://grandyang.com/leetcode/44/)
 - [45.jump-game-ii](./45.jump-game-ii.js) #DP #Greedy \
@@ -101,6 +102,13 @@ username cookie (recommand )
   不太容易想到(想了好久, mind 一度陷入经典组合的框架)
 - [79.word-search](./79.word-search.js) #DFS \
   经典 2d-map
+- [80.remove-duplicates](./80.remove-duplicates.js) #双指针 \
+  经典
+- [81.search-in-rotated-sorted-array-ii](./81.search-in-rotated-sorted-array-ii.js) #BS \
+  33.旋转数组之变种， BS 需要考虑重复元素，即重复元素下分不清是左边/右边有序，此时 start++ 即可。相当于去掉一个重复的干扰项，详见题解[搜索旋转排序数组 II](https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/solution/zai-javazhong-ji-bai-liao-100de-yong-hu-by-reedfan/)
+- [84.largest-rectangle-in-histogram](./84.largest-rectangle-in-histogram.js) #单调栈 \
+  hard, 核心思想:求每条柱子可以向左右延伸的长度->矩形最大宽度 \* 柱子的高度, 计算以每一根柱子高度为高的矩形面积,维护面积最大值
+  [单调栈入门，使用单调栈快速寻找边界](https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/84-by-ikaruga/)
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
@@ -172,6 +180,9 @@ username cookie (recommand )
         index:  0     1     2      3     4     5     6
     [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
   ```
+- [684.redundant-connection](./684.redundant-connection.js) #DFS #UnionFind #拓扑 \
+  (1)dfs：边构建图，边检测环，对于 s->t 的边，检查 s 的邻接点是否能到达 t，如果可以，则说明 s->t 是环路.
+  (2)本题 union find 比较容易, (3)另外也可以用拓扑排序: [三种解法总结](https://leetcode.cn/problems/redundant-connection/solution/bing-cha-ji-sou-suo-shen-du-yan-du-tuo-b-ev30/)
 - [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind #premium \
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
 - [1143.longest-common-subsequence](./1143.longest-common-subsequence.js) #DP #字符串-DP \
