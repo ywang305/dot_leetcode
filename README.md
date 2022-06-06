@@ -109,6 +109,8 @@ username cookie (recommand )
 - [84.largest-rectangle-in-histogram](./84.largest-rectangle-in-histogram.js) #单调栈 \
   hard, 核心思想:求每条柱子可以向左右延伸的长度->矩形最大宽度 \* 柱子的高度, 计算以每一根柱子高度为高的矩形面积,维护面积最大值
   [单调栈入门，使用单调栈快速寻找边界](https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/84-by-ikaruga/)
+- [85.maximal-rectangle](./85.maximal-rectangle.js) #单调栈 \
+  hard, 84 题的变种，从第一行到第 n 行形成的柱状图可以利用 84 题求解，[单调栈解法](https://leetcode.cn/problems/maximal-rectangle/solution/dai-ma-jian-ji-yi-chong-huan-bu-cuo-de-j-k1p3/)
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
