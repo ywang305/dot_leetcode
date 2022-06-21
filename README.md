@@ -93,7 +93,7 @@ username cookie (recommand )
 - [74.search-a-2d-matrix](./74.search-a-2d-matrix.js) #BS \
   经典 highbound
 - [75.sort-colors](./75.sort-colors.js) #QuickSort \
-  quickSort 变种， 思想一样
+  quickSelect -> quickSort 变种， 思想一样
 - [76.minimum-window-substring](./76.minimum-window-substring.js) #双指针哈西 \
   hard, 双指针哈西-变种， 配合额外控制变量 needCnt
 - [77.combinations](./77.combinations.js) #组合 \
@@ -111,6 +111,12 @@ username cookie (recommand )
   [单调栈入门，使用单调栈快速寻找边界](https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/84-by-ikaruga/)
 - [85.maximal-rectangle](./85.maximal-rectangle.js) #单调栈 \
   hard, 84 题的变种，从第一行到第 n 行形成的柱状图可以利用 84 题求解，[单调栈解法](https://leetcode.cn/problems/maximal-rectangle/solution/dai-ma-jian-ji-yi-chong-huan-bu-cuo-de-j-k1p3/)
+- [90.subsets-ii](./90.subsets-ii.js) #组合 \
+  [78.subsets](./78.subsets.js) 的扩展, 去重
+- [91.decode-ways](./91.decode-ways.js) #DP \
+  类似打家劫舍,第 i 个下标能表示的解码方法个数依赖于 i-1 和 i-2 的情况
+- [92.reverse-linked-list-ii](./92.reverse-linked-list-ii.java) #递归 \
+  并不简单,需要借助`reverseN`分解问题，参见[步步拆解：如何递归地反转链表的一部分](https://leetcode.cn/problems/reverse-linked-list-ii/solution/bu-bu-chai-jie-ru-he-di-gui-di-fan-zhuan-lian-biao/)
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
@@ -171,11 +177,13 @@ username cookie (recommand )
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
+- [394.decode-string](./394.decode-string.js) #栈 \
+  [394.借助栈解决](https://leetcode.cn/problems/decode-string/solution/394jie-zhu-zhan-jie-jue-by-wan-jia-guo-d-sqe0/)
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket
   ```
     bucket sort
     trick: ( 和传统的bucket sort 的index value 反过来！), index 是 计数，value 是 num list，
-     因为count是bounded，buckets是有界的。num可能非常大，buckets很长，很多空位置浪费了。
+     因为count是bounded，buckets是有界的。num可能非常大，buckets很长，很多空位置浪费了。(这不就是HashMap吗？)
     e.g. 1,1,1,2,2,100,100
       buckets:
         values: []    []  [2,100]  [1]   []    []   []

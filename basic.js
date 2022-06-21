@@ -115,10 +115,10 @@ const quickSort = (list) => {
   return [...quickSort(left), ...mid, ...quickSort(right)];
 };
 
-// in-place
+// in-place,  single boundary，[start, pivot] [p, ...end]
 const quickSort2 = (list, start = 0, end = list.length - 1) => {
   if (start >= end) return;
-  let p = start; // paritition, 从p开始都是value > pivot
+  let p = start; // boundary, 从p开始都是value > pivot
   let pivot = list[end];
   for (let i = start; i <= end; ++i) {
     if (list[i] <= pivot) {
@@ -129,6 +129,25 @@ const quickSort2 = (list, start = 0, end = list.length - 1) => {
   // 注意 p-1 对应的pivot值(由最后一次循环的交换保证),
   quickSort2(list, start, p - 2); // 排除 pivot (如果p-1会导致 max call stack)
   quickSort2(list, p, end);
+};
+
+// in-place,  double boundarys:  [start, i-1], [i==j/pivot], [j+1, end]
+const quickSort3 = (list, start = 0, end = list.length - 1) => {
+  if (start >= end) return;
+  let i = start; // boundary, 从i往后value > pivot
+  let j = end; // boundary, 从j往前value < pivot
+  let pivot = list[end];
+  while (i < j) {
+    while (i < j && list[i] <= pivot) ++i;
+    [list[i], list[j]] = [list[j], list[i]];
+    while (i < j && list[j] >= pivot) --j;
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+  // 循环结束，i与j相等, 这个位置是属于pivot
+  list[i] = pivot;
+
+  quickSort3(list, start, i - 1);
+  quickSort3(list, i + 1, end);
 };
 
 /**
