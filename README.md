@@ -134,6 +134,14 @@ username cookie (recommand )
   if(pre.val > root.val && null == err1) err1 = pre;  // tricky
   if(pre.val > root.val && null != err1) err2 = root; // tricky
   ```
+- [115.distinct-subsequences](./115.distinct-subsequences.java) #DP #字符串-DP \
+  hard! 这是 0-1 背包问题变种？ \
+  `dp[i][j] = dp[i-1][j] + ( s.charAt(i-1)==t.charAt(j-1) ? dp[i-1][j-1] : 0 ); `
+- [121.best-time-to-buy-and-sell-stock](./121.best-time-to-buy-and-sell-stock.java) #DP \
+  或者不卖，维持 dp[i-1]的 profit，或卖掉 当前价-已知的最小值
+- [122.best-time-to-buy-and-sell-stock-ii](./122.best-time-to-buy-and-sell-stock-ii.java) #DP #Greedy \
+- [124.binary-tree-maximum-path-sum](./124.binary-tree-maximum-path-sum.js) #DFS \
+  hard! DFS 返回 和 结果不是一个东西
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./131.palindrome-partitioning.rb) #DP, #DFS \
@@ -223,3 +231,5 @@ username cookie (recommand )
   ```
 - [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #DP \
   Hard [思路 tricky](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dong-tai-gui-hua-by-clearlife-99kq/)
+- [2320.count-number-of-ways-to-place-houses](./2320.count-number-of-ways-to-place-houses.java) #DP \
+  两种 DP 构造解法， 第一种： 选或不选结构； 第二种：`dp[i] = (dp[i-1] + dp[i-2])` Fibonacci 结构

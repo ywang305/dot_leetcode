@@ -10,22 +10,21 @@
  * @return {number}
  */
 var maxProfit = function (prices) {
-  //  方法1 ： 分清 顶 和 谷底
-  /** 
-  let bottom = prices[0],
-    top = bottom,
-    profit = 0;
-  for (let i = 1; i < prices.length; ++i) {
-    if (prices[i] > prices[i - 1]) {
-      top = prices[i];
+  //  方法1 ： DP 无限次买卖
+  const dp = [];
+  for (let i = 0; i < prices.length; ++i) {
+    const p = prices[i];
+    if (i === 0) {
+      dp[i] = { buy: -p, sell: 0 };
     } else {
-      profit += top - bottom;
-      top = bottom = prices[i];
+      dp[i] = {
+        buy: Math.max(dp[i - 1].buy, -p + dp[i - 1].sell), //或啥也不做-持有(之前买入状态)， 或之前卖掉本次买入
+        sell: Math.max(dp[i - 1].sell, p + dp[i - 1].buy), // 或啥也不做-保持（之前卖掉状态), 或之前买入本次卖掉
+      };
     }
   }
-  profit += top - bottom; // 如果一直涨，需要这一步
-  return profit;
-  */
+  const { buy, sell } = dp[prices.length - 1];
+  return Math.max(buy, sell);
 
   // 方法2: 贪婪, 只要在涨，就加到利润
   let profit = 0;
