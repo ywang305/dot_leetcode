@@ -220,6 +220,10 @@ username cookie (recommand )
   (2)本题 union find 比较容易, (3)另外也可以用拓扑排序: [三种解法总结](https://leetcode.cn/problems/redundant-connection/solution/bing-cha-ji-sou-suo-shen-du-yan-du-tuo-b-ev30/)
 - [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind #premium \
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
+- [828.count-unique-characters-of-all-substrings-of-a-given-string](./828.count-unique-characters-of-all-substrings-of-a-given-string.java) #DP #String \
+  hard。 暴力的方法是枚举 substring，然后考察这个区间里的字符哪些是 unique 的。这需要大致 o(N^2*26)的复杂度。聪明的方法是考察每个字符，它可能在哪些 substring 里是 unique 的。 \
+   重点是转换为计算每一个字符对 substring 对贡献值，并累计。 并且利用了乘法组合性质，e.g. `XXXA[XX A X]AXX`， given cur A index is 6, pre A index is 3, post A index 8, then all possible substring combination for cur A is `(6-3) * (8-6)` \
+  还有 DP 解法 ([2262 变种](./2262.total-appeal-of-a-string.js)) : [四种方法 统计子串中的唯一字符](https://leetcode.cn/problems/count-unique-characters-of-all-substrings-of-a-given-string/solution/by-liu-xiao-tao-vi4x/)
 - [1143.longest-common-subsequence](./1143.longest-common-subsequence.js) #DP #字符串-DP \
   DP, 经典
   ```js
@@ -229,7 +233,11 @@ username cookie (recommand )
     dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
   }
   ```
+- [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #单调栈 \
+  hard! 利用'单调栈' 和 '乘法组合' [一题三解：暴力 & 单调栈 & 栈优化！](https://leetcode.cn/problems/sum-of-subarray-ranges/solution/tong-ge-lai-shua-ti-la-yi-ti-san-jie-bao-sfas/)
 - [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #DP \
   Hard [思路 tricky](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dong-tai-gui-hua-by-clearlife-99kq/)
+- [2272.substring-with-largest-variance](2272.substring-with-largest-variance.java) #DP \
+  hard ！ 根据题意枚举 2 个字符，DP 使用到的 2 个状态变量感觉很 tricky（无法直观理解） ， 参考[最大子数组和的变形题](https://leetcode.cn/problems/substring-with-largest-variance/solution/by-endlesscheng-5775/)
 - [2320.count-number-of-ways-to-place-houses](./2320.count-number-of-ways-to-place-houses.java) #DP \
   两种 DP 构造解法， 第一种： 选或不选结构； 第二种：`dp[i] = (dp[i-1] + dp[i-2])` Fibonacci 结构
