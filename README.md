@@ -215,6 +215,8 @@ username cookie (recommand )
         index:  0     1     2      3     4     5     6
     [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
   ```
+- [472.concatenated-words](./472.concatenated-words.java) #Trie \
+  hard! Trie + DFS, [另外也可以用 hashset 替代 Trie](https://leetcode.com/submissions/detail/738625181/)
 - [684.redundant-connection](./684.redundant-connection.js) #DFS #UnionFind #拓扑 \
   (1)dfs：边构建图，边检测环，对于 s->t 的边，检查 s 的邻接点是否能到达 t，如果可以，则说明 s->t 是环路.
   (2)本题 union find 比较容易, (3)另外也可以用拓扑排序: [三种解法总结](https://leetcode.cn/problems/redundant-connection/solution/bing-cha-ji-sou-suo-shen-du-yan-du-tuo-b-ev30/)
@@ -233,6 +235,8 @@ username cookie (recommand )
     dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
   }
   ```
+- [1268.search-suggestions-system](search-suggestions-system.java) #Trie \
+  Trie + DFS , Trie's startsWith 有变化， 增加了一个 dfs_search, 当 startsWith 满足时，调用 dfs_search 搜索前缀尾节点（current node）之后的 3 个单词(isEnd)
 - [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #单调栈 \
   hard! 利用'单调栈' 和 '乘法组合' [一题三解：暴力 & 单调栈 & 栈优化！](https://leetcode.cn/problems/sum-of-subarray-ranges/solution/tong-ge-lai-shua-ti-la-yi-ti-san-jie-bao-sfas/)
 - [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #DP \
