@@ -262,6 +262,10 @@ username cookie (recommand )
   也可以用 DFS
 - [1762.buildings-with-an-ocean-view](1762.buildings-with-an-ocean-view.java) #单调栈 #premium \
   简单版的 Monotonic Stack， 没啥可说
+  <details>
+    <summary>description</summary>
+    ![image](https://user-images.githubusercontent.com/24782000/179360538-17dcac63-ae96-471e-80f4-e27a9421656f.png)
+  </details>
 - [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #单调栈 #贡献值 \
   hard! 利用'单调栈' 和 '乘法组合'： 使用「单调栈」找到某个 nums[i]nums[i] 的左边/右边的最近一个符合某种性质的位置，从而知道 nums[i]nums[i] 作为区间最值时，左右端点的可选择个数，再结合乘法原理知道 nums[i]nums[i] 能够作为区间最值的区间个数，从而知道 nums[i]nums[i] 对答案的贡献。 [907.sum-of-subarray-ranges 的套路](907.sum-of-subarray-minimums.java)
 - [2130.maximum-twin-sum-of-a-linked-list](2130.maximum-twin-sum-of-a-linked-list.java)
