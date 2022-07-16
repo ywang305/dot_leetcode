@@ -264,6 +264,7 @@ username cookie (recommand )
   简单版的 Monotonic Stack， 没啥可说
   <details>
     <summary>description</summary>
+  
     ![image](https://user-images.githubusercontent.com/24782000/179360538-17dcac63-ae96-471e-80f4-e27a9421656f.png)
   </details>
 - [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #单调栈 #贡献值 \
