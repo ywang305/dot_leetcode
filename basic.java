@@ -1,11 +1,15 @@
 class Trie {
-    protected Map<Character, Trie> children = new HashMap<>();
-    protected boolean isEnd = false;
+    Map<Character, Trie> children = new HashMap<>();
+    boolean isEnd = false;
+    String id; // in case need somewhere
+    Trie(String id) {
+        this.id = id;
+    }
 
     public void insert(String word) {
         var node = this;
         for(var c : word.toCharArray()) {
-            node = node.children.computeIfAbsent(c, (key)-> new Trie());
+            node = node.children.computeIfAbsent(c, (c)-> new Trie(c)); // 点睛
         }
         node.isEnd = true;
     }

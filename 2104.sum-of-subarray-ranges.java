@@ -6,64 +6,41 @@
 
 // @lc code=start
 class Solution {
-    /* Solution 1: 暴力 */
     public long subArrayRanges(int[] nums) {
+        return getCnt(nums, false) - getCnt(nums, true);
+    }
+    
+    // 求子数组最大 / 最小 和
+    // trap 值得注意的是，由于 nums[i] 存在相同元素，因此上述两边均取等号的做法会导致某些区间被重复计算，因此我们可以令最近右端点的部分不取等号，确保区间统计不重不漏。
+    public long getCnt(int[] nums, boolean isMin) {
         var n = nums.length;
-        var ans = 0L;
+        var stack = new Stack<Integer>();
+        int[] left = new int[n], right = new int[n];
+        
+        // 求左边界第一个比cur还小的位置， e.g. 对于最小值来说，即在左范围（stack's index， num's index] num贡献最小值 
         for(int i=0; i<n; ++i) {
-            int min = nums[i];
-            int max = nums[i];
-            for(int j=i+1; j<n; ++j) {
-                min = Math.min(min, nums[j]);
-                max = Math.max(max, nums[j]);
-                ans += max-min;
+            while(!stack.empty() && ( isMin? nums[stack.peek()]>=nums[i] : nums[stack.peek()]<=nums[i]) ) {
+                stack.pop();
             }
+            left[i] = stack.empty() ? -1 : stack.peek();
+            stack.push(i);
+        }
+        
+        stack.clear();
+        // 求右边界 index， e.g. 对于最小值来说，即在右范围 [num's index, stack's index) num贡献最小值
+        for(int i=n-1; i>=0; --i) {
+            while(!stack.empty() && ( isMin? nums[stack.peek()]>nums[i] : nums[stack.peek()]<nums[i]) ) {
+                stack.pop();
+            }
+            right[i] = stack.empty() ? n : stack.peek();
+            stack.push(i);
+        }
+        
+        long ans = 0;
+        for(int i=0; i<n; ++i) {
+            ans += (long) nums[i] * (i-left[i]) * (right[i]-i); // 贡献值的组合成法
         }
         return ans;
-    }
-
-    /* Solution 2: Monotonic Stack */
-    public long subArrayRanges(int[] nums) {
-        return maxSum(nums) - minSum(nums);
-    }
-    
-    long maxSum(int[] nums) {
-        /**
-        e.g. [100, 4, 98, 60, 2, 3, 2, 1, 75, ...]
-        当算到i在75时 stack里是[100的index, 98 index, 60 index, 3 index]
-        （1）pop 3的index=5， 即 lastMax, leftBound 是 60的index=3， rightBound是75deindex=8
-        即subarray ...60, [2, 3, 2, 1], 75...  中3是最大值，
-        利用乘法组合得到多少个sūbarrays， 所以3对这些个subarrys都有贡献最大值。
-        （2） 继续pop 60 index = 3， 即 60是subarrays组合的最大值  ...98, [60, 2, 3, 2, 1], 75...
-            同样的故事。。。
-         */
-        var sum = 0L;
-        var stack = new Stack<Integer>();
-        for(var i=0; i<=nums.length; ++i) {
-            while(!stack.empty() && (i==nums.length || nums[stack.peek()]<nums[i])) {
-                var lastMax = stack.pop();
-                var leftBound = stack.empty() ? -1 : stack.peek();
-                var rightBound = i;
-                sum += (long) nums[lastMax] * (rightBound-lastMax) * (lastMax-leftBound);
-            }
-            stack.push(i);
-        }
-        return sum;
-    }
-    
-    long minSum(int[] nums) {
-        var sum = 0L;
-        var stack = new Stack<Integer>();
-        for(var i=0; i<=nums.length; ++i) {
-            while(!stack.empty() && (i==nums.length || nums[stack.peek()]>nums[i])) {
-                var lastMin = stack.pop();
-                var leftBound = stack.empty() ? -1 : stack.peek();
-                var rightBound = i;
-                sum += (long) nums[lastMin] * (rightBound-lastMin) * (lastMin-leftBound);
-            }
-            stack.push(i);
-        }
-        return sum;
     }
 }
 // @lc code=end

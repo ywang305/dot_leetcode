@@ -29,6 +29,8 @@ username cookie (recommand )
   经典 DP, `s[i] === s[j] && (j - i <= 2 || dp[i + 1][j - 1] === true`
 - [11.container-with-most-water](./11.container-with-most-water.js) #Greedy \
   简单 Greedy， 两边缩减
+- [12.integer-to-roman.java](12.integer-to-roman.java) #Greedy \
+  [图解 贪心哈希表](https://leetcode.cn/problems/integer-to-roman/solution/tan-xin-ha-xi-biao-tu-jie-by-ml-zimingmeng/)
 - [17.letter-combinations-of-a-phone-number](./17.letter-combinations-of-a-phone-number.js) #DFS, #组合
 - [22.generate-parentheses](./22.generate-parentheses.js) #DFS
   经典 DFS
@@ -95,7 +97,7 @@ username cookie (recommand )
 - [75.sort-colors](./75.sort-colors.js) #QuickSort \
   quickSelect -> quickSort 变种， 思想一样
 - [76.minimum-window-substring](./76.minimum-window-substring.js) #双指针哈西 \
-  hard, 双指针哈西-变种， 配合额外控制变量 needCnt
+  hard, 双指针哈西-变种[js 解题思路 清晰明了](https://leetcode.cn/problems/minimum-window-substring/solution/jsjie-ti-si-lu-qing-xi-ming-liao-by-inte-qmpu/), [Java 注释版](./76.minimum-window-substring.java)
 - [77.combinations](./77.combinations.js) #组合 \
   经典
 - [78.subsets](./78.subsets.js) #组合 \
@@ -108,7 +110,7 @@ username cookie (recommand )
   33.旋转数组之变种， BS 需要考虑重复元素，即重复元素下分不清是左边/右边有序，此时 start++ 即可。相当于去掉一个重复的干扰项，详见题解[搜索旋转排序数组 II](https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/solution/zai-javazhong-ji-bai-liao-100de-yong-hu-by-reedfan/)
 - [84.largest-rectangle-in-histogram](./84.largest-rectangle-in-histogram.js) #单调栈 \
   hard, 核心思想:求每条柱子可以向左右延伸的长度->矩形最大宽度 \* 柱子的高度, 计算以每一根柱子高度为高的矩形面积,维护面积最大值
-  [单调栈入门，使用单调栈快速寻找边界](https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/84-by-ikaruga/)
+  [单调栈入门，使用单调栈快速寻找边界](https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/zhao-liang-bian-di-yi-ge-xiao-yu-ta-de-zhi-by-powc/)
 - [85.maximal-rectangle](./85.maximal-rectangle.js) #单调栈 \
   hard, 84 题的变种，从第一行到第 n 行形成的柱状图可以利用 84 题求解，[单调栈解法](https://leetcode.cn/problems/maximal-rectangle/solution/dai-ma-jian-ji-yi-chong-huan-bu-cuo-de-j-k1p3/)
 - [90.subsets-ii](./90.subsets-ii.js) #组合 \
@@ -154,7 +156,7 @@ username cookie (recommand )
 - [135.candy](./135.candy.js) #Greedy \
   贪婪， 按照条件两边扫描更新结果
 - [139.word-break](./139.word-break.js) #DP \
-  经典 DP[i]： s[0, i)是否可以分割,左开右闭, 设初始[0,0)空字符串 true
+  经典 DP[i]： s[0, i)是否可以分割, 设初始[0,0)空字符串 true
 - [140.word-break-ii](./140.word-break-ii.js) #DFS \
   经典 DFS, 吃吐
 - [146.lru-cache](./146.lru-cache.js) #lru \
@@ -194,6 +196,7 @@ username cookie (recommand )
   DP, easy 经典 to be or not to be
 - [200.number-of-islands](./200.number-of-islands.js) #UnionFind \
   UnionFind
+- [210.course-schedule-ii](210.course-schedule-ii.java) #Topo
 - [212.word-search-ii](./212.word-search-ii.js) #Trie \
   hard, 没有那么难。 Trie + DFS
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
@@ -202,8 +205,8 @@ username cookie (recommand )
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
-- [394.decode-string](./394.decode-string.js) #栈 \
-  [394.借助栈解决](https://leetcode.cn/problems/decode-string/solution/394jie-zhu-zhan-jie-jue-by-wan-jia-guo-d-sqe0/)
+- [394.decode-string](./394.decode-string.js) #Stack \
+  [借助栈解决](https://leetcode.cn/problems/decode-string/solution/394jie-zhu-zhan-jie-jue-by-wan-jia-guo-d-sqe0/)
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket
   ```
     bucket sort
@@ -217,17 +220,31 @@ username cookie (recommand )
   ```
 - [472.concatenated-words](./472.concatenated-words.java) #Trie \
   hard! Trie + DFS, [另外也可以用 hashset 替代 Trie](https://leetcode.com/submissions/detail/738625181/)
-- [684.redundant-connection](./684.redundant-connection.js) #DFS #UnionFind #拓扑 \
+- [496.next-greater-element-i](496.next-greater-element-i.java) #单调栈 \
+  easy, 单调栈 只算右边界， 套路参考[907.sum-of-subarray-minimums](./907.sum-of-subarray-minimums.js
+- [545.boundary-of-binary-tree](545.boundary-of-binary-tree.java) #premium \
+  tree 边界分三种情况分别 DFS
+- [588.design-in-memory-file-system](./588.design-in-memory-file-system.java) #Trie \
+  hard, but not hard with Trie
+- [684.redundant-connection](./684.redundant-connection.js) #DFS #UnionFind #Topo \
   (1)dfs：边构建图，边检测环，对于 s->t 的边，检查 s 的邻接点是否能到达 t，如果可以，则说明 s->t 是环路.
   (2)本题 union find 比较容易, (3)另外也可以用拓扑排序: [三种解法总结](https://leetcode.cn/problems/redundant-connection/solution/bing-cha-ji-sou-suo-shen-du-yan-du-tuo-b-ev30/)
 - [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind #premium \
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
-- [828.count-unique-characters-of-all-substrings-of-a-given-string](./828.count-unique-characters-of-all-substrings-of-a-given-string.java) #DP #String \
+- [739.daily-temperatures](739.daily-temperatures.java) #单调栈 \
+  同[496.next-greater-element-i](496.next-greater-element-i.java)
+- [828.count-unique-characters-of-all-substrings-of-a-given-string](./828.count-unique-characters-of-all-substrings-of-a-given-string.java) #DP #String #贡献值 \
   hard。 暴力的方法是枚举 substring，然后考察这个区间里的字符哪些是 unique 的。这需要大致 o(N^2*26)的复杂度。聪明的方法是考察每个字符，它可能在哪些 substring 里是 unique 的。 \
    重点是转换为计算每一个字符对 substring 对贡献值，并累计。 并且利用了乘法组合性质，e.g. `XXXA[XX A X]AXX`， given cur A index is 6, pre A index is 3, post A index 8, then all possible substring combination for cur A is `(6-3) * (8-6)` \
   还有 DP 解法 ([2262 变种](./2262.total-appeal-of-a-string.js)) : [四种方法 统计子串中的唯一字符](https://leetcode.cn/problems/count-unique-characters-of-all-substrings-of-a-given-string/solution/by-liu-xiao-tao-vi4x/)
+- [907.sum-of-subarray-minimums](./907.sum-of-subarray-minimums.js) #单调栈 #贡献值 \
+  解题思路：单调栈+贡献值, 又是每个位置的左右乘积组合 [【超小白】动画详解保证教会你这道题 ](https://leetcode.cn/problems/sum-of-subarray-minimums/solution/xiao-bai-lang-dong-hua-xiang-jie-bao-zhe-489q/)
+- [926.flip-string-to-monotone-increasing](./926.flip-string-to-monotone-increasing.java) #DP #PreSum \
+  [前缀和 / 动态规划](https://leetcode.cn/problems/flip-string-to-monotone-increasing/solution/qian-zhui-he-dong-tai-gui-hua-by-xiaohu9-ayii/)
+- [973.k-closest-points-to-origin](973.k-closest-points-to-origin.java) #QuickSort \
+  quickSelect， O(n)
 - [1143.longest-common-subsequence](./1143.longest-common-subsequence.js) #DP #字符串-DP \
-  DP, 经典
+   DP, 经典
   ```js
   if (text1[i - 1] === text2[j - 1]) {
     dp[i][j] = dp[i - 1][j - 1] + 1;
@@ -235,12 +252,24 @@ username cookie (recommand )
     dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
   }
   ```
-- [1268.search-suggestions-system](search-suggestions-system.java) #Trie \
+- [1151.minimum-swaps-to-group-all-1s-togethe](1151.minimum-swaps-to-group-all-1s-together.java) #premium \
+   问题转换为移动窗口内有多少个 1
+- [1249.minimum-remove-to-make-valid-parentheses](1249.minimum-remove-to-make-valid-parentheses.java) #Stack \
+- [1268.search-suggestions-system](1268.search-suggestions-system.java) #Trie \
   Trie + DFS , Trie's startsWith 有变化， 增加了一个 dfs_search, 当 startsWith 满足时，调用 dfs_search 搜索前缀尾节点（current node）之后的 3 个单词(isEnd)
-- [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #单调栈 \
-  hard! 利用'单调栈' 和 '乘法组合' [一题三解：暴力 & 单调栈 & 栈优化！](https://leetcode.cn/problems/sum-of-subarray-ranges/solution/tong-ge-lai-shua-ti-la-yi-ti-san-jie-bao-sfas/)
-- [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #DP \
-  Hard [思路 tricky](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dong-tai-gui-hua-by-clearlife-99kq/)
+- [1567.maximum-length-of-subarray-with-positive-product](1567.maximum-length-of-subarray-with-positive-product.java) #DP \
+  正/负 两个状态 层层递推 [思路](https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/solution/dong-tai-gui-hua-by-jiao-chun-peng-vjqi/) \
+  也可以用 DFS
+- [1762.buildings-with-an-ocean-view](1762.buildings-with-an-ocean-view.java) #单调栈 #premium \
+  简单版的 Monotonic Stack， 没啥可说
+- [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #单调栈 #贡献值 \
+  hard! 利用'单调栈' 和 '乘法组合'： 使用「单调栈」找到某个 nums[i]nums[i] 的左边/右边的最近一个符合某种性质的位置，从而知道 nums[i]nums[i] 作为区间最值时，左右端点的可选择个数，再结合乘法原理知道 nums[i]nums[i] 能够作为区间最值的区间个数，从而知道 nums[i]nums[i] 对答案的贡献。 [907.sum-of-subarray-ranges 的套路](907.sum-of-subarray-minimums.java)
+- [2130.maximum-twin-sum-of-a-linked-list](2130.maximum-twin-sum-of-a-linked-list.java)
+  快慢指针 + 反转子链表
+- [2214.minimum-health-to-beat-game](2214.minimum-health-to-beat-game.java) #premium \
+  从整体考虑 [题目看起来挺吓人其实是一道 easy 题](https://blog.csdn.net/hgq522/article/details/123982237)
+- [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #贡献值 \
+  Hard ! (super easy if you know it!) 又是对每个字符计算贡献值，左右组合乘法。 [对于每个字符统计贡献](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dui-yu-mei-ge-zi-fu-tong-ji-gong-xian-by-4s68/)
 - [2272.substring-with-largest-variance](2272.substring-with-largest-variance.java) #DP \
   hard ！ 根据题意枚举 2 个字符，DP 使用到的 2 个状态变量感觉很 tricky（无法直观理解） ， 参考[最大子数组和的变形题](https://leetcode.cn/problems/substring-with-largest-variance/solution/by-endlesscheng-5775/)
 - [2320.count-number-of-ways-to-place-houses](./2320.count-number-of-ways-to-place-houses.java) #DP \

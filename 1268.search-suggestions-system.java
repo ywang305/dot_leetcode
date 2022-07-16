@@ -13,7 +13,6 @@ class Solution {
         List<List<String>> ans = new ArrayList<List<String>>();
         
         for(int i=0; i<searchWord.length(); ++i) {
-            List<String> cur = new ArrayList<>();
             var curAns = trie.startsWith( searchWord.substring(0, i+1) );
             ans.add(curAns);
         }

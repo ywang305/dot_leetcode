@@ -29,16 +29,13 @@
  * @return {number}
  */
 var appealSum = function (s) {
-  let dp = [];
-  let map = new Map();
-  for (let i = 0; i < s.length; i++) {
-    if (map.has(s[i])) {
-      dp[i] = (dp[i - 1] ?? 0) + i - map.get(s[i]);
-    } else {
-      dp[i] = (dp[i - 1] ?? 0) + i + 1;
-    }
-    map.set(s[i], i);
+  const lasts = {};
+  const n = s.length;
+  let res = 0;
+  for (let i = 0; i < n; ++i) {
+    res += (i - (lasts[s[i]] ?? -1)) * (n - i);
+    lasts[s[i]] = i;
   }
-  return dp.reduce((a, c) => a + c, 0);
+  return res;
 };
 // @lc code=end
