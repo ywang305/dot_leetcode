@@ -122,13 +122,30 @@ const quickSort2 = (list, start = 0, end = list.length - 1) => {
   let pivot = list[end];
   for (let i = start; i <= end; ++i) {
     if (list[i] <= pivot) {
-      [list[i], list[p]] = [list[p], list[i]];
+      swap(i, p);
       p++;
     }
   }
   // 注意 p-1 对应的pivot值(由最后一次循环的交换保证),
   quickSort2(list, start, p - 2); // 排除 pivot (如果p-1会导致 max call stack)
   quickSort2(list, p, end);
+};
+
+// quick select kth largest
+const quickSelect = (left, right) => {
+  let p = left,
+    pivot = nums[right];
+  for (let i = left; i < right; ++i) {
+    // i<right 因为 最右边是 pivot（不动）
+    if (nums[i] <= pivot) {
+      swap(i, p);
+      ++p;
+    }
+  }
+  swap(p, right); // 最后把pivot放置到分界 p 就是 pivotIndex
+  if (p < k) return quickSelect(p + 1, right);
+  if (p > k) return quickSelect(left, p - 1);
+  return nums[p];
 };
 
 // in-place,  double boundarys:  [start, i-1], [i==j/pivot], [j+1, end]

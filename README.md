@@ -94,8 +94,7 @@ username cookie (recommand )
   难, `Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1` dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]分别对应插入/删除/替换(trick)
 - [74.search-a-2d-matrix](./74.search-a-2d-matrix.js) #BS \
   经典 highbound
-- [75.sort-colors](./75.sort-colors.js) #QuickSort \
-  quickSelect -> quickSort 变种， 思想一样
+- [75.sort-colors](./75.sort-colors.js) #QuickSelect \
 - [76.minimum-window-substring](./76.minimum-window-substring.js) #双指针哈西 \
   hard, 双指针哈西-变种[js 解题思路 清晰明了](https://leetcode.cn/problems/minimum-window-substring/solution/jsjie-ti-si-lu-qing-xi-ming-liao-by-inte-qmpu/), [Java 注释版](./76.minimum-window-substring.java)
 - [77.combinations](./77.combinations.js) #组合 \
@@ -196,9 +195,19 @@ username cookie (recommand )
   DP, easy 经典 to be or not to be
 - [200.number-of-islands](./200.number-of-islands.js) #UnionFind \
   UnionFind
+- [207.course-schedule](./207.course-schedule.java) #Topo \
+- [209.Minimum-Size-Subarray-Sum](209.minimum-size-subarray-sum.java) #双指针 \
+  just straightforward sliding window
 - [210.course-schedule-ii](210.course-schedule-ii.java) #Topo
+- [211.design-add-and-search-words-data-structure](211.design-add-and-search-words-data-structure.java) #Trie \
+  Trie + （forloop 内混合 DFS）
 - [212.word-search-ii](./212.word-search-ii.js) #Trie \
   hard, 没有那么难。 Trie + DFS
+- [213.house-robber-ii](./213.house-robber-ii.java) #DP \
+  此题是 198. 打家劫舍 的拓展版： 唯一的区别是此题中的房间是环状排列的（即首尾相接), 环状排列意味着第一个房子和最后一个房子中只能选择一个偷窃，因此可以把此环状排列房间问题约化为两个单排排列房间子问题：(1) 在不偷窃第一个房子的情况; (2) 在不偷窃最后一个房子的情况. 综合偷窃最大金额： 为以上两种情况的较大值.
+- [215.kth-largest-element-in-an-array](./215.kth-largest-element-in-an-array.java) #QuickSelect \
+  QuickSelect 从大到小， 清晰写法（loop 不含最后位置-pivot），最后 swap(p，right), p 即 pivotIndex
+- [216.combination-sum-iii](./216.combination-sum-iii.java) #组合 \
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
@@ -241,7 +250,7 @@ username cookie (recommand )
   解题思路：单调栈+贡献值, 又是每个位置的左右乘积组合 [【超小白】动画详解保证教会你这道题 ](https://leetcode.cn/problems/sum-of-subarray-minimums/solution/xiao-bai-lang-dong-hua-xiang-jie-bao-zhe-489q/)
 - [926.flip-string-to-monotone-increasing](./926.flip-string-to-monotone-increasing.java) #DP #PreSum \
   [前缀和 / 动态规划](https://leetcode.cn/problems/flip-string-to-monotone-increasing/solution/qian-zhui-he-dong-tai-gui-hua-by-xiaohu9-ayii/)
-- [973.k-closest-points-to-origin](973.k-closest-points-to-origin.java) #QuickSort \
+- [973.k-closest-points-to-origin](973.k-closest-points-to-origin.java) #QuickSelect \
   quickSelect， O(n)
 - [1143.longest-common-subsequence](./1143.longest-common-subsequence.js) #DP #字符串-DP \
    DP, 经典
@@ -264,9 +273,10 @@ username cookie (recommand )
   简单版的 Monotonic Stack， 没啥可说
   <details>
     <summary>description</summary>
-  
-    ![image](https://user-images.githubusercontent.com/24782000/179360538-17dcac63-ae96-471e-80f4-e27a9421656f.png)
+
+  ![image](https://user-images.githubusercontent.com/24782000/179360538-17dcac63-ae96-471e-80f4-e27a9421656f.png)
   </details>
+
 - [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #单调栈 #贡献值 \
   hard! 利用'单调栈' 和 '乘法组合'： 使用「单调栈」找到某个 nums[i]nums[i] 的左边/右边的最近一个符合某种性质的位置，从而知道 nums[i]nums[i] 作为区间最值时，左右端点的可选择个数，再结合乘法原理知道 nums[i]nums[i] 能够作为区间最值的区间个数，从而知道 nums[i]nums[i] 对答案的贡献。 [907.sum-of-subarray-ranges 的套路](907.sum-of-subarray-minimums.java)
 - [2130.maximum-twin-sum-of-a-linked-list](2130.maximum-twin-sum-of-a-linked-list.java)
