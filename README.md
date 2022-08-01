@@ -208,6 +208,12 @@ username cookie (recommand )
 - [215.kth-largest-element-in-an-array](./215.kth-largest-element-in-an-array.java) #QuickSelect \
   QuickSelect 从大到小， 清晰写法（loop 不含最后位置-pivot），最后 swap(p，right), p 即 pivotIndex
 - [216.combination-sum-iii](./216.combination-sum-iii.java) #组合 \
+- [218.the-skyline-problem](218.the-skyline-problem.java) #扫描线 \
+  hard! 大顶堆，[扫描线算法基本思路](https://leetcode.cn/problems/the-skyline-problem/solution/gong-shui-san-xie-sao-miao-xian-suan-fa-0z6xc/)
+- [220.contains-duplicate-iii](./220.contains-duplicate-iii.java) #TreeSet \
+  利用 TreeSet 作为 sliding window，用法：floor, ceiling, TreeSet.pollFirst() // 取出最小值, 本题不能用 pollFrist，而是 remove(someValue)
+- [221.maximal-square](./221.maximal-square.java) #DP \
+  理解 min(上, 左, 左上) + 1
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
