@@ -214,6 +214,12 @@ username cookie (recommand )
   利用 TreeSet 作为 sliding window，用法：floor, ceiling, TreeSet.pollFirst() // 取出最小值, 本题不能用 pollFrist，而是 remove(someValue)
 - [221.maximal-square](./221.maximal-square.java) #DP \
   理解 min(上, 左, 左上) + 1
+- [222.count-complete-tree-nodes](./222.count-complete-tree-nodes.java) #Tree \
+  有难度，技巧，工整简洁 [利用完全二叉树的性质优化](https://leetcode.cn/problems/count-complete-tree-nodes/solution/by-xiaochengtongxue_-guv3/)
+- [224.basic-calculator](224.basic-calculator.java) #Stack \
+  hard! 双栈，given +，-，（，）， 考虑 op 左右括号
+- [227.basic-calculator-ii](227.basic-calculator-ii.js) #Stack \
+  双栈， given +,-,\*,/, 考虑 op 优先级
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
