@@ -220,12 +220,16 @@ username cookie (recommand )
   hard! 双栈，given +，-，（，）， 考虑 op 左右括号
 - [227.basic-calculator-ii](227.basic-calculator-ii.js) #Stack \
   双栈， given +,-,\*,/, 考虑 op 优先级
+- [231.power-of-two](./231.power-of-two.rb) #bit \
+  easy, n & (n-1) 会去掉一个最低位的 1
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
+- [338.counting-bits](./338.counting-bits.rb) #bit \
+  easy, n & (n-1) 会去掉一个最低位的 1
 - [394.decode-string](./394.decode-string.js) #Stack \
   [借助栈解决](https://leetcode.cn/problems/decode-string/solution/394jie-zhu-zhan-jie-jue-by-wan-jia-guo-d-sqe0/)
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket
