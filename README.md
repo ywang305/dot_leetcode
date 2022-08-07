@@ -222,6 +222,20 @@ username cookie (recommand )
   双栈， given +,-,\*,/, 考虑 op 优先级
 - [231.power-of-two](./231.power-of-two.rb) #bit \
   easy, n & (n-1) 会去掉一个最低位的 1
+- [233.number-of-digit-one](./233.number-of-digit-one.java) #贡献值 \
+  hard! [宫水三叶](https://leetcode.cn/problems/number-of-digit-one/solution/gong-shui-san-xie-jiang-shu-wei-dp-wen-t-c9oi/)
+  <details>
+    <pre>
+    假设有 n = abcde，即 m = 5，假设我们需要统计第 3 位中 1 出现的次数，即可统计满足 1 <= --1-- <= abcde 要求的数有多少个? 
+      - 当 c 前面的部分 < ab, 即范围为 [0, ab)，此时必然满足「大小要求」，因此后面的部分可以任意取，即范围为 [0, 99]。根据「乘法原理」，可得知此时数量为 ab * 100
+      - 当 c 前面的部分 = ab，这时候「大小关系」主要取决于 c：
+        1. 当 c = 0，必然不满足「大小要求」，数量为 0；
+        2. 当 c = 1，此时「大小关系」取决于后部分，后面的取值范围为 [0, de]，数量为 1 * (de + 1)；
+        3. 当 c > 1，必然满足「大小关系」，后面的部分可以任意取，即范围为 [0, 99]，数量为 1 * 100；
+        4. 当 cc 前面的部分 > ab，必然不满足「大小要求」，数量为 0。
+      - 当 c 前面的部分 > ab，必然不满足「大小要求」，数量为 0。
+    </pre>
+  </details>
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
