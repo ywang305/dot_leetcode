@@ -239,9 +239,10 @@ username cookie (recommand )
 - [239.sliding-window-maximum](239.sliding-window-maximum.java) #Monotonic \
   经典例题 单调队列
 - [240.search-a-2d-matrix-ii](./240.search-a-2-d-matrix-ii.java) #Tree \
-  貌似 BinarySearch，但是本题没有确保「每行的第一个整数大于前一行的最后一个整数, 因此我们无法采取「两次二分」的做法。(骗我). [抽象 BST](https://leetcode.cn/problems/search-a-2d-matrix-ii/solution/gong-shui-san-xie-yi-ti-shuang-jie-er-fe-y1ns/)
+  貌似 BinarySearch，但是本题没有确保「每行的第一个整数大于前一行的最后一个整数, 因此我们无法采取「两次二分」的做法。(骗我). [【宫水三叶】抽象 BST](https://leetcode.cn/problems/search-a-2d-matrix-ii/solution/gong-shui-san-xie-yi-ti-shuang-jie-er-fe-y1ns/)
   <details>
     <summary>抽象 BST</summary>
+    <img width="730" alt="image" src="https://user-images.githubusercontent.com/24782000/184059998-8702e467-232c-41f8-91e0-68078ecebf17.png">
   </details>
 - [241.different-ways-to-add-parentheses](241.different-ways-to-add-parentheses.java) #DFS \
   针对操作符分成左右两部分递归
