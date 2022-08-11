@@ -65,7 +65,7 @@ username cookie (recommand )
   组合变种， 包括重复元素， every time go from i
 - [40.combination-sum-ii](./40.combination-sum-ii.js) #DFS #组合 \
   组合变种, 跳过重复的元素, `if (i > start && candidates[i] === candidates[i - 1]) continue; `
-- [42.trapping-rain-water](./42.trapping-rain-water.js) #单调栈 #DP \
+- [42.trapping-rain-water](./42.trapping-rain-water.js) #Monotonic #DP \
   解法 （1） DP 空间（n) 比较好理解， （2） 双指针 空间（1）。 [ref:youtube](https://www.youtube.com/watch?v=ZI2z5pq0TqA), key: 对每个位置，找到最大的左右墙壁高度 \
   （3）[单调递减栈，简洁代码](https://leetcode.cn/problems/trapping-rain-water/solution/trapping-rain-water-by-ikaruga/)
 - [44.wildcard-matching](./44.wildcard-matching.js) #DP #字符串-DP \
@@ -107,11 +107,11 @@ username cookie (recommand )
   经典
 - [81.search-in-rotated-sorted-array-ii](./81.search-in-rotated-sorted-array-ii.js) #BS \
   33.旋转数组之变种， BS 需要考虑重复元素，即重复元素下分不清是左边/右边有序，此时 start++ 即可。相当于去掉一个重复的干扰项，详见题解[搜索旋转排序数组 II](https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/solution/zai-javazhong-ji-bai-liao-100de-yong-hu-by-reedfan/)
-- [84.largest-rectangle-in-histogram](./84.largest-rectangle-in-histogram.js) #单调栈 \
+- [84.largest-rectangle-in-histogram](./84.largest-rectangle-in-histogram.js) #Monotonic \
   hard, 核心思想:求每条柱子可以向左右延伸的长度->矩形最大宽度 \* 柱子的高度, 计算以每一根柱子高度为高的矩形面积,维护面积最大值
-  [单调栈入门，使用单调栈快速寻找边界](https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/zhao-liang-bian-di-yi-ge-xiao-yu-ta-de-zhi-by-powc/)
-- [85.maximal-rectangle](./85.maximal-rectangle.js) #单调栈 \
-  hard, 84 题的变种，从第一行到第 n 行形成的柱状图可以利用 84 题求解，[单调栈解法](https://leetcode.cn/problems/maximal-rectangle/solution/dai-ma-jian-ji-yi-chong-huan-bu-cuo-de-j-k1p3/)
+  [Monotonic 入门，使用 Monotonic 快速寻找边界](https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/zhao-liang-bian-di-yi-ge-xiao-yu-ta-de-zhi-by-powc/)
+- [85.maximal-rectangle](./85.maximal-rectangle.js) #Monotonic \
+  hard, 84 题的变种，从第一行到第 n 行形成的柱状图可以利用 84 题求解，[Monotonic 解法](https://leetcode.cn/problems/maximal-rectangle/solution/dai-ma-jian-ji-yi-chong-huan-bu-cuo-de-j-k1p3/)
 - [90.subsets-ii](./90.subsets-ii.js) #组合 \
   [78.subsets](./78.subsets.js) 的扩展, 去重
 - [91.decode-ways](./91.decode-ways.js) #DP \
@@ -236,6 +236,15 @@ username cookie (recommand )
       - 当 c 前面的部分 > ab，必然不满足「大小要求」，数量为 0。
     </pre>
   </details>
+- [239.sliding-window-maximum](239.sliding-window-maximum.java) #Monotonic \
+  经典例题 单调队列
+- [240.search-a-2d-matrix-ii](./240.search-a-2-d-matrix-ii.java) #Tree \
+  貌似 BinarySearch，但是本题没有确保「每行的第一个整数大于前一行的最后一个整数, 因此我们无法采取「两次二分」的做法。(骗我). [抽象 BST](https://leetcode.cn/problems/search-a-2d-matrix-ii/solution/gong-shui-san-xie-yi-ti-shuang-jie-er-fe-y1ns/)
+  <details>
+    <summary>抽象 BST</summary>
+  </details>
+- [241.different-ways-to-add-parentheses](241.different-ways-to-add-parentheses.java) #DFS \
+  针对操作符分成左右两部分递归
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
@@ -259,8 +268,8 @@ username cookie (recommand )
   ```
 - [472.concatenated-words](./472.concatenated-words.java) #Trie \
   hard! Trie + DFS, [另外也可以用 hashset 替代 Trie](https://leetcode.com/submissions/detail/738625181/)
-- [496.next-greater-element-i](496.next-greater-element-i.java) #单调栈 \
-  easy, 单调栈 只算右边界， 套路参考[907.sum-of-subarray-minimums](./907.sum-of-subarray-minimums.js
+- [496.next-greater-element-i](496.next-greater-element-i.java) #Monotonic \
+  easy, Monotonic 只算右边界， 套路参考[907.sum-of-subarray-minimums](./907.sum-of-subarray-minimums.js
 - [545.boundary-of-binary-tree](545.boundary-of-binary-tree.java) #premium \
   tree 边界分三种情况分别 DFS
 - [588.design-in-memory-file-system](./588.design-in-memory-file-system.java) #Trie \
@@ -270,14 +279,14 @@ username cookie (recommand )
   (2)本题 union find 比较容易, (3)另外也可以用拓扑排序: [三种解法总结](https://leetcode.cn/problems/redundant-connection/solution/bing-cha-ji-sou-suo-shen-du-yan-du-tuo-b-ev30/)
 - [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind #premium \
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
-- [739.daily-temperatures](739.daily-temperatures.java) #单调栈 \
+- [739.daily-temperatures](739.daily-temperatures.java) #Monotonic \
   同[496.next-greater-element-i](496.next-greater-element-i.java)
 - [828.count-unique-characters-of-all-substrings-of-a-given-string](./828.count-unique-characters-of-all-substrings-of-a-given-string.java) #DP #String #贡献值 \
   hard。 暴力的方法是枚举 substring，然后考察这个区间里的字符哪些是 unique 的。这需要大致 o(N^2*26)的复杂度。聪明的方法是考察每个字符，它可能在哪些 substring 里是 unique 的。 \
    重点是转换为计算每一个字符对 substring 对贡献值，并累计。 并且利用了乘法组合性质，e.g. `XXXA[XX A X]AXX`， given cur A index is 6, pre A index is 3, post A index 8, then all possible substring combination for cur A is `(6-3) * (8-6)` \
   还有 DP 解法 ([2262 变种](./2262.total-appeal-of-a-string.js)) : [四种方法 统计子串中的唯一字符](https://leetcode.cn/problems/count-unique-characters-of-all-substrings-of-a-given-string/solution/by-liu-xiao-tao-vi4x/)
-- [907.sum-of-subarray-minimums](./907.sum-of-subarray-minimums.js) #单调栈 #贡献值 \
-  解题思路：单调栈+贡献值, 又是每个位置的左右乘积组合 [【超小白】动画详解保证教会你这道题 ](https://leetcode.cn/problems/sum-of-subarray-minimums/solution/xiao-bai-lang-dong-hua-xiang-jie-bao-zhe-489q/)
+- [907.sum-of-subarray-minimums](./907.sum-of-subarray-minimums.js) #Monotonic #贡献值 \
+  解题思路：Monotonic+贡献值, 又是每个位置的左右乘积组合 [【超小白】动画详解保证教会你这道题 ](https://leetcode.cn/problems/sum-of-subarray-minimums/solution/xiao-bai-lang-dong-hua-xiang-jie-bao-zhe-489q/)
 - [926.flip-string-to-monotone-increasing](./926.flip-string-to-monotone-increasing.java) #DP #PreSum \
   [前缀和 / 动态规划](https://leetcode.cn/problems/flip-string-to-monotone-increasing/solution/qian-zhui-he-dong-tai-gui-hua-by-xiaohu9-ayii/)
 - [973.k-closest-points-to-origin](973.k-closest-points-to-origin.java) #QuickSelect \
@@ -299,7 +308,7 @@ username cookie (recommand )
 - [1567.maximum-length-of-subarray-with-positive-product](1567.maximum-length-of-subarray-with-positive-product.java) #DP \
   正/负 两个状态 层层递推 [思路](https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/solution/dong-tai-gui-hua-by-jiao-chun-peng-vjqi/) \
   也可以用 DFS
-- [1762.buildings-with-an-ocean-view](1762.buildings-with-an-ocean-view.java) #单调栈 #premium \
+- [1762.buildings-with-an-ocean-view](1762.buildings-with-an-ocean-view.java) #Monotonic #premium \
   简单版的 Monotonic Stack， 没啥可说
   <details>
     <summary>description</summary>
@@ -307,8 +316,8 @@ username cookie (recommand )
   ![image](https://user-images.githubusercontent.com/24782000/179360538-17dcac63-ae96-471e-80f4-e27a9421656f.png)
   </details>
 
-- [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #单调栈 #贡献值 \
-  hard! 利用'单调栈' 和 '乘法组合'： 使用「单调栈」找到某个 nums[i]nums[i] 的左边/右边的最近一个符合某种性质的位置，从而知道 nums[i]nums[i] 作为区间最值时，左右端点的可选择个数，再结合乘法原理知道 nums[i]nums[i] 能够作为区间最值的区间个数，从而知道 nums[i]nums[i] 对答案的贡献。 [907.sum-of-subarray-ranges 的套路](907.sum-of-subarray-minimums.java)
+- [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #Monotonic #贡献值 \
+  hard! 利用'Monotonic' 和 '乘法组合'： 使用「Monotonic」找到某个 nums[i]nums[i] 的左边/右边的最近一个符合某种性质的位置，从而知道 nums[i]nums[i] 作为区间最值时，左右端点的可选择个数，再结合乘法原理知道 nums[i]nums[i] 能够作为区间最值的区间个数，从而知道 nums[i]nums[i] 对答案的贡献。 [907.sum-of-subarray-ranges 的套路](907.sum-of-subarray-minimums.java)
 - [2130.maximum-twin-sum-of-a-linked-list](2130.maximum-twin-sum-of-a-linked-list.java)
   快慢指针 + 反转子链表
 - [2214.minimum-health-to-beat-game](2214.minimum-health-to-beat-game.java) #premium \
