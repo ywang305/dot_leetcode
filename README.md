@@ -1,10 +1,18 @@
-## login
+## context
 
-us login use third-party linkedin
+> **Note**
+> login
 
-cn login use account/password
+- us login use third-party linkedin
+- cn login use account/password
+- us username cookie (recommand )
 
-username cookie (recommand )
+> **Note**
+> vsc extension
+
+- markdown-hashtags
+
+---
 
 ## summary
 
@@ -39,7 +47,7 @@ username cookie (recommand )
 - [30.substring-with-concatenation-of-all-words](./30.substring-with-concatenation-of-all-words.js) #双指针哈西 \
   sliding window 变种， 参见[youtube](https://www.youtube.com/watch?v=ddSzsLUSPrQ)理解题意
 - [31.next-permutation](./31.next-permutation.js) #Array \
-  Array 技巧
+  array 技巧
 - [32.longest-valid-parentheses](./32.longest-valid-parentheses.js) #DP \
   较难， 关键: 结合 leetcode solution example，理解连续有效括号时的推导过程，
 
@@ -158,7 +166,7 @@ username cookie (recommand )
   经典 DP[i]： s[0, i)是否可以分割, 设初始[0,0)空字符串 true
 - [140.word-break-ii](./140.word-break-ii.js) #DFS \
   经典 DFS, 吃吐
-- [146.lru-cache](./146.lru-cache.js) #lru \
+- [146.lru-cache](./146.lru-cache.js) #LRU \
   Map 是有序 hash, 每次 get/set 都先删除再加入
 - [152.maximum-product-subarray](./152.maximum-product-subarray.js) #DP \
   easy DP
@@ -170,7 +178,7 @@ username cookie (recommand )
   [premium](156.binary-tree-upsidedown.md)
 - [159.longest-substring-with-at-most-k-distinct-characters](./159.longest-substring-with-at-most-k-distinct-characters.js) #双指针哈西 \
   sliding window, 左右指针 + hashmap， hashmap 记录 char 和 last index
-- [161.one-edit-distance](./161.one-edit-distance.js) #string \
+- [161.one-edit-distance](./161.one-edit-distance.js) #String \
   String, 分两种情况：字符串长度相等 或 相差 1。 找出第一个不同的位置，根据两种情况 分别比较之后子串是否相等
 - [162.find-peak-element](./162.find-peak-element.js) #BS \
   Binary Search 非标准变种， 注意 i<j 和 j = m 变化
@@ -184,12 +192,12 @@ username cookie (recommand )
   Binary Search, 退化版 每次++i 或 --j
 - [174.dungeon-game](./174.dungeon-game.js) #DP \
   DP, 逆向推正是本题的精髓所在, 因为是求起点的状态
-- [186.reverse-words-in-a-string](./186.reverse-words-in-a-string.js) #array \
+- [186.reverse-words-in-a-string](./186.reverse-words-in-a-string.js) #Array \
   array, 反转数组， 再反转每个单词
 - [188.best-time-to-buy-and-sell-stock-iv](./188.best-time-to-buy-and-sell-stock-iv.js) #DP \
   DP, 3 维!， `dp[act次数][day]{no_hold, hold}`, \
   交易次数 act k=0 是实际不可呢的情况(至少得有一次交易吧)，但是需要初始化。 只有买入才会消耗一个交易次数，所以本次买入状态`dp[act][day]`取决于 dp`[act-1][day-1]`; 其他情况 `dp[act][day]` 取决于本次 act 维度`·`dp[act][day-1]`
-- [189.rotate-array](./189.rotate-array.js) #array \
+- [189.rotate-array](./189.rotate-array.js) #Array \
   array, 反转数组， 再反转左右半部分
 - [198.house-robber.js](./198.house-robber.js) #DP \
   DP, easy 经典 to be or not to be
@@ -246,6 +254,14 @@ username cookie (recommand )
   </details>
 - [241.different-ways-to-add-parentheses](241.different-ways-to-add-parentheses.java) #DFS \
   针对操作符分成左右两部分递归
+- [244.shortest-word-distance-ii](244.shortest-word-distance-ii.java) #premium #TreeSet \
+  利用 TreeSet floor(target) ceiling(target) 快速查找 target 之在 TreeSet 内的上下界，注意如果未找到返回 null
+- [247.strobogrammatic-number-ii](247.strobogrammatic-number-ii.java) #premium #DFS \
+  Following this pattern, we can conclude that to find all strobogrammatic numbers with N-digits, we first need to find all strobogrammatic numbers with (N - 2) digits and then append reversible digits to the beginning and the end.
+- [248.strobogrammatic-number-iii](248.strobogrammatic-number-iii.java) #premium #DFS \
+  hard，不难，利用 247solution 直接求解
+- [249.group-shifted-strings](249.group-shifted-strings.java) #premium \
+  自造 hashcode
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
