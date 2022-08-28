@@ -262,8 +262,14 @@
   hard，不难，利用 247solution 直接求解
 - [249.group-shifted-strings](249.group-shifted-strings.java) #premium \
   自造 hashcode
+- [251.flatten-2d-vecto](251.flatten-2d-vector.java) #premium \
+  内外指针
 - [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
+- [254.factor-combinations](254.factor-combinations.java) #DFS #premium \
+  经典吃吐，但有变化（不易想到）
+- [255.verify-preorder-sequence-in-binary-search-tree](255.verify-preorder-sequence-in-binary-search-tree.java) #DFS #Tree #premium \
+  minmax 限界
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \

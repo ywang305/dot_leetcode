@@ -20,21 +20,27 @@ Output: 1
  * @return {number}
  */
 var minMeetingRooms = function (intervals) {
-  const starts = intervals.map((x) => x[0]).sort((a, b) => a - b);
-  const ends = intervals.map((x) => x[1]).sort((a, b) => a - b);
+  const starts = [];
+  const ends = [];
+  for (const [s, e] of intervals) {
+    starts.push(s);
+    ends.push(e);
+  }
+  starts.sort((a, b) => a - b);
+  ends.sort((a, b) => a - b);
   let s = 0,
     e = 0,
     count = 0,
-    res = 0;
+    max = 0;
   while (s < starts.length) {
     if (starts[s] < ends[e]) {
-      s += 1;
-      count += 1;
+      ++s;
+      ++count;
     } else {
-      e += 1;
-      count -= 1;
+      ++e;
+      --count;
     }
-    res = Math.max(res, count);
+    max = Math.max(max, count);
   }
-  return res;
+  return max;
 };
