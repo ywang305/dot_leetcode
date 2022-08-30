@@ -270,6 +270,8 @@
   经典吃吐，但有变化（不易想到）
 - [255.verify-preorder-sequence-in-binary-search-tree](255.verify-preorder-sequence-in-binary-search-tree.java) #DFS #Tree #premium \
   minmax 限界
+- [256.paint-house](256.paint-house.java) #DP #premium \
+  DP, easy 经典 to be or not to be
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
