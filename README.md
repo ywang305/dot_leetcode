@@ -272,6 +272,13 @@
   minmax 限界
 - [256.paint-house](256.paint-house.java) #DP #premium \
   DP, easy 经典 to be or not to be
+- [259.3sum-smaller](259.3sum-smaller.java) #双指针 #premium \
+- [260.single-number-iii](260.single-number-iii.java) #bit \
+  ~(n-1) & n ：只保留最后一位 1. 本题利用 xor 后都结果中任意一位 1 作为区分标志
+- [261.graph-valid-tree](261.graph-valid-tree.java) #DFS #UnionFind #premium \
+  一题双解，判断 given graph 是不是 tree
+  - DFS 因给的条件是有向图，但求解构造的 adjList 是无向图，所以 dfs 增加参数 from 来跳过不必要的邻点
+  - UnionFind 巧妙利用 2 个 conditions
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \

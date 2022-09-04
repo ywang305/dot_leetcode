@@ -83,6 +83,7 @@ class UnionFind<T> {
 
     T find(T x) {
         if(!this.root.containsKey(x)) this.root.put(x, x);
-        return this.root.get(x) == x ? x : this.find( this.root.get(x) );
+        T parent = this.root.get(x);
+        return parent == x ? x : this.find(parent);
     }
 }
