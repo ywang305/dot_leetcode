@@ -279,6 +279,8 @@
   一题双解，判断 given graph 是不是 tree
   - DFS 因给的条件是有向图，但求解构造的 adjList 是无向图，所以 dfs 增加参数 from 来跳过不必要的邻点
   - UnionFind 巧妙利用 2 个 conditions
+- [265.paint-house-ii](265.paint-house-ii.java) #DP #premium \
+  同 256， 此题应该 easy（但标的 hard）
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
