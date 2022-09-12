@@ -281,6 +281,9 @@
   - UnionFind 巧妙利用 2 个 conditions
 - [265.paint-house-ii](265.paint-house-ii.java) #DP #premium \
   同 256， 此题应该 easy（但标的 hard）
+- [267.palindrome-permutation-ii](267.palindrome-permutation-ii.java) #排列 #premium \
+  虽然是 median，但是较难。
+  思路： 收集字母次数，取字符数量一半来作为 palindrome 的 first half string 来全排序，并且去重 cs[i]==cs[start]，但依然会产生重复解， 所以需要 HashSet 来去重复（因此 过程中 continue if cs[i]==cs[start] 不写也可以）
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
