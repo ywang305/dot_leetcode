@@ -166,15 +166,15 @@
   经典 DP[i]： s[0, i)是否可以分割, 设初始[0,0)空字符串 true
 - [140.word-break-ii](./140.word-break-ii.js) #DFS \
   经典 DFS, 吃吐
-- [146.lru-cache](./146.lru-cache.js) #LRU \
-  Map 是有序 hash, 每次 get/set 都先删除再加入
+- [146.lru-cache](./146.lru-cache.js) #设计 \
+  JS Map 是有序 hash, 每次 get/set 都先删除再加入
 - [152.maximum-product-subarray](./152.maximum-product-subarray.js) #DP \
   easy DP
 - [153.find-minimum-in-rotated-sorted-array](./153.find-minimum-in-rotated-sorted-array.js) #BS \
   Binary Search 变种（无重复元素）, 比较 pivot 和 right 判断哪边 unsorted， 注意 min 值 可能位于 pivot
 - [154.find-minimum-in-rotated-sorted-array-ii](./154.find-minimum-in-rotated-sorted-array-ii.js) #BS \
   Binary Search 变种（有重复元素）, 额外处理重复情况
-- [156.binary-tree-upside-down.js](./156.binary-tree-upside-down.js) #premium \
+- [156.binary-tree-upside-down $$](./156.binary-tree-upside-down.js) \
   [premium](156.binary-tree-upsidedown.md)
 - [159.longest-substring-with-at-most-k-distinct-characters](./159.longest-substring-with-at-most-k-distinct-characters.js) #双指针哈西 \
   sliding window, 左右指针 + hashmap， hashmap 记录 char 和 last index
@@ -182,7 +182,7 @@
   String, 分两种情况：字符串长度相等 或 相差 1。 找出第一个不同的位置，根据两种情况 分别比较之后子串是否相等
 - [162.find-peak-element](./162.find-peak-element.js) #BS \
   Binary Search 非标准变种， 注意 i<j 和 j = m 变化
-- [163.missing-ranges](./163.missing-ranges.js) #premium #Array \
+- [163.missing-ranges $$](./163.missing-ranges.js) #Array \
   [premium] array, 注意边界条件
 - [164.maximum-gap](./164.maximum-gap.js) #Bucket \
   [Bucket Sort, 3:00](https://www.youtube.com/watch?v=YPTqKIgVk-k) 桶排（线性）性能前提是数字均匀分布，数组能均匀映射到各个桶内, 本题大数据分布`1 <= nums.length <= 105, 0 <= nums[i] <= 109`， 桶排性能比较好。\
@@ -254,36 +254,43 @@
   </details>
 - [241.different-ways-to-add-parentheses](241.different-ways-to-add-parentheses.java) #DFS \
   针对操作符分成左右两部分递归
-- [244.shortest-word-distance-ii](244.shortest-word-distance-ii.java) #premium #TreeSet \
+- [244.shortest-word-distance-ii $$](244.shortest-word-distance-ii.java) #TreeSet \
   利用 TreeSet floor(target) ceiling(target) 快速查找 target 之在 TreeSet 内的上下界，注意如果未找到返回 null
-- [247.strobogrammatic-number-ii](247.strobogrammatic-number-ii.java) #premium #DFS \
+- [247.strobogrammatic-number-ii $$](247.strobogrammatic-number-ii.java) #DFS \
   Following this pattern, we can conclude that to find all strobogrammatic numbers with N-digits, we first need to find all strobogrammatic numbers with (N - 2) digits and then append reversible digits to the beginning and the end.
-- [248.strobogrammatic-number-iii](248.strobogrammatic-number-iii.java) #premium #DFS \
+- [248.strobogrammatic-number-iii $$](248.strobogrammatic-number-iii.java) #DFS \
   hard，不难，利用 247solution 直接求解
-- [249.group-shifted-strings](249.group-shifted-strings.java) #premium \
+- [249.group-shifted-strings $$](249.group-shifted-strings.java) \
   自造 hashcode
-- [251.flatten-2d-vecto](251.flatten-2d-vector.java) #premium \
+- [251.flatten-2d-vecto $$](251.flatten-2d-vector.java) \
   内外指针
-- [253.meeting-rooms-ii](./253.meeting-rooms-ii.js) #Greedy #premium \
+- [253.meeting-rooms-ii $$](./253.meeting-rooms-ii.js) #Greedy \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
-- [254.factor-combinations](254.factor-combinations.java) #DFS #premium \
+- [254.factor-combinations $$](254.factor-combinations.java) #DFS \
   经典吃吐，但有变化（不易想到）
-- [255.verify-preorder-sequence-in-binary-search-tree](255.verify-preorder-sequence-in-binary-search-tree.java) #DFS #Tree #premium \
+- [255.verify-preorder-sequence-in-binary-search-tree $$](255.verify-preorder-sequence-in-binary-search-tree.java) #DFS #Tree \
   minmax 限界
-- [256.paint-house](256.paint-house.java) #DP #premium \
+- [256.paint-house $$](256.paint-house.java) #DP
   DP, easy 经典 to be or not to be
-- [259.3sum-smaller](259.3sum-smaller.java) #双指针 #premium \
+- [259.3sum-smaller $$](259.3sum-smaller.java) #双指针
 - [260.single-number-iii](260.single-number-iii.java) #bit \
   ~(n-1) & n ：只保留最后一位 1. 本题利用 xor 后都结果中任意一位 1 作为区分标志
-- [261.graph-valid-tree](261.graph-valid-tree.java) #DFS #UnionFind #premium \
+- [261.graph-valid-tree $$](261.graph-valid-tree.java) #DFS #UnionFind \
   一题双解，判断 given graph 是不是 tree
   - DFS 因给的条件是有向图，但求解构造的 adjList 是无向图，所以 dfs 增加参数 from 来跳过不必要的邻点
   - UnionFind 巧妙利用 2 个 conditions
-- [265.paint-house-ii](265.paint-house-ii.java) #DP #premium \
+- [265.paint-house-ii $$](265.paint-house-ii.java) #DP \
   同 256， 此题应该 easy（但标的 hard）
-- [267.palindrome-permutation-ii](267.palindrome-permutation-ii.java) #排列 #premium \
+- [267.palindrome-permutation-ii $$](267.palindrome-permutation-ii.java) #排列 \
   虽然是 median，但是较难。
   思路： 收集字母次数，取字符数量一半来作为 palindrome 的 first half string 来全排序，并且去重 cs[i]==cs[start]，但依然会产生重复解， 所以需要 HashSet 来去重复（因此 过程中 continue if cs[i]==cs[start] 不写也可以）
+- [270.closest-binary-search-tree-value $$](270.closest-binary-search-tree-value.java) #Tree
+- [271.encode-and-decode-strings $$](271.encode-and-decode-strings.js) #设计 \
+  不仅 askii 字符集，如果是其它字符集怎么办？ 每个字符串前面插入（固定 4 bytes ）meta 记录后面的字符串长度
+- [297.serialize-and-deserialize-binary-tree](297.serialize-and-deserialize-binary-tree.java) #Tree #DFS #BFS
+  - 本题知识点多解法多！ DFS 序列化 Tree，参数 Index start 在反序列化的技巧 （ps： 发现 Java Integer 穿参是 value copy，即和 int 一样 ！！，不得已又增加了一个 wrapper class Index）
+  - BFS [297.serialize-and-deserialize-binary-tree.js](297.serialize-and-deserialize-binary-tree.js) 反序列化时层序遍历。
+  - 构建 inorder 和 preorder 俩个序列然后再构造 tree, 注意如果有重复值需要区分它们（如 inorder [3,..3,.,3...], 无法区分哪个 3 是 root), 所以使用小数位来区分它们 如[3.0,... 3.2，... 3.1,...] (当然 mute 了原 treenode 的值), [297.serialize-and-deserialize-binary-tree(2).js](<297.serialize-and-deserialize-binary-tree(2).js>)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
@@ -291,7 +298,7 @@
 - [338.counting-bits](./338.counting-bits.rb) #bit \
   easy, n & (n-1) 会去掉一个最低位的 1
 - [394.decode-string](./394.decode-string.js) #Stack \
-  [借助栈解决](https://leetcode.cn/problems/decode-string/solution/394jie-zhu-zhan-jie-jue-by-wan-jia-guo-d-sqe0/)
+  [双栈解决](https://leetcode.cn/problems/decode-string/solution/394jie-zhu-zhan-jie-jue-by-wan-jia-guo-d-sqe0/)
 - [347.top-k-frequent-elements](./347.top-k-frequent-elements.js) #Bucket
   ```
     bucket sort
@@ -303,18 +310,20 @@
         index:  0     1     2      3     4     5     6
     [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
   ```
+- [449.serialize-and-deserialize-bst](449.serialize-and-deserialize-bst.java) #Tree #BS \
+  因为 BST 所以可以二分搜索 rootVal 的分界点（如 lowerBound 或 higherBound ） [前序遍历与 BST 特性（含二分优化）](https://leetcode.cn/problems/serialize-and-deserialize-bst/solution/by-ac_oier-ncwn/)
 - [472.concatenated-words](./472.concatenated-words.java) #Trie \
   hard! Trie + DFS, [另外也可以用 hashset 替代 Trie](https://leetcode.com/submissions/detail/738625181/)
 - [496.next-greater-element-i](496.next-greater-element-i.java) #Monotonic \
   easy, Monotonic 只算右边界， 套路参考[907.sum-of-subarray-minimums](./907.sum-of-subarray-minimums.js
-- [545.boundary-of-binary-tree](545.boundary-of-binary-tree.java) #premium \
+- [545.boundary-of-binary-tree $$](545.boundary-of-binary-tree.java) #Tree \
   tree 边界分三种情况分别 DFS
 - [588.design-in-memory-file-system](./588.design-in-memory-file-system.java) #Trie \
   hard, but not hard with Trie
 - [684.redundant-connection](./684.redundant-connection.js) #DFS #UnionFind #Topo \
   (1)dfs：边构建图，边检测环，对于 s->t 的边，检查 s 的邻接点是否能到达 t，如果可以，则说明 s->t 是环路.
   (2)本题 union find 比较容易, (3)另外也可以用拓扑排序: [三种解法总结](https://leetcode.cn/problems/redundant-connection/solution/bing-cha-ji-sou-suo-shen-du-yan-du-tuo-b-ev30/)
-- [694.number-of-distinct-islands](./694.number-of-distinct-islands.js) #DFS #UnionFind #premium \
+- [694.number-of-distinct-islands $$](./694.number-of-distinct-islands.js) #DFS #UnionFind \
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
 - [739.daily-temperatures](739.daily-temperatures.java) #Monotonic \
   同[496.next-greater-element-i](496.next-greater-element-i.java)
@@ -339,7 +348,7 @@
     dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
   }
   ```
-- [1151.minimum-swaps-to-group-all-1s-togethe](1151.minimum-swaps-to-group-all-1s-together.java) #premium \
+- [1151.minimum-swaps-to-group-all-1s-togethe $$](1151.minimum-swaps-to-group-all-1s-together.java) \
    问题转换为移动窗口内有多少个 1
 - [1249.minimum-remove-to-make-valid-parentheses](1249.minimum-remove-to-make-valid-parentheses.java) #Stack \
 - [1268.search-suggestions-system](1268.search-suggestions-system.java) #Trie \
@@ -347,7 +356,7 @@
 - [1567.maximum-length-of-subarray-with-positive-product](1567.maximum-length-of-subarray-with-positive-product.java) #DP \
   正/负 两个状态 层层递推 [思路](https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/solution/dong-tai-gui-hua-by-jiao-chun-peng-vjqi/) \
   也可以用 DFS
-- [1762.buildings-with-an-ocean-view](1762.buildings-with-an-ocean-view.java) #Monotonic #premium \
+- [1762.buildings-with-an-ocean-view $$](1762.buildings-with-an-ocean-view.java) #Monotonic \
   简单版的 Monotonic Stack， 没啥可说
   <details>
     <summary>description</summary>
@@ -359,7 +368,7 @@
   hard! 利用'Monotonic' 和 '乘法组合'： 使用「Monotonic」找到某个 nums[i]nums[i] 的左边/右边的最近一个符合某种性质的位置，从而知道 nums[i]nums[i] 作为区间最值时，左右端点的可选择个数，再结合乘法原理知道 nums[i]nums[i] 能够作为区间最值的区间个数，从而知道 nums[i]nums[i] 对答案的贡献。 [907.sum-of-subarray-ranges 的套路](907.sum-of-subarray-minimums.java)
 - [2130.maximum-twin-sum-of-a-linked-list](2130.maximum-twin-sum-of-a-linked-list.java)
   快慢指针 + 反转子链表
-- [2214.minimum-health-to-beat-game](2214.minimum-health-to-beat-game.java) #premium \
+- [2214.minimum-health-to-beat-game $$](2214.minimum-health-to-beat-game.java) \
   从整体考虑 [题目看起来挺吓人其实是一道 easy 题](https://blog.csdn.net/hgq522/article/details/123982237)
 - [2262.total-appeal-of-a-string](./2262.total-appeal-of-a-string.js) #贡献值 \
   Hard ! (super easy if you know it!) 又是对每个字符计算贡献值，左右组合乘法。 [对于每个字符统计贡献](https://leetcode.cn/problems/total-appeal-of-a-string/solution/dui-yu-mei-ge-zi-fu-tong-ji-gong-xian-by-4s68/)
