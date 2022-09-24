@@ -21,7 +21,7 @@ public class Codec {
         if(root==null) return "";
         String left = serialize(root.left);
         String right = serialize(root.right);
-        return root.val + (left==""? "" : ","+left) + (right==""? "" : ","+right);
+        return root.val + (left.isEmpty()? "" : ","+left) + (right.isEmpty()? "" : ","+right);
     }
 
     // Decodes your encoded data to tree.

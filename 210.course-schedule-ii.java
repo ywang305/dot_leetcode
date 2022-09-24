@@ -28,27 +28,20 @@ class Solution {
         }
         List<Integer> order = new ArrayList<>();;
         while(!q.isEmpty()) {
-            var n = q.size();
-            for(int i=0; i<n; ++i) {
-                var id = q.poll();
-                order.add(id);
-                var list = adjList[id];
-                list.forEach(nid->{
-                    indegrees[nid]--;
-                    if(indegrees[nid]==0) {
-                        q.offer(nid);
-                    }
-                });
-            }
+            var id = q.poll();
+            order.add(id);
+            var list = adjList[id];
+            list.forEach(nid->{
+                indegrees[nid]--;
+                if(indegrees[nid]==0) {
+                    q.offer(nid);
+                }
+            });
         }
         
         if(order.size()!=numCourses) return new int[]{};
         
-        int[] ans = new int[order.size()];
-        for(int i=0; i<ans.length; ++i) {
-            ans[i] = order.get(i);
-        }
-        return ans;
+        return order.stream().mapToInt(i->i).toArray();
     }
 }
 // @lc code=end

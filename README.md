@@ -284,6 +284,8 @@
 - [267.palindrome-permutation-ii $$](267.palindrome-permutation-ii.java) #排列 \
   虽然是 median，但是较难。
   思路： 收集字母次数，取字符数量一半来作为 palindrome 的 first half string 来全排序，并且去重 cs[i]==cs[start]，但依然会产生重复解， 所以需要 HashSet 来去重复（因此 过程中 continue if cs[i]==cs[start] 不写也可以）
+- [269.alien-dictionary $$](269.alien-dictionary.js) #Topo \
+  hard, 难点只是 edge cases 比较多
 - [270.closest-binary-search-tree-value $$](270.closest-binary-search-tree-value.java) #Tree
 - [271.encode-and-decode-strings $$](271.encode-and-decode-strings.js) #设计 \
   不仅 askii 字符集，如果是其它字符集怎么办？ 每个字符串前面插入（固定 4 bytes ）meta 记录后面的字符串长度
