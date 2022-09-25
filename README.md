@@ -228,6 +228,7 @@
   hard! 双栈，given +，-，（，）， 考虑 op 左右括号
 - [227.basic-calculator-ii](227.basic-calculator-ii.js) #Stack \
   双栈， given +,-,\*,/, 考虑 op 优先级
+  
 - [231.power-of-two](./231.power-of-two.rb) #bit \
   easy, n & (n-1) 会去掉一个最低位的 1
 - [233.number-of-digit-one](./233.number-of-digit-one.java) #贡献值 \
@@ -291,6 +292,12 @@
   不仅 askii 字符集，如果是其它字符集怎么办？ 每个字符串前面插入（固定 4 bytes ）meta 记录后面的字符串长度
 - [272.closest-binary-search-tree-value-ii $$](272.closest-binary-search-tree-value-ii.java) #PriorityQueue #Tree \
   hard, 但是不觉难, 使用 PQ 后代码很简洁
+  <details>
+    <summary>description</summary>
+
+  ![image](https://user-images.githubusercontent.com/24782000/192130183-51a2b2b4-f668-4413-92f5-a38824eb9101.png)
+  </details>
+
 - [297.serialize-and-deserialize-binary-tree](297.serialize-and-deserialize-binary-tree.java) #Tree #DFS #BFS
   - 本题知识点多解法多！ DFS 序列化 Tree，参数 Index start 在反序列化的技巧 （ps： 发现 Java Integer 穿参是 value copy，即和 int 一样 ！！，不得已又增加了一个 wrapper class Index）
   - BFS [297.serialize-and-deserialize-binary-tree.js](297.serialize-and-deserialize-binary-tree.js) 反序列化时层序遍历。
