@@ -299,6 +299,8 @@ test
   ![image](https://user-images.githubusercontent.com/24782000/192130183-51a2b2b4-f668-4413-92f5-a38824eb9101.png)
   </details>
 
+- [273.integer-to-english-words](273.integer-to-english-words.java) #分治 \
+  hard, 考虑情况很多，技巧-将问题分解为子问题
 - [297.serialize-and-deserialize-binary-tree](297.serialize-and-deserialize-binary-tree.java) #Tree #DFS #BFS
   - 本题知识点多解法多！ DFS 序列化 Tree，参数 Index start 在反序列化的技巧 （ps： 发现 Java Integer 穿参是 value copy，即和 int 一样 ！！，不得已又增加了一个 wrapper class Index）
   - BFS [297.serialize-and-deserialize-binary-tree.js](297.serialize-and-deserialize-binary-tree.js) 反序列化时层序遍历。
@@ -365,6 +367,8 @@ test
 - [1249.minimum-remove-to-make-valid-parentheses](1249.minimum-remove-to-make-valid-parentheses.java) #Stack \
 - [1268.search-suggestions-system](1268.search-suggestions-system.java) #Trie \
   Trie + DFS , Trie's startsWith 有变化， 增加了一个 dfs_search, 当 startsWith 满足时，调用 dfs_search 搜索前缀尾节点（current node）之后的 3 个单词(isEnd)
+- [1301](1301.number-of-paths-with-max-score.java) #DP \
+  经典路径 DP
 - [1567.maximum-length-of-subarray-with-positive-product](1567.maximum-length-of-subarray-with-positive-product.java) #DP \
   正/负 两个状态 层层递推 [思路](https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/solution/dong-tai-gui-hua-by-jiao-chun-peng-vjqi/) \
   也可以用 DFS
