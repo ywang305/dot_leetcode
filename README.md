@@ -303,8 +303,12 @@ test
   hard, 考虑情况很多，技巧-将问题分解为子问题
 - [279.perfect-squares](279.perfect-squares.java) #DP \
   `dp[i] = Math.min(dp[i], dp[i-j*j]+1)`
-- [282](282.expression-add-operators.java) #DFS \
-  hard! 超级难的 DFS，这里 paste cn 官方解法， 难点在于（1）前导 0 的处理，（2）乘法优先级的处理
+- [282.expression-add-operators](282.expression-add-operators.java) #DFS \
+  hard! 超级难的 DFS，这里 cn 官方解法， 难点在于（1）前导 0 的处理，（2）乘法优先级的处理
+- [283](283.move-zeroes.rb) #Array \
+  easy, 后面覆盖前面（不需要交换）
+- [284.](284.peeking-iterator.java) #设计 \
+  peek 是新功能，提前一步存储 next 值
 - [297.serialize-and-deserialize-binary-tree](297.serialize-and-deserialize-binary-tree.java) #Tree #DFS #BFS
   - 本题知识点多解法多！ DFS 序列化 Tree，参数 Index start 在反序列化的技巧 （ps： 发现 Java Integer 穿参是 value copy，即和 int 一样 ！！，不得已又增加了一个 wrapper class Index）
   - BFS [297.serialize-and-deserialize-binary-tree.js](297.serialize-and-deserialize-binary-tree.js) 反序列化时层序遍历。
