@@ -305,10 +305,14 @@ test
   `dp[i] = Math.min(dp[i], dp[i-j*j]+1)`
 - [282.expression-add-operators](282.expression-add-operators.java) #DFS \
   hard! 超级难的 DFS，这里 cn 官方解法， 难点在于（1）前导 0 的处理，（2）乘法优先级的处理
-- [283](283.move-zeroes.rb) #Array \
+- [283.move-zeroes](283.move-zeroes.rb) #Array \
   easy, 后面覆盖前面（不需要交换）
-- [284.](284.peeking-iterator.java) #设计 \
+- [284.peeking-iterator](284.peeking-iterator.java) #设计 \
   peek 是新功能，提前一步存储 next 值
+- [287.find-the-duplicate-number](287.find-the-duplicate-number.java) #bit \
+  [官方题解-表格例子](https://leetcode.cn/problems/find-the-duplicate-number/solution/xun-zhao-zhong-fu-shu-by-leetcode-solution/)
+- [289.game-of-life](289.game-of-life.java) #复合状态 \
+  如果复制 board 浪费空间。本题向周围辐射影响，巧妙利用个位和十位区分自己和周边的复合状态
 - [297.serialize-and-deserialize-binary-tree](297.serialize-and-deserialize-binary-tree.java) #Tree #DFS #BFS
   - 本题知识点多解法多！ DFS 序列化 Tree，参数 Index start 在反序列化的技巧 （ps： 发现 Java Integer 穿参是 value copy，即和 int 一样 ！！，不得已又增加了一个 wrapper class Index）
   - BFS [297.serialize-and-deserialize-binary-tree.js](297.serialize-and-deserialize-binary-tree.js) 反序列化时层序遍历。
