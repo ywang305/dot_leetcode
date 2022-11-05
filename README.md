@@ -313,12 +313,14 @@ test
   [官方题解-表格例子](https://leetcode.cn/problems/find-the-duplicate-number/solution/xun-zhao-zhong-fu-shu-by-leetcode-solution/)
 - [289.game-of-life](289.game-of-life.java) #复合状态 \
   如果复制 board 浪费空间。本题向周围辐射影响，巧妙利用个位和十位区分自己和周边的复合状态
+- [295.find-median-from-data-stream](295.find-median-from-data-stream.java) #设计 \
+  双优先队列，令 lq 为大根堆，rq 为小根堆, 中位取决于两个堆顶元素
 - [297.serialize-and-deserialize-binary-tree](297.serialize-and-deserialize-binary-tree.java) #Tree #DFS #BFS
   - 本题知识点多解法多！ DFS 序列化 Tree，参数 Index start 在反序列化的技巧 （ps： 发现 Java Integer 穿参是 value copy，即和 int 一样 ！！，不得已又增加了一个 wrapper class Index）
   - BFS [297.serialize-and-deserialize-binary-tree.js](297.serialize-and-deserialize-binary-tree.js) 反序列化时层序遍历。
   - 构建 inorder 和 preorder 俩个序列然后再构造 tree, 注意如果有重复值需要区分它们（如 inorder [3,..3,.,3...], 无法区分哪个 3 是 root), 所以使用小数位来区分它们 如[3.0,... 3.2，... 3.1,...] (当然 mute 了原 treenode 的值), [297.serialize-and-deserialize-binary-tree(2).js](<297.serialize-and-deserialize-binary-tree(2).js>)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
-  经典
+  经典 DP - LIS
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
