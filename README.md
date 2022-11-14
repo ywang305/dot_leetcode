@@ -255,7 +255,7 @@ test
     <img width="730" alt="image" src="https://user-images.githubusercontent.com/24782000/184059998-8702e467-232c-41f8-91e0-68078ecebf17.png">
   </details>
 - [241.different-ways-to-add-parentheses](241.different-ways-to-add-parentheses.java) #DFS \
-  针对操作符分成左右两部分递归
+  括号题，针对操作符分成左右两部分递归
 - [244.shortest-word-distance-ii $$](244.shortest-word-distance-ii.java) #TreeSet \
   利用 TreeSet floor(target) ceiling(target) 快速查找 target 之在 TreeSet 内的上下界，注意如果未找到返回 null
 - [247.strobogrammatic-number-ii $$](247.strobogrammatic-number-ii.java) #DFS \
@@ -272,7 +272,7 @@ test
   经典吃吐，但有变化（不易想到）
 - [255.verify-preorder-sequence-in-binary-search-tree $$](255.verify-preorder-sequence-in-binary-search-tree.java) #DFS #Tree \
   minmax 限界
-- [256.paint-house $$](256.paint-house.java) #DP
+- [256.paint-house $$](256.paint-house.java) #DP \
   DP, easy 经典 to be or not to be
 - [259.3sum-smaller $$](259.3sum-smaller.java) #双指针
 - [260.single-number-iii](260.single-number-iii.java) #bit \
@@ -321,6 +321,8 @@ test
   - 构建 inorder 和 preorder 俩个序列然后再构造 tree, 注意如果有重复值需要区分它们（如 inorder [3,..3,.,3...], 无法区分哪个 3 是 root), 所以使用小数位来区分它们 如[3.0,... 3.2，... 3.1,...] (当然 mute 了原 treenode 的值), [297.serialize-and-deserialize-binary-tree(2).js](<297.serialize-and-deserialize-binary-tree(2).js>)
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典 DP - LIS
+- [301](301.remove-invalid-parentheses.java) #DFS \
+  hard! 括号题， [【宫水三叶】将括号的「是否合法」转化为「数学判定」](https://leetcode.cn/problems/remove-invalid-parentheses/solution/gong-shui-san-xie-jiang-gua-hao-de-shi-f-asu8/), 这里的数学判定是巧妙利用 平衡度 score（见 code）来简化逻辑.
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
@@ -379,6 +381,7 @@ test
 - [1151.minimum-swaps-to-group-all-1s-togethe $$](1151.minimum-swaps-to-group-all-1s-together.java) \
    问题转换为移动窗口内有多少个 1
 - [1249.minimum-remove-to-make-valid-parentheses](1249.minimum-remove-to-make-valid-parentheses.java) #Stack \
+  括号题
 - [1268.search-suggestions-system](1268.search-suggestions-system.java) #Trie \
   Trie + DFS , Trie's startsWith 有变化， 增加了一个 dfs_search, 当 startsWith 满足时，调用 dfs_search 搜索前缀尾节点（current node）之后的 3 个单词(isEnd)
 - [1301](1301.number-of-paths-with-max-score.java) #DP \
