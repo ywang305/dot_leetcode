@@ -401,6 +401,7 @@ test
   to be or not to be. 两个数组表示当前位置取奇数/偶数得到的最大收益;
   奇数 oddMax[i]: 不取，则沿用前一个奇 oddMax[i-1]，取则 evenMax[i-1]-nums[i];
   偶数 evenMax[i]: 不取，则沿用前一个奇 evenMax[i-1]，取（又分 2 种情况），仅 nums[i]，或 oddMax[i-1]+nums[i];
+- [1926.nearest-exit-from-entrance-in-maze](1926.nearest-exit-from-entrance-in-maze.java) #BFS
 - [2104.sum-of-subarray-ranges](./2104.sum-of-subarray-ranges.java) #Monotonic #贡献值 \
   hard! 利用'Monotonic' 和 '乘法组合'： 使用「Monotonic」找到某个 nums[i]nums[i] 的左边/右边的最近一个符合某种性质的位置，从而知道 nums[i]nums[i] 作为区间最值时，左右端点的可选择个数，再结合乘法原理知道 nums[i]nums[i] 能够作为区间最值的区间个数，从而知道 nums[i]nums[i] 对答案的贡献。 [907.sum-of-subarray-ranges 的套路](907.sum-of-subarray-minimums.java)
 - [2130.maximum-twin-sum-of-a-linked-list](2130.maximum-twin-sum-of-a-linked-list.java)
