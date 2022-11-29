@@ -301,6 +301,11 @@ test
 
 - [273.integer-to-english-words](273.integer-to-english-words.java) #分治 \
   hard, 考虑情况很多，技巧-将问题分解为子问题
+- [276.paint-fence $$](276.paint-fence.js) #DFS #DP \
+  [DFS+memo](276.paint-fence.java) or [DP](276.paint-fence.js), \
+  dp[i] 用来表示 i 个栅栏柱的涂色的方案数，有两种情况：如果：i 与 i-1 的颜色相同，则表明 i-1 与 i-2 的颜色不同，则 i 的数目为`dp[i-2]*(k-1)`; 如果：i 与 i-1 的颜色不同，则 i 的数目为`dp[i-1]*(k-1)`, 则递推公式为：`dp[i] = dp[i-2](k-1) + dp[i-1](k-1)`
+- [277.find-the-celebrity $$](277.find-the-celebrity.java) #Greedy \
+  题目中说明如果存在解， 则 exact one celebrity，所以用 Greedy， 两步走：先选出可能的候选人，再检验事否满足条件
 - [279.perfect-squares](279.perfect-squares.java) #DP \
   `dp[i] = Math.min(dp[i], dp[i-j*j]+1)`
 - [282.expression-add-operators](282.expression-add-operators.java) #DFS \
