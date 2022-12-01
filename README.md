@@ -308,12 +308,16 @@ test
   题目中说明如果存在解， 则 exact one celebrity，所以用 Greedy， 两步走：先选出可能的候选人，再检验事否满足条件
 - [279.perfect-squares](279.perfect-squares.java) #DP \
   `dp[i] = Math.min(dp[i], dp[i-j*j]+1)`
+- [280.wiggle-sort](280.wiggle-sort.java) #Greedy \
+  直觉的仅考虑交换相邻的两位（典型的 Greedy）
 - [282.expression-add-operators](282.expression-add-operators.java) #DFS \
   hard! 超级难的 DFS，这里 cn 官方解法， 难点在于（1）前导 0 的处理，（2）乘法优先级的处理
 - [283.move-zeroes](283.move-zeroes.rb) #Array \
   easy, 后面覆盖前面（不需要交换）
 - [284.peeking-iterator](284.peeking-iterator.java) #设计 \
   peek 是新功能，提前一步存储 next 值
+- [286.walls-and-gates $$](286.walls-and-gates.java) #BFS \
+  多源 BFS
 - [287.find-the-duplicate-number](287.find-the-duplicate-number.java) #bit \
   [官方题解-表格例子](https://leetcode.cn/problems/find-the-duplicate-number/solution/xun-zhao-zhong-fu-shu-by-leetcode-solution/)
 - [289.game-of-life](289.game-of-life.java) #复合状态 \
