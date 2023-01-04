@@ -316,6 +316,8 @@ test
   easy, 后面覆盖前面（不需要交换）
 - [284.peeking-iterator](284.peeking-iterator.java) #设计 \
   peek 是新功能，提前一步存储 next 值
+- [285.inorder-successor-in-bst $$](285.inorder-successor-in-bst.java) #Tree \
+  [PD](https://leetcode.ca/all/285.html)利用 BFS 二分遍历 tricky
 - [286.walls-and-gates $$](286.walls-and-gates.java) #BFS \
   多源 BFS
 - [287.find-the-duplicate-number](287.find-the-duplicate-number.java) #bit \
