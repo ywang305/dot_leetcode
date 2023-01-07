@@ -324,6 +324,8 @@ test
   [官方题解-表格例子](https://leetcode.cn/problems/find-the-duplicate-number/solution/xun-zhao-zhong-fu-shu-by-leetcode-solution/)
 - [289.game-of-life](289.game-of-life.java) #复合状态 \
   如果复制 board 浪费空间。本题向周围辐射影响，巧妙利用个位和十位区分自己和周边的复合状态
+- [291.word-pattern-ii $$](291.word-pattern-ii.java) #DFS \
+  经典结构，但是做不出来 :(, 分两类情况考虑，（1）字符 c 已经映射过某 substring，（2）否则逐个构建 substring，注意跳过已经被映射过的 substring
 - [295.find-median-from-data-stream](295.find-median-from-data-stream.java) #设计 \
   双优先队列，令 lq 为大根堆，rq 为小根堆, 中位取决于两个堆顶元素
 - [297.serialize-and-deserialize-binary-tree](297.serialize-and-deserialize-binary-tree.java) #Tree #DFS #BFS
