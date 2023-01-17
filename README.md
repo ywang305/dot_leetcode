@@ -329,6 +329,8 @@ test
 - [294.flip-game-ii.rb $$](294.flip-game-ii.rb) #DFS \
 - [295.find-median-from-data-stream](295.find-median-from-data-stream.java) #设计 \
   双优先队列，令 lq 为大根堆，rq 为小根堆, 中位取决于两个堆顶元素
+- [296.best-meeting-point $$](296.best-meeting-point.java) #降维 \
+  hard! 归纳推理，由于是曼哈顿距离，把问题分解为 2 个一维的距离问题. [solution](https://www.cnblogs.com/grandyang/p/5291058.html)
 - [297.serialize-and-deserialize-binary-tree](297.serialize-and-deserialize-binary-tree.java) #Tree #DFS #BFS
   - 本题知识点多解法多！ DFS 序列化 Tree，参数 Index start 在反序列化的技巧 （ps： 发现 Java Integer 穿参是 value copy，即和 int 一样 ！！，不得已又增加了一个 wrapper class Index）
   - BFS [297.serialize-and-deserialize-binary-tree.js](297.serialize-and-deserialize-binary-tree.js) 反序列化时层序遍历。
