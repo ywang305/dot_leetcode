@@ -335,10 +335,16 @@ test
   - 本题知识点多解法多！ DFS 序列化 Tree，参数 Index start 在反序列化的技巧 （ps： 发现 Java Integer 穿参是 value copy，即和 int 一样 ！！，不得已又增加了一个 wrapper class Index）
   - BFS [297.serialize-and-deserialize-binary-tree.js](297.serialize-and-deserialize-binary-tree.js) 反序列化时层序遍历。
   - 构建 inorder 和 preorder 俩个序列然后再构造 tree, 注意如果有重复值需要区分它们（如 inorder [3,..3,.,3...], 无法区分哪个 3 是 root), 所以使用小数位来区分它们 如[3.0,... 3.2，... 3.1,...] (当然 mute 了原 treenode 的值), [297.serialize-and-deserialize-binary-tree(2).js](<297.serialize-and-deserialize-binary-tree(2).js>)
+- [298.binary-tree-longest-consecutive-sequence $$](298.binary-tree-longest-consecutive-sequence.java) #Tree
+  可以记录全局和当前的最优值，也可以使用一个 count 更加简洁
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典 DP - LIS
-- [301](301.remove-invalid-parentheses.java) #DFS \
+- [301.remove-invalid-parentheses.java](301.remove-invalid-parentheses.java) #DFS \
   hard! 括号题， [【宫水三叶】将括号的「是否合法」转化为「数学判定」](https://leetcode.cn/problems/remove-invalid-parentheses/solution/gong-shui-san-xie-jiang-gua-hao-de-shi-f-asu8/), 这里的数学判定是巧妙利用 平衡度 score（见 code）来简化逻辑.
+- [304.range-sum-query-2-d-immutable.java](304.range-sum-query-2-d-immutable.java) #PreSum \
+  二维 Presum
+- [305.number-of-islands-ii.java $$](305.number-of-islands-ii.java) #UnionFind \
+  hard, 但是运用 ufo 很简单，涉及到小岛数量的融合，有几个 corner 要小心。
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
