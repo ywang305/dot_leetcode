@@ -77,13 +77,13 @@ class UnionFind<T> {
     void union(T x, T y) {
         var rootX = this.find(x);
         var rootY = this.find(y);
-        if(rootX == rootY) return;
-        this.root.put(rootX, rootY);
+        if(rootX.equals(rootY)) return;
+        this.root.put(rootX, rootY); // bewared rootY is the new root
     }
 
     T find(T x) {
         if(!this.root.containsKey(x)) this.root.put(x, x);
         T parent = this.root.get(x);
-        return parent == x ? x : this.find(parent);
+        return parent.equals(x) ? x : this.find(parent);
     }
 }
