@@ -339,12 +339,14 @@ test
   可以记录全局和当前的最优值，也可以使用一个 count 更加简洁
 - [300.longest-increasing-subsequence](./300.longest-increasing-subsequence.js) #DP \
   经典 DP - LIS
-- [301.remove-invalid-parentheses.java](301.remove-invalid-parentheses.java) #DFS \
+- [301.remove-invalid-parentheses](301.remove-invalid-parentheses.java) #DFS \
   hard! 括号题， [【宫水三叶】将括号的「是否合法」转化为「数学判定」](https://leetcode.cn/problems/remove-invalid-parentheses/solution/gong-shui-san-xie-jiang-gua-hao-de-shi-f-asu8/), 这里的数学判定是巧妙利用 平衡度 score（见 code）来简化逻辑.
-- [304.range-sum-query-2-d-immutable.java](304.range-sum-query-2-d-immutable.java) #PreSum \
+- [304.range-sum-query-2-d-immutable](304.range-sum-query-2-d-immutable.java) #PreSum \
   二维 Presum
-- [305.number-of-islands-ii.java $$](305.number-of-islands-ii.java) #UnionFind \
+- [305.number-of-islands-ii $$](305.number-of-islands-ii.java) #UnionFind \
   hard, 但是运用 ufo 很简单，涉及到小岛数量的融合，有几个 corner 要小心。
+- [306.additive-number](306.additive-number.java) #DFS \
+  经典 DFS
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
