@@ -347,6 +347,8 @@ test
   hard, 但是运用 ufo 很简单，涉及到小岛数量的融合，有几个 corner 要小心。
 - [306.additive-number](306.additive-number.java) #DFS \
   经典 DFS
+- [307.range-sum-query-mutable](307.range-sum-query-mutable.java) #SegmentTree \
+  [线段树入门题型](https://leetcode.cn/problems/range-sum-query-mutable/solution/by-lfool-v3x9)，本题实现方式简化版 SegmentTree, 本题是未使用 lazy pushDown， update 仅 node 而非 range (标准版见 715 题)
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
@@ -379,6 +381,8 @@ test
   (2)本题 union find 比较容易, (3)另外也可以用拓扑排序: [三种解法总结](https://leetcode.cn/problems/redundant-connection/solution/bing-cha-ji-sou-suo-shen-du-yan-du-tuo-b-ev30/)
 - [694.number-of-distinct-islands $$](./694.number-of-distinct-islands.js) #DFS #UnionFind \
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
+- [715.range-module](715.range-module.java) #SegmentTree \
+  hard! 标准的线段树实现
 - [739.daily-temperatures](739.daily-temperatures.java) #Monotonic \
   同[496.next-greater-element-i](496.next-greater-element-i.java)
 - [828.count-unique-characters-of-all-substrings-of-a-given-string](./828.count-unique-characters-of-all-substrings-of-a-given-string.java) #DP #String #贡献值 \
