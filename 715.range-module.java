@@ -59,7 +59,7 @@ class RangeModule {
             }
             pushDown(); 
             int mid = start+(end-start)/2;
-            if(s<=mid) left.update(s, Math.min(mid, e), val); // overlap with left
+            if(s<=mid) left.update(s, Math.min(mid, e), val); // overlap with left, 难点： 这里left可能被lazy更新过，并且部分分枝又被val更新
             if(e>mid) right.update(Math.max(mid+1, s), e, val); // overlap with right
             pushUp();
         }
