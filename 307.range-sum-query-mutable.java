@@ -6,19 +6,16 @@
 
 // @lc code=start
 class NumArray {
-
     STNode root;
 
     public NumArray(int[] nums) {
         root = new STNode(0, nums.length-1);
         for(int i=0; i<nums.length; ++i) {
-            // root.update(i, nums[i]);   // single update works
-            root.update(i, i, nums[i]); // test range update
+            root.update(i, i, nums[i]);
         }
     }
     
     public void update(int index, int val) {
-        // root.update(index, val);
         root.update(index, index, val);
     }
     
@@ -26,7 +23,6 @@ class NumArray {
         return root.range(left, right);
     }
 
-    /** Segment Tree Node */
     class STNode {
         STNode left, right;
         int val;
@@ -48,32 +44,28 @@ class NumArray {
             (index<=mid? this.left : this.right).update(index, val);
             this.val = this.left.val + this.right.val;
         }
-        // this is range update also works
+        //  range update also works
         void update(int s, int e, int val) {
             if(s<=start && end<=e) {
-                this.val = (end-start+1) * val;
+                this.val = (end-start+1) * val; // 模版做法。但这里仅单点更新，等价this.val = val;
                 return;
             }
             int mid = (start+end)/2;
             if(this.left==null) this.left = new STNode(start, mid);
             if(this.right==null) this.right = new STNode(mid+1, end);
-            if(s<=mid) left.update(s, Math.min(e, mid), val);
-            if(e>mid) right.update(Math.max(s, mid+1), e, val);
+            if(s<=mid) left.update(s, Math.min(e, mid), val); // overlap
+            if(e>mid) right.update(Math.max(s, mid+1), e, val); // overlap
+
             this.val = this.left.val + this.right.val;  
         }
 
-        // query range - sum value
         int range(int s, int e) {
-            if(start==end || (s==start && e==end)) return this.val;
+            if(s<=start && e>=end) return val; // in range
 
-            int mid = (start+end)/2;
-            if(s > mid) {
-                return this.right.range(s, e);
-            } else if(e <= mid) {
-                return this.left.range(s, e);
-            } else {
-                return this.left.range(s, mid) + this.right.range(mid+1, e);
-            }
+            int res = 0, mid = (start+end)>>1;
+            if(s<=mid) res += left.range(s, Math.min(e, mid));  // overlap with left
+            if(e>mid) res += right.range(Math.max(s, mid+1), e); // overlap with right
+            return res;
         }
     }
 }

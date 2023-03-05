@@ -349,6 +349,8 @@ test
   经典 DFS
 - [307.range-sum-query-mutable](307.range-sum-query-mutable.java) #SegmentTree \
   [线段树入门题型](https://leetcode.cn/problems/range-sum-query-mutable/solution/by-lfool-v3x9)，本题实现方式简化版 SegmentTree, 本题是未使用 lazy pushDown， update 仅 node 而非 range (标准版见 715 题)
+- [308.range-sum-query-2d-mutable $$](308.range-sum-query-2d-mutable.java) #SegmentTree \
+  hard, 并不难如果熟悉 307 解法。 2d range 求和，quad segment tree 原理和 1d 二分 segment tree 一样。
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
