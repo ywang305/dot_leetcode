@@ -149,8 +149,8 @@ test
   hard! 这是 0-1 背包问题变种？ \
   `dp[i][j] = dp[i-1][j] + ( s.charAt(i-1)==t.charAt(j-1) ? dp[i-1][j-1] : 0 ); `
 - [121.best-time-to-buy-and-sell-stock](./121.best-time-to-buy-and-sell-stock.java) #DP \
-  或者不卖，维持 dp[i-1]的 profit，或卖掉 当前价-已知的最小值
-- [122.best-time-to-buy-and-sell-stock-ii](./122.best-time-to-buy-and-sell-stock-ii.java) #DP #Greedy \
+  这种可以无限次买卖的， 使用 dp - hold/ no_hold
+- [122.best-time-to-buy-and-sell-stock-ii](./122.best-time-to-buy-and-sell-stock-ii.js) #DP #Greedy \
 - [124.binary-tree-maximum-path-sum](./124.binary-tree-maximum-path-sum.js) #DFS \
   hard! DFS 返回 和 结果不是一个东西
 - [128.longest-consecutive-sequence](./128.longest-consecutive-sequence.js) #UnionFind \
@@ -351,6 +351,8 @@ test
   [线段树入门题型](https://leetcode.cn/problems/range-sum-query-mutable/solution/by-lfool-v3x9)，本题实现方式简化版 SegmentTree, 本题是未使用 lazy pushDown， update 仅 node 而非 range (标准版见 715 题)
 - [308.range-sum-query-2d-mutable $$](308.range-sum-query-2d-mutable.java) #SegmentTree \
   hard, 并不难如果熟悉 307 解法。 2d range 求和，quad segment tree 原理和 1d 二分 segment tree 一样。
+- [309.best-time-to-buy-and-sell-stock-with-cooldown](309.best-time-to-buy-and-sell-stock-with-cooldown.java) #DP \
+  [持股/不持股：细分为四状态](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/fei-zhuang-tai-ji-de-dpjiang-jie-chao-ji-tong-su-y/)
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
