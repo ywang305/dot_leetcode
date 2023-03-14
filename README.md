@@ -353,6 +353,8 @@ test
   hard, 并不难如果熟悉 307 解法。 2d range 求和，quad segment tree 原理和 1d 二分 segment tree 一样。
 - [309.best-time-to-buy-and-sell-stock-with-cooldown](309.best-time-to-buy-and-sell-stock-with-cooldown.java) #DP \
   [持股/不持股：细分为四状态](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/fei-zhuang-tai-ji-de-dpjiang-jie-chao-ji-tong-su-y/)
+- [310.minimum-height-trees](310.minimum-height-trees.java) #Topo \
+  常规逐点 DFS 导致 LTE，Topo 用到 Tree 结构上，想法非常巧妙！逐层去掉叶节点-参考[图解 310. 最小高度树（拓扑排序，多写法）](https://leetcode.cn/problems/minimum-height-trees/solution/by-a-fei-8-hm2n/)
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
