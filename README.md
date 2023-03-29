@@ -355,6 +355,8 @@ test
   [持股/不持股：细分为四状态](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/fei-zhuang-tai-ji-de-dpjiang-jie-chao-ji-tong-su-y/)
 - [310.minimum-height-trees](310.minimum-height-trees.java) #Topo \
   常规逐点 DFS 导致 LTE，Topo 用到 Tree 结构上，想法非常巧妙！逐层去掉叶节点-参考[图解 310. 最小高度树（拓扑排序，多写法）](https://leetcode.cn/problems/minimum-height-trees/solution/by-a-fei-8-hm2n/)
+- [312.burst-balloons](312.burst-balloons.rb) #DP \
+  hard, 数列范围扩展到 2d DP，状态方程关键点是 K 是最后被戳破的那一个 [图解：动态规划解决戳气球问题](https://leetcode.cn/problems/burst-balloons/solution/tu-jie-dong-tai-gui-hua-jie-jue-chuo-qi-cx18h/)
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
