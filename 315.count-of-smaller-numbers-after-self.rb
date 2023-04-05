@@ -67,13 +67,8 @@ class SolutionSegmentTree
 
   # no need to optimized push_down
   class Node
-      def left
-          @left ||= Node.new(@start, @mid)
-      end
-
-      def right
-          @right ||= Node.new(@mid+1, @end)
-      end
+      def left = @left ||= Node.new(@start, @mid)
+      def right = @right ||= Node.new(@mid+1, @end)
 
       def initialize(s, e)
           @start, @end, @count = s, e, 0
