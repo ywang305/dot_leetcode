@@ -360,6 +360,8 @@ test
 - [313.super-ugly-number](313.super-ugly-number.java) #PriorityQueue \
   技巧在于防止生成重复的数
 - [314.binary-tree-vertical-order-traversal $$](314.binary-tree-vertical-order-traversal.rb) #Tree \
+- [315.count-of-smaller-numbers-after-self](315.count-of-smaller-numbers-after-self.rb) #SegmentTree \
+  hard, 可以用 BS 但是依然 TLE。 SegmentTree 的 Ruby 版,动态生成子树利用 left/right getter 很方便。 [思路:对某数 n，统计 min..n-1 个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/solution/li-yong-dong-tai-kai-dian-xian-duan-shu-070m5/)
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
