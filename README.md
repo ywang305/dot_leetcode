@@ -362,6 +362,8 @@ test
 - [314.binary-tree-vertical-order-traversal $$](314.binary-tree-vertical-order-traversal.rb) #Tree \
 - [315.count-of-smaller-numbers-after-self](315.count-of-smaller-numbers-after-self.rb) #SegmentTree \
   hard, 可以用 BS 但是依然 TLE。 SegmentTree 的 Ruby 版,动态生成子树利用 left/right one-line getter 很方便。 [思路:对某数 n，统计 min..n-1 个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/solution/li-yong-dong-tai-kai-dian-xian-duan-shu-070m5/)
+- [316.remove-duplicate-letters](316.remove-duplicate-letters.rb) #Monotonic \
+  [一招吃遍力扣四道题](https://leetcode.cn/problems/remove-duplicate-letters/solution/yi-zhao-chi-bian-li-kou-si-dao-ti-ma-ma-zai-ye-b-4/)
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
@@ -379,6 +381,8 @@ test
         index:  0     1     2      3     4     5     6
     [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
   ```
+- [402.remove-k-digits](402.remove-k-digits.rb) #Monotonic \
+  对于两个数 123a456 和 123b456，如果 a > b， 那么数字 123a456 大于 数字 123b456。 123[a or b]456, a 的取舍在于 a>b?, 重复这个过程 123a[b or d]46, b 的取舍...
 - [449.serialize-and-deserialize-bst](449.serialize-and-deserialize-bst.java) #Tree #BS \
   因为 BST 所以可以二分搜索 rootVal 的分界点（如 lowerBound 或 higherBound ） [前序遍历与 BST 特性（含二分优化）](https://leetcode.cn/problems/serialize-and-deserialize-bst/solution/by-ac_oier-ncwn/)
 - [472.concatenated-words](./472.concatenated-words.java) #Trie \
