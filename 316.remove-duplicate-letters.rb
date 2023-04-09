@@ -9,7 +9,7 @@
 # @return {String}
 def remove_duplicate_letters(s)
   stack = []
-  freq = s.chars.group_by(&:itself).transform_values(&:length)
+  freq = s.chars.tally
   memo = Set.new # 在stack上？
   s.chars.each do |c|
     unless memo.include?(c)

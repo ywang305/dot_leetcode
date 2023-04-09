@@ -364,6 +364,8 @@ test
   hard, 可以用 BS 但是依然 TLE。 SegmentTree 的 Ruby 版,动态生成子树利用 left/right one-line getter 很方便。 [思路:对某数 n，统计 min..n-1 个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/solution/li-yong-dong-tai-kai-dian-xian-duan-shu-070m5/)
 - [316.remove-duplicate-letters](316.remove-duplicate-letters.rb) #Monotonic \
   [一招吃遍力扣四道题](https://leetcode.cn/problems/remove-duplicate-letters/solution/yi-zhao-chi-bian-li-kou-si-dao-ti-ma-ma-zai-ye-b-4/)
+- [317.shortest-distance-from-all-buildings](317.shortest-distance-from-all-buildings.rb) #BFS \
+  hard, 曼哈顿距离，从目标点开始探索并更新空位点(见方法 2)，涟漪现象
 - [329.longest-increasing-path](./329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
 - [338.counting-bits](./338.counting-bits.rb) #bit \
