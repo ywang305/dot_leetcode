@@ -266,7 +266,7 @@ test
   自造 hashcode
 - [251.flatten-2d-vecto $$](251.flatten-2d-vector.java) \
   内外指针
-- [253.meeting-rooms-ii $$](./253.meeting-rooms-ii.js) #Greedy \
+- [253.meeting-rooms-ii $$](./253.meeting-rooms-ii.js) #Greedy #Stack \
   建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
 - [254.factor-combinations $$](254.factor-combinations.java) #DFS \
   经典吃吐，但有变化（不易想到）

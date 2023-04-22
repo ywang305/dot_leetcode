@@ -8,13 +8,13 @@
 # @param {String} s
 # @return {Integer}
 def length_of_longest_substring(s)
-  hash = {}
+  memo = {}
   max = 0
   start = 0
   s.each_char.with_index do |c, i|
-    start = hash[c] + 1 if hash[c] && hash[c] >= start
-    max = [max, i - start + 1].max
-    hash[c] = i
+    start = memo[c]+1 if memo.key?(c) && memo[c]>=start
+    max = i-start+1 if i-start+1 > max
+    memo[c] = i
   end
   max
 end

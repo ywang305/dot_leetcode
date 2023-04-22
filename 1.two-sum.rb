@@ -9,11 +9,13 @@
 # @param {Integer} target
 # @return {Integer[]}
 def two_sum(nums, target)
-  hash = {}
-  nums.each_with_index do |num, i|
-    return [hash[target - num], i] if hash[target - num]
+  memo = {}
+  nums.each_with_index do |v, i|
+    return [memo[target - v], i] if memo.key?(target - v)
 
-    hash[num] = i
+    memo[v] = i
   end
 end
 # @lc code=end
+
+two_sum([2, 7, 11, 15], 9)
