@@ -125,7 +125,7 @@ class Trie
       return false unless node[c]
       node = node[c]
     end
-    !node.is_end.nil?
+    !!node.is_end
   end
 
   def prefix(chars)

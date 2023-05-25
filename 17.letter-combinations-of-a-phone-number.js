@@ -27,7 +27,7 @@ var letterCombinations = function (digits) {
     const d = digits[index];
     const res = [];
     for (const c of arr[d]) {
-      const subArr = combine(index + 1);
+      const subArr = combine(index + 1); //should be 挪到外层，重复计算，影响性能 (see ruby solution)
       if (subArr.length === 0) res.push(c);
       subArr.forEach((sub) => res.push(c + sub));
     }
