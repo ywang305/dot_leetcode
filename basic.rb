@@ -105,9 +105,9 @@ class Trie
   attr_accessor :is_end
 
   def initialize = @data = {}
-  def [](index) = @data[index]
-  def []=(index, value)
-    @data[index] = value
+  def [](key) = @data[key]
+  def []=(key, value)
+    @data[key] = value
   end
 
   def insert(chars)

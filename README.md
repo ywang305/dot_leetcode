@@ -236,7 +236,7 @@ test
   hard! [宫水三叶](https://leetcode.cn/problems/number-of-digit-one/solution/gong-shui-san-xie-jiang-shu-wei-dp-wen-t-c9oi/)
   <details>
     <pre>
-    假设有 n = abcde，即 m = 5，假设我们需要统计第 3 位中 1 出现的次数，即可统计满足 1 <= --1-- <= abcde 要求的数有多少个? 
+    假设有 n = abcde，即 m = 5，假设我们需要统计第 3 位中 1 出现的次数，即可统计满足 1 <= --1-- <= abcde 要求的数有多少个?
       - 当 c 前面的部分 < ab, 即范围为 [0, ab)，此时必然满足「大小要求」，因此后面的部分可以任意取，即范围为 [0, 99]。根据「乘法原理」，可得知此时数量为 ab * 100
       - 当 c 前面的部分 = ab，这时候「大小关系」主要取决于 c：
         1. 当 c = 0，必然不满足「大小要求」，数量为 0；
@@ -404,6 +404,8 @@ test
   hard! 标准的线段树实现
 - [739.daily-temperatures](739.daily-temperatures.java) #Monotonic \
   同[496.next-greater-element-i](496.next-greater-element-i.java)
+- [741.cherry-pickup](741.cherry-pickup.rb) #DP \
+  hard! 三维 DP （官方题解）
 - [828.count-unique-characters-of-all-substrings-of-a-given-string](./828.count-unique-characters-of-all-substrings-of-a-given-string.java) #DP #String #贡献值 \
   hard。 暴力的方法是枚举 substring，然后考察这个区间里的字符哪些是 unique 的。这需要大致 o(N^2*26)的复杂度。聪明的方法是考察每个字符，它可能在哪些 substring 里是 unique 的。 \
    重点是转换为计算每一个字符对 substring 对贡献值，并累计。 并且利用了乘法组合性质，e.g. `XXXA[XX A X]AXX`， given cur A index is 6, pre A index is 3, post A index 8, then all possible substring combination for cur A is `(6-3) * (8-6)` \

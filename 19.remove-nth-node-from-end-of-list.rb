@@ -17,21 +17,17 @@
 # @param {Integer} n
 # @return {ListNode}
 def remove_nth_from_end(head, n)
-  dummy = ListNode.new(0, head)
-  node = dummy.next
-  len = 0
-  while node
-    len += 1
-    node = node.next
-  end
-  n = len - n
-  node = dummy
-  while n.positive?
-    node = node.next
-    n -= 1
+  return [nil, 0] if head.nil?
+
+  next_head, next_num = remove_nth_from_end(head.next, n)
+  head.next = next_head
+  if next_num
+    cur_num = next_num + 1
+    return next_head if cur_num == n
+
+    return [head, cur_num]
   end
 
-  node.next = node.next.next
-  dummy.next
+  head
 end
 # @lc code=end
