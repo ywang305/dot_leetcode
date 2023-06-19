@@ -39,11 +39,9 @@ def binary_search_first(nums, target)
     m = i + (j - i) / 2
     if nums[m] < target
       i = m + 1
-    elsif nums[m] > target
-      j = m - 1
     else
-      found = m
       j = m - 1
+      found = m if nums[m] == target
     end
   end
   found
@@ -55,13 +53,11 @@ def binary_search_last(nums, target)
   j = nums.length - 1
   while i <= j
     m = i + (j - i) / 2
-    if nums[m] < target
+    if nums[m] <= target
       i = m + 1
-    elsif nums[m] > target
-      j = m - 1
+      found = m if nums[m] == target
     else
-      found = m
-      i = m + 1
+      j = m - 1
     end
   end
   found
