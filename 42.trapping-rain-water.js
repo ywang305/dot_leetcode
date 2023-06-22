@@ -10,7 +10,7 @@
  * @return {number}
  */
 var trap = function (height) {
-  // Monotopic decreasing stack
+  // Monotonic decreasing stack
   const stack = [];
   let sum = 0;
   for (let i = 0; i < height.length; ++i) {
