@@ -83,7 +83,7 @@ test
 - [45.jump-game-ii](./45.jump-game-ii.js) #DP #Greedy \
   DP T(n^2); Greedy T(n), greedy is better, [youtube neetcode](https://www.youtube.com/watch?v=dJ7sWiOoK7g), 类似于 BFS, 每次算出 reachFarthest
 - [47.permutations-ii](./47.permutations-ii.js) #DFS \
-    并不简单，涉及剪枝，递归逻辑也喝 46 不一样（从 0 开始）
+    并不简单，涉及剪枝，递归逻辑也与 46.js 交换的写法 不一样（每次从 0 开始）
 - [51.n-queens](./51.n-queens.js) #DFS
   经典 DFS, 吃吐
 - [55.jump-game](./55.jump-game.js) #Greedy \

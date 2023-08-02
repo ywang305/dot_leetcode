@@ -8,22 +8,23 @@
 # @param {Integer[]} nums
 # @return {Integer[][]}
 def permute(nums)
-  swap = ->(i, j) { nums[i], nums[j] = nums[j], nums[i] }
   ans = []
   tmp = []
-  dfs = ->(start) do
-    return ans << tmp.dup if start == nums.length
+  visited = []
+  dfs = lambda do
+    return ans << tmp.dup if tmp.length == nums.length
 
-    (start...nums.length).each do |i|
-      swap.call(start, i)
-      tmp << nums[start]
-      dfs.call(start + 1)
+    (0...nums.length).each do |i|
+      next if visited[i]
+      visited[i] = true
+      tmp << nums[i]
+      dfs.call
       tmp.pop
-      swap.call(start, i)
+      visited[i] = false
     end
   end
 
-  dfs.call(0)
+  dfs.call
   ans
 end
 # @lc code=end
