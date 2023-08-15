@@ -14,6 +14,14 @@ test
 
 - markdown-hashtags
 
+> **Note**
+> debug with rdbg
+
+- `rdbg <ruby file>`
+  - i : info
+  - b + #num : break point number
+  - c : continue
+
 ---
 
 ## summary
