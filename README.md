@@ -92,10 +92,9 @@ test
   区间问题排除 no overlap 的 2 种情况， overlap 的情况 动态更新 start/end
 - [60.permutation-sequence](./60.permutation-sequence.js) #DFS #排列 \
   hard, 不能用经典的吃吐(or I don't know how)， 对字母次序有要求
-- [62.unique-paths](./62.unique-paths.js) #DP \
-  经典 DP
-- [63.unique-paths-ii](./63.unique-paths-ii.js) #DP \
-  经典 DP
+- [62.unique-paths](./62.unique-paths.rb) #DP #DFS \
+  DFS 更简洁
+- [63.unique-paths-ii](./63.unique-paths-ii.rb) #DP #DFS \
 - [64.minimum-path-sum](./64.minimum-path-sum.js) #DP \
   经典 DP
 - [69.sqrtx](./69.sqrt-x.rb) #BS \
