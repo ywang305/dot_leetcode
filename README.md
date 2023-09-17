@@ -110,7 +110,8 @@ test
 - [71.simplify-path](./71.simplify-path.rb) #String \
   经典 stack
 - [72.edit-distance](./72.edit-distance.js) #DP \
-  难, `Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1` dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]分别对应插入/删除/替换(trick)
+  难, `Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1`. dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]分别对应插入/删除/替换(trick)
+  [完美题解](https://leetcode.cn/problems/edit-distance/solutions/189676/edit-distance-by-ikaruga/)
 - [74.search-a-2d-matrix](./74.search-a-2d-matrix.js) #BS \
   经典 highbound
 - [75.sort-colors](./75.sort-colors.js) #QuickSelect \
