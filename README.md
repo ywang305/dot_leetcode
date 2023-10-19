@@ -202,6 +202,8 @@ test
   重点理解 bucket sort, bucketIndexMappingFunc, 鸽洞原理不重要
 - [167.two-sum-ii-input-array-is-sorted](./167.two-sum-ii-input-array-is-sorted.js) #BS \
   Binary Search, 退化版 每次++i 或 --j
+- [169.majority-element](./169.majority-element.rb) #Array \
+  Moorer's Voting Alg, 见官方
 - [174.dungeon-game](./174.dungeon-game.js) #DP \
   DP, 逆向推正是本题的精髓所在, 因为是求起点的状态
 - [186.reverse-words-in-a-string](./186.reverse-words-in-a-string.js) #Array \
