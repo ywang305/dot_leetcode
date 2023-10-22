@@ -114,7 +114,7 @@ test
   [完美题解](https://leetcode.cn/problems/edit-distance/solutions/189676/edit-distance-by-ikaruga/)
 - [74.search-a-2d-matrix](./solutions/74.search-a-2d-matrix.js) #BS \
   经典 highbound
-- [75.sort-colors](./solutions/75.sort-colors.js) #QuickSelect \
+- [75.sort-colors](./solutions/75.sort-colors.rb) #QuickSelect \
 - [76.minimum-window-substring](./solutions/76.minimum-window-substring.js) #双指针哈西 \
   hard, 双指针哈西-变种[js 解题思路 清晰明了](https://leetcode.cn/problems/minimum-window-substring/solution/jsjie-ti-si-lu-qing-xi-ming-liao-by-inte-qmpu/), [Java 注释版](./solutions/76.minimum-window-substring.java)
 - [77.combinations](./solutions/77.combinations.js) #组合 \

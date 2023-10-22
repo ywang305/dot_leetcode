@@ -156,9 +156,9 @@ const quickSort3 = (list, start = 0, end = list.length - 1) => {
   let pivot = list[end];
   while (i < j) {
     while (i < j && list[i] <= pivot) ++i;
-    [list[i], list[j]] = [list[j], list[i]];
+    swap(i, j);
     while (i < j && list[j] >= pivot) --j;
-    [list[i], list[j]] = [list[j], list[i]];
+    swap(i, j);
   }
   // 循环结束，i与j相等, 这个位置是属于pivot
   list[i] = pivot;
