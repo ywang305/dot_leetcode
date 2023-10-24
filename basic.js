@@ -115,11 +115,11 @@ const quickSort = (list) => {
   return [...quickSort(left), ...mid, ...quickSort(right)];
 };
 
-// in-place,  single boundary，[start, pivot] [p, ...end]
+// in-place,  single (pointer) boundary，[start, pivot] [p, ...end]
 const quickSort2 = (list, start = 0, end = list.length - 1) => {
   if (start >= end) return;
   let p = start; // boundary, 从p开始都是value > pivot
-  let pivot = list[end];
+  let pivot = list[end]; // 选最后元素做pivot保证最后一次交换p-1是pivot，之后的迭代才能排除p-1位置
   for (let i = start; i <= end; ++i) {
     if (list[i] <= pivot) {
       swap(i, p);
@@ -148,7 +148,7 @@ const quickSelect = (left, right) => {
   return nums[p];
 };
 
-// in-place,  double boundarys:  [start, i-1], [i==j/pivot], [j+1, end]
+// in-place,  double boundarys (2 pointer):  [start, i-1], [i==j/pivot], [j+1, end]
 const quickSort3 = (list, start = 0, end = list.length - 1) => {
   if (start >= end) return;
   let i = start; // boundary, 从i往后value > pivot

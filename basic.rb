@@ -95,13 +95,38 @@ def binary_search_higher(nums, target)
   found
 end
 # puts found = binary_search_higher([1, 2, 3, 4, 4, 4, 5, 5, 6], 4) # 6
+#
 
+# ==== quick sort  ====
+def swap(list, i, j)
+  list[i], list[j] = list[j], list[i]
+end
 
+# single pointer (easy to understand)
+def quick_sort(list, s = 0, e = list.length - 1)
+  return if s >= e
+
+  p = s # boundary: from p all > pivot; before p all <= pivot
+  pivot = list[e] # must be last to keep p-1 as pivot after last swap
+
+  (s..e).each do |i|
+    if list[i] <= pivot
+      swap(list, i, p)
+      p += 1
+    end
+  end
+
+  quick_sort(list, s, p - 2) # exclude pivot (at index p-1), or might curse inifite recursion
+  quick_sort(list, p, e)
+end
+
+# ==== Trie tree ====
 class Trie
   attr_accessor :is_end
 
   def initialize = @data = {}
   def [](key) = @data[key]
+
   def []=(key, value)
     @data[key] = value
   end
@@ -119,6 +144,7 @@ class Trie
     node = self
     for c in chars
       return false unless node[c]
+
       node = node[c]
     end
     !!node.is_end
@@ -128,6 +154,7 @@ class Trie
     node = self
     for c in chars
       return false unless node[c]
+
       node = node[c]
     end
     true
