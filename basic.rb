@@ -120,6 +120,23 @@ def quick_sort(list, s = 0, e = list.length - 1)
   quick_sort(list, p, e)
 end
 
+def quick_sort_double_pointer(list, s = 0, e = list.length-1)
+  return if s >= e
+
+  pivot = list[e]
+  left = s
+  right = e
+  while left < right
+    left += 1 while left < right && list[left] <= pivot # find an element > pivot
+    right -= 1 while left < right && list[right] >= pivot # find an elment < pivot
+    swap(list, left, right)
+  end
+  swap(list, left, e) # put the pivot into its final place
+  quick_sort_double_pointer(list, s, left-1)
+  quick_sort_double_pointer(list, left+1, e)
+end
+
+
 # ==== Trie tree ====
 class Trie
   attr_accessor :is_end
