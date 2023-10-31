@@ -119,8 +119,7 @@ test
   hard, 双指针哈西-变种[js 解题思路 清晰明了](https://leetcode.cn/problems/minimum-window-substring/solution/jsjie-ti-si-lu-qing-xi-ming-liao-by-inte-qmpu/), [Java 注释版](./solutions/76.minimum-window-substring.java)
 - [77.combinations](./solutions/77.combinations.js) #组合 \
   经典
-- [78.subsets](./solutions/78.subsets.js) #组合 \
-  不太容易想到(想了好久, mind 一度陷入经典组合的框架)
+- [78.subsets](./solutions/78.subsets.rb) #组合 \
 - [79.word-search](./solutions/79.word-search.js) #DFS \
   经典 2d-map
 - [80.remove-duplicates](./solutions/80.remove-duplicates.js) #双指针 \
