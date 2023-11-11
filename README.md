@@ -127,10 +127,12 @@ test
 - [81.search-in-rotated-sorted-array-ii](./solutions/81.search-in-rotated-sorted-array-ii.js) #BS \
   33.旋转数组之变种， BS 需要考虑重复元素，即重复元素下分不清是左边/右边有序，此时 start++ 即可。相当于去掉一个重复的干扰项，详见题解[搜索旋转排序数组 II](https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/solution/zai-javazhong-ji-bai-liao-100de-yong-hu-by-reedfan/)
 - [84.largest-rectangle-in-histogram](./solutions/84.largest-rectangle-in-histogram.js) #Monotonic \
-  hard, 核心思想:求每条柱子可以向左右延伸的长度->矩形最大宽度 \* 柱子的高度, 计算以每一根柱子高度为高的矩形面积,维护面积最大值
+  hard, 核心思想:求每条柱子可以向左右延伸的长度->矩形最大宽度 : 枚举高度 + 单调栈找 x 左边界
   [Monotonic 入门，使用 Monotonic 快速寻找边界](https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/zhao-liang-bian-di-yi-ge-xiao-yu-ta-de-zhi-by-powc/)
 - [85.maximal-rectangle](./solutions/85.maximal-rectangle.js) #Monotonic \
   hard, 84 题的变种，从第一行到第 n 行形成的柱状图可以利用 84 题求解，[Monotonic 解法](https://leetcode.cn/problems/maximal-rectangle/solution/dai-ma-jian-ji-yi-chong-huan-bu-cuo-de-j-k1p3/)
+- [87.scramble-string](./solutions/87.scramble-string.rb) #DFS \
+  dfs+memo: s 分解 s_left, s_right; t 分解 t_left, t_right. 原问题转化为((s_left,t_left) and (s_right, t_right) || (s_left, t_right) && (s_right, t+left)) 的子问题组合
 - [90.subsets-ii](./solutions/90.subsets-ii.js) #组合 \
   [78.subsets](./solutions/78.subsets.js) 的扩展, 去重
 - [91.decode-ways](./solutions/91.decode-ways.js) #DP \
