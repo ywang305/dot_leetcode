@@ -1,14 +1,14 @@
+
 # @param {Integer[]} nums
 # @return {Integer[][]}
 def subsets(nums)
-  ans = [[]]
+  ans = []
   temp = []
   dfs = lambda do |start|
-    return if start == nums.length
+    ans << temp.dup
 
     (start...nums.length).each do |i|
       temp.push nums[i]
-      ans << temp.dup
       dfs.call i+1
       temp.pop
     end
