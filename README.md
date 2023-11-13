@@ -138,7 +138,8 @@ test
 - [91.decode-ways](./solutions/91.decode-ways.js) #DP \
   类似打家劫舍,第 i 个下标能表示的解码方法个数依赖于 i-1 和 i-2 的情况
 - [92.reverse-linked-list-ii](./solutions/92.reverse-linked-list-ii.java) #DFS \
-  并不简单,需要借助`reverseN`分解问题，参见[步步拆解：如何递归地反转链表的一部分](https://leetcode.cn/problems/reverse-linked-list-ii/solution/bu-bu-chai-jie-ru-he-di-gui-di-fan-zhuan-lian-biao/)
+  - 并不简单,需要借助`reverseN`分解问题，参见[步步拆解：如何递归地反转链表的一部分](https://leetcode.cn/problems/reverse-linked-list-ii/solution/bu-bu-chai-jie-ru-he-di-gui-di-fan-zhuan-lian-biao/)
+  - 直接 DFS 简洁，见 rb 版
 - [93.restore-ip-addresses](./solutions/93.restore-ip-addresses.java) #DFS \
   经典
 - [95.unique-binary-search-trees-ii](./solutions/95.unique-binary-search-trees-ii.java) #DFS \
