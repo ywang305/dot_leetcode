@@ -138,14 +138,13 @@ test
 - [91.decode-ways](./solutions/91.decode-ways.js) #DP \
   类似打家劫舍,第 i 个下标能表示的解码方法个数依赖于 i-1 和 i-2 的情况
 - [92.reverse-linked-list-ii](./solutions/92.reverse-linked-list-ii.java) #DFS \
-  - 并不简单,需要借助`reverseN`分解问题，参见[步步拆解：如何递归地反转链表的一部分](https://leetcode.cn/problems/reverse-linked-list-ii/solution/bu-bu-chai-jie-ru-he-di-gui-di-fan-zhuan-lian-biao/)
-  - 直接 DFS 简洁，见 rb 版
+  直接 DFS 简洁，见 rb 版
 - [93.restore-ip-addresses](./solutions/93.restore-ip-addresses.java) #DFS \
   经典
 - [95.unique-binary-search-trees-ii](./solutions/95.unique-binary-search-trees-ii.java) #DFS \
   结合 Tree 的 DFS，更像是分治. [如果求 1...n 的所有可能：把 1 作为根节点，[ ] 空作为左子树，[ 2 ... n ] 的所有可能作为右子树；2 作为根节点，[ 1 ] 作为左子树，[ 3...n ] 的所有可能作为右子树。](https://leetcode.cn/problems/unique-binary-search-trees-ii/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-2-7)
-- [96.unique-binary-search-trees](./solutions/96.unique-binary-search-trees.java) #DFS \
-  套路 inorder traversal with left_result \* right_result
+- [96.unique-binary-search-trees](./solutions/96.unique-binary-search-trees.rb) #DP #贡献值 \
+  枚举 root，当前 root 的解 = 左解 \* 右解 （贡献值）
 - [97.interleaving-strings](./solutions/97.interleaving-strings.java) #DP #字符串-DP \
   [类似 2d 路径问题](https://leetcode.cn/problems/interleaving-string/solution/lei-si-lu-jing-wen-ti-zhao-zhun-zhuang-tai-fang-ch/)
 - [98.validate-binary-search-tree](./solutions/98.validate-binary-search-tree.java) #DFS \
