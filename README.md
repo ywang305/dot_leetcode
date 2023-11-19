@@ -147,10 +147,10 @@ test
   枚举 root，当前 root 的解 = 左解 \* 右解 （贡献值）
 - [97.interleaving-strings](./solutions/97.interleaving-strings.java) #DP #字符串-DP \
   [类似 2d 路径问题](https://leetcode.cn/problems/interleaving-string/solution/lei-si-lu-jing-wen-ti-zhao-zhun-zhuang-tai-fang-ch/)
-- [98.validate-binary-search-tree](./solutions/98.validate-binary-search-tree.java) #DFS \
+- [98.validate-binary-search-tree](./solutions/98.validate-binary-search-tree.java) #DFS #alpha-beta \
   类似 alpha-beta 限界
-- [99.recover-binary-search-tree](./solutions/99.recover-binary-search-tree.java) #DFS \
-  有难度，利用 pre 记录 inOrder 前一个节点! \
+- [99.recover-binary-search-tree](./solutions/99.recover-binary-search-tree.java) #DFS #alpha-beta \
+  有难度，利用 pre 记录 inOrder 前一个节点! ps: alpha-beta 版本见 ruby \
   并利用规律：错误 1：出现了两对不满足前小后大，需要交换第一对的第一个元素与第二对的第二个元素。错误 2：只出现一对不满足前小后大，交换这一对元素即可。 这两行关键代码可以 cover 以上 2 种错误（结合[手画图解](https://leetcode.cn/problems/recover-binary-search-tree/solution/tu-jie-hui-fu-yi-ge-er-cha-sou-suo-shu-by-hyj8/)自己体会）
   ```java
   if(pre.val > root.val && null == err1) err1 = pre;  // tricky
