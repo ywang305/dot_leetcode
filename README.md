@@ -160,10 +160,15 @@ test
   hard! 这是 0-1 背包问题变种？ \
   `dp[i][j] = dp[i-1][j] + ( s.charAt(i-1)==t.charAt(j-1) ? dp[i-1][j-1] : 0 ); `
 - [121.best-time-to-buy-and-sell-stock](./solutions/121.best-time-to-buy-and-sell-stock.java) #DP \
-  这种可以无限次买卖的， 使用 dp - hold/ no_hold
+  1. 这种可以无限次买卖的， 使用 dp - hold/ no_hold
+  2. 贪婪-仅需记住最小价
 - [122.best-time-to-buy-and-sell-stock-ii](./solutions/122.best-time-to-buy-and-sell-stock-ii.js) #DP #Greedy \
+- [123.best-time-to-buy-and-sell-stock-iii](./solutions/123.best-time-to-buy-and-sell-stock-iii.rb) #DP \
+  [一套模板，几行代码，闭着眼睛轻松默写所有彩票题](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/solutions/2199035/yi-tao-mo-ban-ji-xing-dai-ma-bi-zhao-yan-0ap8/)
 - [124.binary-tree-maximum-path-sum](./solutions/124.binary-tree-maximum-path-sum.js) #DFS \
   hard! DFS 返回 和 结果不是一个东西
+- [126.word-ladder-ii](./solutions/126.word-ladder-ii.rb) #BFS #DFS #Graph \
+  hard！BFS 建立图，方向为邻居点指向源点，BFS 再从后向前搜索最短路径
 - [128.longest-consecutive-sequence](./solutions/128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简
 - [131.palindrome-partitioning](./solutions/131.palindrome-partitioning.rb) #DP, #DFS \
