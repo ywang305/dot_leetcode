@@ -182,3 +182,22 @@ end
 # trie.insert(["a", "b", "c"])
 # puts trie.has(["a", "b", "c"]), trie.has(["a", "b"])
 # puts trie.prefix(["a", "b", "c"]), trie.prefix(["a", "b", "a"])
+
+
+class UnionFind
+  attr_reader :root
+
+  def initialize = @root = {}
+
+  def union(x, y)
+    x_root = find(x)
+    y_root = find(y)
+    @root[x_root] = y_root if x_root != y_root
+  end
+
+  def find(x)
+    return x if @root[x] == x # 前提是root.key?(x)==true, 几初始化过 ufo.root[x]=x; 否则会死循环，
+
+    find(@root[x])
+  end
+end
