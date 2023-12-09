@@ -169,6 +169,8 @@
   hard！BFS 建立图，方向为邻居点指向源点，BFS 再从后向前搜索最短路径
 - [128.longest-consecutive-sequence](./solutions/128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简; 另一种做法利用连续数的[规律](https://leetcode.cn/problems/longest-consecutive-sequence/solutions/2362995/javapython3cha-xi-biao-ding-wei-mei-ge-l-xk4c/)
+- [129.sum-root-to-leaf-numbers](./solutions/129.sum-root-to-leaf-numbers.rb) #Tree, #DFS \
+  经典吃吐 on the tree
 - [131.palindrome-partitioning](./solutions/131.palindrome-partitioning.rb) #DP, #DFS \
   DP + backtracking \
   注意 dp 内 j i 的顺序， 先决定 j 再向前决定 i。
