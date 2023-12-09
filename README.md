@@ -1,9 +1,7 @@
 ## context
 
-test
-
 > **Note**
-> login
+> login with vscode extension
 
 - us login use third-party linkedin
 - cn login use account/password
