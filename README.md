@@ -19,6 +19,9 @@
   - i : info
   - b + #num : break point number
   - c : continue
+> **Note**
+> debug with ruby and binding.irb
+  `binding.irb`
 
 ---
 
