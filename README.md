@@ -19,9 +19,9 @@
   - i : info
   - b + #num : break point number
   - c : continue
-> **Note**
-> debug with ruby and binding.irb
-  `binding.irb`
+    > **Note**
+    > debug with ruby and binding.irb
+    > `binding.irb`
 
 ---
 
@@ -178,7 +178,7 @@
   DP + backtracking \
   注意 dp 内 j i 的顺序， 先决定 j 再向前决定 i。
 - [132.palindrome-partitioning-ii](./solutions/132.palindrome-partitioning-ii.js) #DP #字符串-DP \
-  双 DP, `dp2[j] = Math.min(dp2[j], dp2[i - 1] + 1);`
+  hard! 双 DP, `dp2[j] = Math.min(dp2[j], dp2[i - 1] + 1);`
 - [134.gas-station](./solutions/134.gas-station.js) #Greedy \
   贪婪：从前往后找，找到第一个满足条件的，就是结果
 - [135.candy](./solutions/135.candy.js) #Greedy \

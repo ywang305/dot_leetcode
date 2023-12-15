@@ -8,30 +8,28 @@
 # @param {String} s
 # @return {String[][]}
 def partition(s)
-  dp = Array.new(s.length) { [] }
-  s.length.times do |j|
-    (0..j).each do |i|
-      dp[i][j] = s[j] == s[i] && (j - i <= 2 || dp[i + 1][j - 1])
+  len = s.length
+  dp = Array.new(len){[]}
+  len.times do |j|
+    j.downto(0) do |i|
+      dp[i][j] = s[i] == s[j] && (j-i<=2 || dp[i+1][j-1])
     end
   end
 
   res = []
-  part = []
-  dfs = lambda { |start|
-    res << part.dup if start == s.length
+  tmp = []
+  dfs = lambda do |left|
+    return res << tmp.dup if left==len
 
-    (start...s.length).each do |i|
-      next unless dp[start][i]
-
-      part.push s[start..i]
-      dfs.call(i + 1)
-      part.pop
+    (left...len).each do |right|
+      if dp[left][right]
+        tmp << s[left..right]
+        dfs.call(right+1)
+        tmp.pop
+      end
     end
-  }
-
+  end
   dfs.call(0)
   res
 end
 # @lc code=end
-
-p partition('abbab')
