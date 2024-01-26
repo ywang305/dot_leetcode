@@ -196,7 +196,7 @@ class UnionFind
   end
 
   def find(x)
-    return x if @root[x] == x # 前提是root.key?(x)==true, 几初始化过 ufo.root[x]=x; 否则会死循环，
+    return x if @root[x] == x # 前提是root.key?(x)==true, 初始化过 ufo.root[x]=x; 否则会死循环，
 
     find(@root[x])
   end
