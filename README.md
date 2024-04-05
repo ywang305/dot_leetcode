@@ -225,7 +225,8 @@
 - [198.house-robber.js](./solutions/198.house-robber.js) #DP \
   DP, easy 经典 to be or not to be
 - [200.number-of-islands](./solutions/200.number-of-islands.js) #UnionFind \
-  UnionFind
+- [201.bitwise-and-of-numbers-range](./solutions/201.bitwise-and-of-numbers-range.rb) #bit \
+  Brian Kernighan 算法的关键在于我们每次对 number 和 number−1 之间进行按位与运算后，number 中最右边的 1 会被抹去变成 0. 本题思想是 :对数字 n 迭代地应用上述技巧，清除最右边的 1，直到它小于或等于 m，此时非公共前缀部分的 1 均被消去。
 - [207.course-schedule](./solutions/207.course-schedule.java) #Topo \
 - [209.Minimum-Size-Subarray-Sum](./solutions/209.minimum-size-subarray-sum.java) #双指针 \
   just straightforward sliding window
