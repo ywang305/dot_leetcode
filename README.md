@@ -237,8 +237,10 @@
   hard, 没有那么难。 Trie + DFS
 - [213.house-robber-ii](./solutions/213.house-robber-ii.java) #DP \
   此题是 198. 打家劫舍 的拓展版： 唯一的区别是此题中的房间是环状排列的（即首尾相接), 环状排列意味着第一个房子和最后一个房子中只能选择一个偷窃，因此可以把此环状排列房间问题约化为两个单排排列房间子问题：(1) 在不偷窃第一个房子的情况; (2) 在不偷窃最后一个房子的情况. 综合偷窃最大金额： 为以上两种情况的较大值.
+- [214.shortest-palindrome](./solutions/214.shortest-palindrome.rb) #String \
+  hard, 虽然是 HARD，涉及 KMP 算法， 但是本质很简单：s2=反转，比较直至 s1 前缀 == s2 后缀。。。 ruby 很容易实现
 - [215.kth-largest-element-in-an-array](./solutions/215.kth-largest-element-in-an-array.java) #QuickSelect \
-  QuickSelect 从大到小， 清晰写法（loop 不含最后位置-pivot），最后 swap(p，right), p 即 pivotIndex
+  QuickSelect 从大到小， 清晰写法
 - [216.combination-sum-iii](./solutions/216.combination-sum-iii.java) #组合 \
 - [218.the-skyline-problem](./solutions/218.the-skyline-problem.java) #扫描线 #PriorityQueue \
   hard! 大顶堆，[扫描线算法基本思路](https://leetcode.cn/problems/the-skyline-problem/solution/gong-shui-san-xie-sao-miao-xian-suan-fa-0z6xc/)
@@ -248,8 +250,8 @@
   理解 min(上, 左, 左上) + 1
 - [222.count-complete-tree-nodes](./solutions/222.count-complete-tree-nodes.java) #Tree \
   有难度，技巧，工整简洁 [利用完全二叉树的性质优化](https://leetcode.cn/problems/count-complete-tree-nodes/solution/by-xiaochengtongxue_-guv3/)
-- [224.basic-calculator](./solutions/224.basic-calculator.java) #Stack \
-  hard! 双栈，given +，-，（，）， 考虑 op 左右括号
+- [224.basic-calculator](./solutions/224.basic-calculator.rb) #Stack \
+  hard! 双栈，given +，-，（，）， 考虑 op 左右括号; ruby 版本更清晰简洁， 仅在')'进行清算， 符合直觉
 - [227.basic-calculator-ii](./solutions/227.basic-calculator-ii.js) #Stack \
   双栈， given +,-,\*,/, 考虑 op 优先级
 - [231.power-of-two](./solutions/231.power-of-two.rb) #bit \
