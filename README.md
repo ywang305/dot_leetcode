@@ -252,24 +252,12 @@
   有难度，技巧，工整简洁 [利用完全二叉树的性质优化](https://leetcode.cn/problems/count-complete-tree-nodes/solution/by-xiaochengtongxue_-guv3/)
 - [224.basic-calculator](./solutions/224.basic-calculator.rb) #Stack \
   hard! 双栈，given +，-，（，）， 考虑 op 左右括号; ruby 版本更清晰简洁， 仅在')'进行清算， 符合直觉
-- [227.basic-calculator-ii](./solutions/227.basic-calculator-ii.js) #Stack \
-  双栈， given +,-,\*,/, 考虑 op 优先级
+- [227.basic-calculator-ii](./solutions/227.basic-calculator-ii.rb) #Stack \
+  双栈， given +,-,\*,/, 考虑 op 优先级； 思路和 224 类似，ruby 版清晰
 - [231.power-of-two](./solutions/231.power-of-two.rb) #bit \
   easy, n & (n-1) 会去掉一个最低位的 1
-- [233.number-of-digit-one](./solutions/233.number-of-digit-one.java) #贡献值 \
-  hard! [宫水三叶](https://leetcode.cn/problems/number-of-digit-one/solution/gong-shui-san-xie-jiang-shu-wei-dp-wen-t-c9oi/)
-  <details>
-    <pre>
-    假设有 n = abcde，即 m = 5，假设我们需要统计第 3 位中 1 出现的次数，即可统计满足 1 <= --1-- <= abcde 要求的数有多少个?
-      - 当 c 前面的部分 < ab, 即范围为 [0, ab)，此时必然满足「大小要求」，因此后面的部分可以任意取，即范围为 [0, 99]。根据「乘法原理」，可得知此时数量为 ab * 100
-      - 当 c 前面的部分 = ab，这时候「大小关系」主要取决于 c：
-        1. 当 c = 0，必然不满足「大小要求」，数量为 0；
-        2. 当 c = 1，此时「大小关系」取决于后部分，后面的取值范围为 [0, de]，数量为 1 * (de + 1)；
-        3. 当 c > 1，必然满足「大小关系」，后面的部分可以任意取，即范围为 [0, 99]，数量为 1 * 100；
-        4. 当 cc 前面的部分 > ab，必然不满足「大小要求」，数量为 0。
-      - 当 c 前面的部分 > ab，必然不满足「大小要求」，数量为 0。
-    </pre>
-  </details>
+- [233.number-of-digit-one](./solutions/233.number-of-digit-one.py) #贡献值 \
+  hard! 自行车锁算法
 - [239.sliding-window-maximum](./solutions/239.sliding-window-maximum.java) #Monotonic \
   经典例题 单调队列
 - [240.search-a-2d-matrix-ii](./solutions/240.search-a-2-d-matrix-ii.java) #Tree \
