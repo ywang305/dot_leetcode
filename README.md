@@ -258,6 +258,8 @@
   easy, n & (n-1) 会去掉一个最低位的 1
 - [233.number-of-digit-one](./solutions/233.number-of-digit-one.py) #贡献值 \
   hard! 自行车锁算法
+- [236.lowest-common-ancestor-of-a-binary-tree](./solutions/236.lowest-common-ancestor-of-a-binary-tree.rb) #Tree \
+  🌲 经典
 - [239.sliding-window-maximum](./solutions/239.sliding-window-maximum.java) #Monotonic \
   经典例题 单调队列
 - [240.search-a-2d-matrix-ii](./solutions/240.search-a-2-d-matrix-ii.java) #Tree \
