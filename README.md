@@ -477,3 +477,5 @@
   hard ！ 根据题意枚举 2 个字符，DP 使用到的 2 个状态变量感觉很 tricky（无法直观理解） ， 参考[最大子数组和的变形题](https://leetcode.cn/problems/substring-with-largest-variance/solution/by-endlesscheng-5775/)
 - [2320.count-number-of-ways-to-place-houses](./solutions/2320.count-number-of-ways-to-place-houses.java) #DP \
   两种 DP 构造解法， 第一种： 选或不选结构； 第二种：`dp[i] = (dp[i-1] + dp[i-2])` Fibonacci 结构
+- [2786.visit-array-positions-to-maximize-score](./solutions/2786.visit-array-positions-to-maximize-score.rb) #DP \
+  https://leetcode.cn/problems/visit-array-positions-to-maximize-score/solutions/1/javapython3cdong-tai-gui-hua-wei-hu-qi-o-t67c/comments/2320748
