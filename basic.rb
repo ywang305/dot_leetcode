@@ -121,7 +121,7 @@ def quick_sort(list, s = 0, e = list.length - 1)
   quick_sort(list, p, e)
 end
 
-def quick_sort_double_pointer(list, s = 0, e = list.length-1)
+def quick_sort_double_pointer(list, s = 0, e = list.length - 1)
   return if s >= e
 
   pivot = list[e]
@@ -133,10 +133,9 @@ def quick_sort_double_pointer(list, s = 0, e = list.length-1)
     swap(list, left, right)
   end
   swap(list, left, e) # put the pivot into its final place
-  quick_sort_double_pointer(list, s, left-1)
-  quick_sort_double_pointer(list, left+1, e)
+  quick_sort_double_pointer(list, s, left - 1)
+  quick_sort_double_pointer(list, left + 1, e)
 end
-
 
 # ==== Trie tree ====
 class Trie
@@ -183,7 +182,6 @@ end
 # trie.insert(["a", "b", "c"])
 # puts trie.has(["a", "b", "c"]), trie.has(["a", "b"])
 # puts trie.prefix(["a", "b", "c"]), trie.prefix(["a", "b", "a"])
-
 
 class UnionFind
   attr_reader :root

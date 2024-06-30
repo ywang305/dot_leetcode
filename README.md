@@ -262,7 +262,7 @@
   🌲 经典
 - [239.sliding-window-maximum](./solutions/239.sliding-window-maximum.java) #Monotonic \
   经典例题 单调队列
-- [240.search-a-2d-matrix-ii](./solutions/240.search-a-2-d-matrix-ii.java) #Tree \
+- [240.search-a-2d-matrix-ii](./solutions/240.search-a-2-d-matrix-ii.java) #Tree #Greedy \
   貌似 BinarySearch，但是本题没有确保「每行的第一个整数大于前一行的最后一个整数, 因此我们无法采取「两次二分」的做法。(骗我). [【宫水三叶】抽象 BST](https://leetcode.cn/problems/search-a-2d-matrix-ii/solution/gong-shui-san-xie-yi-ti-shuang-jie-er-fe-y1ns/)
   <details>
     <summary>抽象 BST</summary>
