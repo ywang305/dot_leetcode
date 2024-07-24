@@ -2,6 +2,7 @@ class WordDistance
   def initialize(words_dict)
     @hash = words_dict.each.with_index.each_with_object(Hash.new { |h, k| h[k] = [] }) do |(c, i), a|
       a[c] << i
+      a
     end
   end
 

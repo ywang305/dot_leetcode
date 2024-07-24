@@ -397,6 +397,9 @@
         index:  0     1     2      3     4     5     6
     [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
   ```
+- [373.find-k-pairs-with-smallest-sums](./solutions/373.find-k-pairs-with-smallest-sums.rb) #PriorityQueue \
+  [补充官方题解【优先队列】](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/solutions/1210221/bu-chong-guan-fang-ti-jie-you-xian-dui-l-htf8)
+
 - [402.remove-k-digits](./solutions/402.remove-k-digits.rb) #Monotonic \
   对于两个数 123a456 和 123b456，如果 a > b， 那么数字 123a456 大于 数字 123b456。 123[a or b]456, a 的取舍在于 a>b?, 重复这个过程 123a[b or d]46, b 的取舍...
 - [449.serialize-and-deserialize-bst](./solutions/449.serialize-and-deserialize-bst.java) #Tree #BS \

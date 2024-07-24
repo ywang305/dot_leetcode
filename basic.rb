@@ -1,20 +1,22 @@
-# require 'algorithms'
-# # [url](https://kanwei.github.io/algorithms)
-# include Containers
+#   bundle install && bundle exec irb
 #
-## -- test Containers::PriorityQueue  --
-# Person = Data.define(:name, :age)
-# persons = [Person.new(name: 'Zhang', age: 50), Person.new(name: 'Wang', age: 60), Person.new(name: 'Brad', age: 9)]
-# pq = PriorityQueue.new do |f1, f2|
-#   f1 <=> f2
-# end
+#   require 'algorithms'
+#   # [url](https://kanwei.github.io/algorithms)
+#   include Containers
 #
-# persons.each do |per|
-#   pq.push(per, per.age) # per.age -> field in comparator
-# end
+#   # -- test Containers::PriorityQueue  --
+#   1. min-top heap
+#         pq_min = PriorityQueue.new { _1 < _2 }
+#         pq_min.push("Brad", 10)
+#         pq_min.push("Yao", 10)
+#         pq_min.next  # => peek "Brad"
+#         pq_min.pop   # => remove and return "Brad"
 #
-# puts pq.pop, pq.pop, pq.pop
-## -- end --
+#   2. max-top heap
+#         pq_max = PriorityQueue.new { _1 > _2 }
+#         pq_max.push("Brad", 10)
+#         pq_max.push("Yao", 40)
+#         pq_max.next  # => "Yao"
 
 ## binary search basic
 def binary_search(nums, target)
