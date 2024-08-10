@@ -1,77 +1,73 @@
 class LRUCache
-  # =begin
-  #     :type capacity: Integer
-  # =end
+  # double ended circluar queue
+  class Node
+    attr_accessor :key, :value, :pre, :nex
+
+    def initialize(key, value, pre = nil, nex = nil)
+      @key = key
+      @value = value
+      @pre = pre
+      @nex = nex
+    end
+  end
+
+  #   :type capacity: Integer
   def initialize(capacity)
     @capacity = capacity
     @key_to_node = {}
     @dummy = Node.new(-1, -1)
-    @dummy.next = @dummy.prev = @dummy
+    @dummy.pre = @dummy.nex = @dummy
   end
 
-  # =begin
-  #     :type key: Integer
-  #     :rtype: Integer
-  # =end
+  #   :type key: Integer
+  #   :rtype: Integer
   def get(key)
-    get_node(key)&.value || -1
+    node = @key_to_node.dig(key)
+    return -1 if node.nil?
+
+    delete(node)
+    insert(node)
+    node.value
   end
 
-  # =begin
-  #     :type key: Integer
-  #     :type value: Integer
-  #     :rtype: Void
-  # =end
+  #   :type key: Integer
+  #   :type value: Integer
+  #   :rtype: Void
   def put(key, value)
-    node = get_node(key)
-    if node.nil?
+    if @key_to_node.key?(key)
+      node = @key_to_node[key]
+      node.value = value
+      delete(node)
+      insert(node)
+    else
       node = Node.new(key, value)
+      @key_to_node[key] = node
       insert(node)
     end
-    node.value = value
-    remove(@dummy.prev) if @key_to_node.size > @capacity
+
+    return unless @key_to_node.size > @capacity
+
+    last_node = @dummy.pre
+    delete(last_node)
+    @key_to_node.delete(last_node.key)
   end
 
   private
 
-  def get_node(key)
-    return nil unless @key_to_node.key? key
-
-    node = @key_to_node[key]
-    remove(node)
-    insert(node)
-    node
-  end
-
-  def remove(node)
-    next_node = node.next
-    prev_node = node.prev
-    prev_node.next = next_node
-    next_node.prev = prev_node
-    node.next = node.prev = nil
-    @key_to_node.delete(node.key) # returns the deleted node
-  end
-
-  # insert new node to front
   def insert(node)
-    next_node = @dummy.next
-    next_node.prev = node
-    node.next = next_node
-    @dummy.next = node
-    node.prev = @dummy
-    @key_to_node[node.key] = node
+    head_nex = @dummy.nex
+    node.nex = head_nex
+    head_nex.pre = node
+    @dummy.nex = node
+    node.pre = @dummy
   end
-end
 
-# Double Linke Node
-class Node
-  attr_accessor :key, :value, :prev, :next
-
-  def initialize(key, value, pre = nil, nex = nil)
-    @key = key
-    @value = value
-    @prev = pre
-    @next = nex
+  def delete(node)
+    node_pre = node.pre
+    node_nex = node.nex
+    node_pre.nex = node_nex
+    node_nex.pre = node_pre
+    node.pre = node.nex = nil
   end
 end
 

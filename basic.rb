@@ -191,13 +191,13 @@ class UnionFind
   def initialize = @root = {}
 
   def union(x, y)
-    x_root = find(x)
-    y_root = find(y)
-    @root[x_root] = y_root if x_root != y_root
+    root_x = find(x)
+    root_y = find(y)
+    @root[root_y] = root_x unless root_x == root_y
   end
 
   def find(x)
-    return x if @root[x] == x # 前提是root.key?(x)==true, 初始化过 ufo.root[x]=x; 否则会死循环，
+    return x if (@root[x] ||= x) == x # create root for x if not exists
 
     find(@root[x])
   end

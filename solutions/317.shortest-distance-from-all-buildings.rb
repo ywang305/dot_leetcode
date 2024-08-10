@@ -1,5 +1,3 @@
-
-
 # 方法1 从空位搜索房子
 # @param {Integer[][]} grid
 # @return {Integer}
@@ -110,3 +108,58 @@ def shortest_distance(grid)
   end
   min_dist == max_value ? -1 : min_dist
 end
+
+# @param {Integer[][]} grid
+# @return {Integer}
+def shortest_distance_ii(grid)
+  m = grid.size
+  n = grid[0].size
+
+  dist = Array.new(m) { Array.new(n) { 0 } }
+  freq = dist.dup # visit freq to [x,y]
+  can_move = lambda do |x, y, visited|
+    visited.none?([x, y]) && x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == 0
+  end
+
+  bfs = lambda do |i, j|
+    visited = Set.new
+    q = [] << [i, j]
+    visited << [i, j]
+    until q.empty?
+      q.size.times do
+        x, y = q.shift
+        dist[x][y] += (x - i).abs + (y - j).abs
+        freq[x][y] += 1
+        [[x - 1, y], [x + 1, y], [x, y - 1], [x, y + 1]].each do |nx, ny|
+          if can_move.call(nx, ny, visited)
+            q << [nx, ny]
+            visited << [nx, ny]
+          end
+        end
+      end
+    end
+  end
+
+  house_num = 0
+  (0...m).each do |i|
+    (0...n).each do |j|
+      if grid[i][j] == 1
+        bfs.call(i, j)
+        house_num += 1
+      end
+    end
+  end
+
+  int_max = (1 << 31) - 1
+  ans = int_max
+  (0...m).each do |i|
+    (0...n).each do |j|
+      ans = min(ans, dist[i][j]) if freq[i][j] == house_num && grid[i][j] == 0
+    end
+  end
+  ans == int_max ? -1 : ans
+end
+
+def min(*vars) = vars.min
+
+shortest_distance_ii([[1, 0]])

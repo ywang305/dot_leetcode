@@ -89,14 +89,14 @@
   （3）[单调递减栈，简洁代码](https://leetcode.cn/problems/trapping-rain-water/solution/trapping-rain-water-by-ikaruga/)
 - [44.wildcard-matching](./solutions/44.wildcard-matching.js) #DP #字符串-DP \
   [grandyang 的解法](https://grandyang.com/leetcode/44/)
-- [45.jump-game-ii](./solutions/45.jump-game-ii.js) #DP #Greedy \
+- [45.jump-game-ii](./solutions/45.jump-game-ii.js) #DP #Greedy #区间 \
   DP T(n^2); Greedy T(n), greedy is better, [youtube neetcode](https://www.youtube.com/watch?v=dJ7sWiOoK7g), 类似于 BFS, 每次算出 reachFarthest
 - [47.permutations-ii](./solutions/47.permutations-ii.js) #DFS \
     并不简单，涉及剪枝，递归逻辑也与 46.js 交换的写法 不一样（每次从 0 开始）
 - [51.n-queens](./solutions/51.n-queens.js) #DFS
   经典 DFS, 吃吐
-- [55.jump-game](./solutions/55.jump-game.js) #Greedy \
-  每次算出 reachFarthest,
+- [55.jump-game](./solutions/55.jump-game.js) #Greedy #区间 \
+  当前范围/下一步范围， 要想清楚什么时候步数才一定要加一呢？ [如图](https://leetcode.cn/problems/jump-game-ii/solutions/858257/dai-ma-sui-xiang-lu-dai-ni-xue-tou-tan-x-yh58/)
 - [57.insert-interval](./solutions/57.insert-interval.js) #Array \
   区间问题排除 no overlap 的 2 种情况， overlap 的情况 动态更新 start/end
 - [60.permutation-sequence](./solutions/60.permutation-sequence.js) #DFS #排列 \
@@ -168,7 +168,7 @@
   [一套模板，几行代码，闭着眼睛轻松默写所有彩票题](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/solutions/2199035/yi-tao-mo-ban-ji-xing-dai-ma-bi-zhao-yan-0ap8/)
 - [124.binary-tree-maximum-path-sum](./solutions/124.binary-tree-maximum-path-sum.js) #DFS \
   hard! DFS 返回 和 结果不是一个东西
-- [126.word-ladder-ii](./solutions/126.word-ladder-ii.rb) #BFS #DFS #Graph \
+- [126.word-ladder-ii](./solutions/126.word-ladder-ii.rb) #BFS #DFS \
   hard！BFS 建立图，方向为邻居点指向源点，BFS 再从后向前搜索最短路径
 - [128.longest-consecutive-sequence](./solutions/128.longest-consecutive-sequence.js) #UnionFind \
   UnionFind 极简; 另一种做法利用连续数的[规律](https://leetcode.cn/problems/longest-consecutive-sequence/solutions/2362995/javapython3cha-xi-biao-ding-wei-mei-ge-l-xk4c/)
@@ -192,13 +192,35 @@
 - [152.maximum-product-subarray](./solutions/152.maximum-product-subarray.js) #DP \
   easy DP
 - [153.find-minimum-in-rotated-sorted-array](./solutions/153.find-minimum-in-rotated-sorted-array.js) #BS \
-  Binary Search 变种（无重复元素）, 比较 pivot 和 right 判断哪边 unsorted， 注意 min 值 可能位于 pivot
+  [一文解决 4 道「搜索旋转排序数组」题！](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/solutions/134812/yi-wen-jie-jue-4-dao-sou-suo-xuan-zhuan-pai-xu-s-3/)
+  - 本文涉及 4 道「搜索旋转排序数组」题：
+    - LeetCode 33 题：搜索旋转排序数组
+    - LeetCode 81 题：搜索旋转排序数组-ii
+    - LeetCode 153 题：寻找旋转排序数组中的最小值
+    - LeetCode 154 题：寻找旋转排序数组中的最小值-ii
+  - 可以分为 3 类：
+    - 33、81 题：搜索特定值
+    - 153、154 题：搜索最小值
+    - 81、154 题：包含重复元素
 - [154.find-minimum-in-rotated-sorted-array-ii](./solutions/154.find-minimum-in-rotated-sorted-array-ii.js) #BS \
   Binary Search 变种（有重复元素）, 额外处理重复情况
 - [156.binary-tree-upside-down $$](./solutions/156.binary-tree-upside-down.js) \
   [premium](156.binary-tree-upsidedown.md)
 - [159.longest-substring-with-at-most-k-distinct-characters](./solutions/159.longest-substring-with-at-most-k-distinct-characters.js) #双指针哈西 \
-  sliding window, 左右指针 + hashmap， hashmap 记录 char 和 last index
+  sliding window, 左右指针 + hashmap， hashmap 记录 char 和 last index \
+  hash 也可以记录频率， 利用频率模版[[滑动窗口真滴简单] 一招带你秒杀 12 道中等题](https://leetcode.cn/problems/longest-substring-with-at-most-two-distinct-characters/solutions/879777/hua-dong-chuang-kou-zhen-di-jian-dan-yi-73bii/?envType=study-plan-v2&envId=premium-algo-100)
+  - 159. 至多包含两个不同字符的最长子串
+  - 3. 无重复字符的最长子串
+  - 209. 长度最小的子数组
+  - 1695. 删除子数组的最大得分
+  - 438. 找到字符串中所有字母异位词
+  - 567. 字符串的排列
+  - 487. 最大连续 1 的个数 II
+  - 1004. 最大连续 1 的个数 III
+  - 1208. 尽可能使字符串相等
+  - 1052. 爱生气的书店老板
+  - 1423. 可获得的最大点数
+  - 1151. 最少交换次数来组合所有的 1
 - [161.one-edit-distance](./solutions/161.one-edit-distance.js) #String \
   String, 分两种情况：字符串长度相等 或 相差 1。 找出第一个不同的位置，根据两种情况 分别比较之后子串是否相等
 - [162.find-peak-element](./solutions/162.find-peak-element.js) #BS \
@@ -231,7 +253,7 @@
 - [209.Minimum-Size-Subarray-Sum](./solutions/209.minimum-size-subarray-sum.java) #双指针 \
   just straightforward sliding window
 - [210.course-schedule-ii](./solutions/210.course-schedule-ii.java) #Topo
-- [211.design-add-and-search-words-data-structure](211.design-add-and-search-words-data-structure.java) #Trie \
+- [211.design-add-and-search-words-data-structure](solutions/211.design-add-and-search-words-data-structure.rb) #Trie \
   Trie + （forloop 内混合 DFS）
 - [212.word-search-ii](./solutions/212.word-search-ii.js) #Trie \
   hard, 没有那么难。 Trie + DFS
@@ -281,7 +303,7 @@
 - [251.flatten-2d-vecto $$](./solutions/251.flatten-2d-vector.java) \
   内外指针
 - [253.meeting-rooms-ii $$](./solutions/253.meeting-rooms-ii.js) #Greedy #Stack \
-  建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观） [NeetCode 7:35 / 11:45](https://www.youtube.com/watch?v=FdzJmTCVyJU)
+  建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观）
 - [254.factor-combinations $$](./solutions/254.factor-combinations.java) #DFS \
   经典吃吐，但有变化（不易想到）
 - [255.verify-preorder-sequence-in-binary-search-tree $$](255.verify-preorder-sequence-in-binary-search-tree.java) #DFS #Tree \
@@ -320,6 +342,8 @@
   dp[i] 用来表示 i 个栅栏柱的涂色的方案数，有两种情况：如果：i 与 i-1 的颜色相同，则表明 i-1 与 i-2 的颜色不同，则 i 的数目为`dp[i-2]*(k-1)`; 如果：i 与 i-1 的颜色不同，则 i 的数目为`dp[i-1]*(k-1)`, 则递推公式为：`dp[i] = dp[i-2](k-1) + dp[i-1](k-1)`
 - [277.find-the-celebrity $$](./solutions/277.find-the-celebrity.java) #Greedy \
   题目中说明如果存在解， 则 exact one celebrity，所以用 Greedy， 两步走：先选出可能的候选人，再检验事否满足条件
+- [278.first-bad-version](solutions/278.first-bad-version.rb) #BS \
+  easy
 - [279.perfect-squares](./solutions/279.perfect-squares.java) #DP \
   `dp[i] = Math.min(dp[i], dp[i-j*j]+1)`
 - [280.wiggle-sort](./solutions/280.wiggle-sort.java) #Greedy \
@@ -332,7 +356,7 @@
   peek 是新功能，提前一步存储 next 值
 - [285.inorder-successor-in-bst $$](./solutions/285.inorder-successor-in-bst.java) #Tree \
   [PD](https://leetcode.ca/all/285.html)利用 BFS 二分遍历 tricky
-- [286.walls-and-gates $$](286.walls-and-gates.java) #BFS \
+- [286.walls-and-gates $$](solutions/286.walls-and-gates.java) #BFS \
   多源 BFS
 - [287.find-the-duplicate-number](./solutions/287.find-the-duplicate-number.java) #bit \
   [官方题解-表格例子](https://leetcode.cn/problems/find-the-duplicate-number/solution/xun-zhao-zhong-fu-shu-by-leetcode-solution/)
@@ -378,40 +402,50 @@
   hard, 可以用 BS 但是依然 TLE。 SegmentTree 的 Ruby 版,动态生成子树利用 left/right one-line getter 很方便。 [思路:对某数 n，统计 min..n-1 个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/solution/li-yong-dong-tai-kai-dian-xian-duan-shu-070m5/)
 - [316.remove-duplicate-letters](./solutions/316.remove-duplicate-letters.rb) #Monotonic \
   [一招吃遍力扣四道题](https://leetcode.cn/problems/remove-duplicate-letters/solution/yi-zhao-chi-bian-li-kou-si-dao-ti-ma-ma-zai-ye-b-4/)
-- [317.shortest-distance-from-all-buildings](317.shortest-distance-from-all-buildings.rb) #BFS \
+- [317.shortest-distance-from-all-buildings](solutions/317.shortest-distance-from-all-buildings.rb) #BFS \
   hard, 曼哈顿距离，从目标点开始探索并更新空位点(见方法 2)，涟漪现象
+- [322.](solutions/322.coin-change.rb) #DFS #DP \
+  2 种方法求解， dfs+memo，dp。 [动态规划套路详解](https://leetcode.cn/problems/coin-change/solutions/6568/dong-tai-gui-hua-tao-lu-xiang-jie-by-wei-lai-bu-ke/)
 - [329.longest-increasing-path](./solutions/329.longest-increasing-path.js) #DFS \
   DFS + Memo 经典
+- [333.largest-bst-subtree](solutions/333.largest-bst-subtree.rb) #Tree \
+
 - [338.counting-bits](./solutions/338.counting-bits.rb) #bit \
   easy, n & (n-1) 会去掉一个最低位的 1
 - [394.decode-string](./solutions/394.decode-string.js) #Stack \
   [双栈解决](https://leetcode.cn/problems/decode-string/solution/394jie-zhu-zhan-jie-jue-by-wan-jia-guo-d-sqe0/)
-- [347.top-k-frequent-elements](./solutions/347.top-k-frequent-elements.js) #Bucket
-  ```
-    bucket sort
-    trick: ( 和传统的bucket sort 的index value 反过来！), index 是 计数，value 是 num list，
-     因为count是bounded，buckets是有界的。num可能非常大，buckets很长，很多空位置浪费了。(这不就是HashMap吗？)
-    e.g. 1,1,1,2,2,100,100
-      buckets:
-        values: []    []  [2,100]  [1]   []    []   []
-        index:  0     1     2      3     4     5     6
-    [Bucket Sort](https://www.youtube.com/watch?v=YPTqKIgVk-k)
-  ```
+- [347.top-k-frequent-elements](./solutions/347.top-k-frequent-elements.rb) #QuickSelect \
+  top-k 系列
 - [373.find-k-pairs-with-smallest-sums](./solutions/373.find-k-pairs-with-smallest-sums.rb) #PriorityQueue \
   [补充官方题解【优先队列】](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/solutions/1210221/bu-chong-guan-fang-ti-jie-you-xian-dui-l-htf8)
 
 - [402.remove-k-digits](./solutions/402.remove-k-digits.rb) #Monotonic \
   对于两个数 123a456 和 123b456，如果 a > b， 那么数字 123a456 大于 数字 123b456。 123[a or b]456, a 的取舍在于 a>b?, 重复这个过程 123a[b or d]46, b 的取舍...
+- [438.find-all-anagrams-in-a-string](solutions/438.find-all-anagrams-in-a-string.rb) #双指针 \
+
 - [449.serialize-and-deserialize-bst](./solutions/449.serialize-and-deserialize-bst.java) #Tree #BS \
   因为 BST 所以可以二分搜索 rootVal 的分界点（如 lowerBound 或 higherBound ） [前序遍历与 BST 特性（含二分优化）](https://leetcode.cn/problems/serialize-and-deserialize-bst/solution/by-ac_oier-ncwn/)
 - [472.concatenated-words](./solutions/472.concatenated-words.java) #Trie \
   hard! Trie + DFS, [另外也可以用 hashset 替代 Trie](https://leetcode.com/submissions/detail/738625181/)
 - [496.next-greater-element-i](./solutions/496.next-greater-element-i.java) #Monotonic \
-  easy, Monotonic 只算右边界， 套路参考[907.sum-of-subarray-minimums](./solutions/907.sum-of-subarray-minimums.js
+  easy, Monotonic 只算右边界， 套路参考[907.sum-of-subarray-minimums](./solutions/907.sum-of-subarray-minimums.js)
+  [单调栈解决 Next Greater Number 一类问题](https://leetcode.cn/problems/next-greater-element-i/solutions/8877/dan-diao-zhan-jie-jue-next-greater-number-yi-lei-w/)
+- [501](solutions/501.find-mode-in-binary-search-tree.rb) #Tree \
+  中序遍历是有序的 这是考点, 利用计数收集 mode（出现次数最多的值）
+- [503.next-gerater-element-ii](solutions/503.next-gerater-element-ii.rb) #Monotonic \
+  496 -> 单调栈解决 Next Greater Number 一类问题
+- [518.](solutions/518.coin-change-ii.rb) #DP \
+  背包/组合问题 - 答案简单但是 idea 很难想到
+- [527.word-abbreviation $$](solutions/527.word-abbreviation.rb) #Trie \
+  Trie 变种,对每组构造一个能统计节点频数的字典树，uniq 根据 freq 找出最大前缀； 从首字母开始搜索，如果节点频数大于 1，就说明存在该前缀在同组中存在其他单词会导致混淆，就继续找更长的前缀，直到节点频数等于 1 为止
 - [545.boundary-of-binary-tree $$](./solutions/545.boundary-of-binary-tree.java) #Tree \
   tree 边界分三种情况分别 DFS
+- [560.subarray-sum-equals-k](solutions/560.subarray-sum-equals-k.rb) #PreSum \
+  PreSum + Freq 优化
 - [588.design-in-memory-file-system](./solutions/588.design-in-memory-file-system.java) #Trie \
   hard, but not hard with Trie
+- [652.find-duplicate-subtrees](solutions/652.find-duplicate-subtrees.rb) #Tree \
+  遍历记录 fingerprint，常规 DFS + 哈希表运用题
 - [684.redundant-connection](./solutions/684.redundant-connection.js) #DFS #UnionFind #Topo \
   (1)dfs：边构建图，边检测环，对于 s->t 的边，检查 s 的邻接点是否能到达 t，如果可以，则说明 s->t 是环路.
   (2)本题 union find 比较容易, (3)另外也可以用拓扑排序: [三种解法总结](https://leetcode.cn/problems/redundant-connection/solution/bing-cha-ji-sou-suo-shen-du-yan-du-tuo-b-ev30/)
@@ -423,6 +457,10 @@
   同[496.next-greater-element-i](496.next-greater-element-i.java)
 - [741.cherry-pickup](741.cherry-pickup.rb) #DP \
   hard! 三维 DP （官方题解）
+- [746.min-cost-climbing-stairs](solutions/746.min-cost-climbing-stairs.rb) #DP \
+  简单 爬楼梯系列
+- [787.cheapest-flights-within-k-stops](solutions/787.cheapest-flights-within-k-stops.rb) #DFS \
+  有条件最短路径问题。 dfs + memo 遍历图
 - [828.count-unique-characters-of-all-substrings-of-a-given-string](./solutions/828.count-unique-characters-of-all-substrings-of-a-given-string.java) #DP #String #贡献值 \
   hard。 暴力的方法是枚举 substring，然后考察这个区间里的字符哪些是 unique 的。这需要大致 o(N^2*26)的复杂度。聪明的方法是考察每个字符，它可能在哪些 substring 里是 unique 的。 \
    重点是转换为计算每一个字符对 substring 对贡献值，并累计。 并且利用了乘法组合性质，e.g. `XXXA[XX A X]AXX`， given cur A index is 6, pre A index is 3, post A index 8, then all possible substring combination for cur A is `(6-3) * (8-6)` \
@@ -435,6 +473,12 @@
   [前缀和 / 动态规划](https://leetcode.cn/problems/flip-string-to-monotone-increasing/solution/qian-zhui-he-dong-tai-gui-hua-by-xiaohu9-ayii/)
 - [973.k-closest-points-to-origin](./solutions/973.k-closest-points-to-origin.java) #QuickSelect \
   quickSelect， O(n)
+- [994.](solutions/994.rotting-oranges.rb) #BFS # \
+  BFS 图
+- [1024.video-stitching](solutions/1024.video-stitching.rb) #Greedy #区间 \
+  区间覆盖问题
+- [1028.recover-a-tree-from-preorder-traversal](solutions/1028.recover-a-tree-from-preorder-traversal.rb) #Tree \
+  输入字符窜规范化为 值，深度的 对象数组后，简单递归
 - [1143.longest-common-subsequence](./solutions/1143.longest-common-subsequence.js) #DP #字符串-DP \
    DP, 经典
   ```js
@@ -446,8 +490,14 @@
   ```
 - [1151.minimum-swaps-to-group-all-1s-togethe $$](./solutions/1151.minimum-swaps-to-group-all-1s-together.java) \
    问题转换为移动窗口内有多少个 1
+- [1135.connecting-cities-with-minimum-cost](solutions/1135.connecting-cities-with-minimum-cost.rb) #UnionFind \
+  Kruskal 算法 - 添加最小边，直到森林形成 🌲 结构, 思想就是 UnionFind - union
 - [1249.minimum-remove-to-make-valid-parentheses](./solutions/1249.minimum-remove-to-make-valid-parentheses.java) #Stack \
   括号题
+- [1257.smallest-common-region](solutions/1257.smallest-common-region.rb) #Tree \
+  236-最小祖先变种
+- [1258.synonymous-sentences](solutions/1258.synonymous-sentences.rb) #Trie #DFS \
+  Trie + DFS
 - [1268.search-suggestions-system](./solutions/1268.search-suggestions-system.java) #Trie \
   Trie + DFS , Trie's startsWith 有变化， 增加了一个 dfs_search, 当 startsWith 满足时，调用 dfs_search 搜索前缀尾节点（current node）之后的 3 个单词(isEnd)
 - [1301](1301.number-of-paths-with-max-score.java) #DP \
@@ -455,8 +505,11 @@
 - [1567.maximum-length-of-subarray-with-positive-product]./solutions/1567.maximum-length-of-subarray-with-positive-product.java) #DP \
   正/负 两个状态 层层递推 [思路](https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/solution/dong-tai-gui-hua-by-jiao-chun-peng-vjqi/) \
   也可以用 DFS
-- [1762.buildings-with-an-ocean-view $$](./solutions/1762.buildings-with-an-ocean-view.java) #Monotonic \
-  简单版的 Monotonic Stack， 没啥可说
+- [1644.lowest-common-ancestor-of-a-binary-tree-ii $$](solutions/1644.lowest-common-ancestor-of-a-binary-tree-ii.js) #Tree \
+- [1650](solutions/1650.lowest-common-ancestor-of-a-binary-tree-iii.rb) #Tree \
+  虽然是 Tree， 但是本题等效为双链表的交点问题-160
+- [1762.buildings-with-an-ocean-view $$](./solutions/1762.buildings-with-an-ocean-view.rb) #Monotonic \
+  简单版的 Monotonic Stack，和 next-greater-element 一样
   <details>
     <summary>description</summary>
 
@@ -482,3 +535,5 @@
   两种 DP 构造解法， 第一种： 选或不选结构； 第二种：`dp[i] = (dp[i-1] + dp[i-2])` Fibonacci 结构
 - [2786.visit-array-positions-to-maximize-score](./solutions/2786.visit-array-positions-to-maximize-score.rb) #DP \
   https://leetcode.cn/problems/visit-array-positions-to-maximize-score/solutions/1/javapython3cdong-tai-gui-hua-wei-hu-qi-o-t67c/comments/2320748
+- [2850.minimum-moves-to-spread-stones-over-grid](solutions/2850.minimum-moves-to-spread-stones-over-grid.rb) #排列 \
+  居然是全排列暴力法

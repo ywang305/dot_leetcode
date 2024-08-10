@@ -1,0 +1,1 @@
+- [176.second-highest-salary](176.second-highest-salary.sql) NULLIF limit offset

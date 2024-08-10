@@ -21,7 +21,7 @@ def ladder_length(begin_word, end_word, word_list)
       word = q.shift
       return step if word == end_word
 
-      (0..word.length - 1).each do |i|
+      (0...word.length).each do |i|
         ('a'..'z').each do |c|
           new_word = word.dup
           new_word[i] = c

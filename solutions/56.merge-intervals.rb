@@ -8,7 +8,7 @@
 # @param {Integer[][]} intervals
 # @return {Integer[][]}
 def merge(intervals)
-  intervals.sort_by!(&:first)
+  intervals.sort_by!(&:first) # list = intervals.sort { _1.first - _2.first }
   res = [intervals[0]]
   (1..intervals.length - 1).each do |i|
     s1, e1 = res.last

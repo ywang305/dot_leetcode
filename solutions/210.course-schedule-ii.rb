@@ -2,26 +2,22 @@
 # @param {Integer[][]} prerequisites
 # @return {Integer[]}
 def find_order(num_courses, prerequisites)
-  adj_list = Array.new(num_courses){[]}
-  ins = Array.new(num_courses) {0}
-  prerequisites.each do |b,a|
+  adj_list = Array.new(num_courses) { [] }
+  idg = [0] * num_courses
+  prerequisites.each do |b, a|
     adj_list[a] << b
-    ins[b] += 1
+    idg[b] += 1
   end
 
+  ans = []
   q = []
-  topo = []
-  ins.each.with_index do |deg, i|
-    q << i if deg.zero?
-  end
+  idg.each.with_index { |d, i| q << i if d == 0 }
   until q.empty?
-    a = q.shift
-    topo << a
+    ans << a = q.shift
     adj_list[a].each do |b|
-      ins[b] -= 1
-      q << b if ins[b].zero?
+      idg[b] -= 1
+      q << b if idg[b] == 0
     end
   end
-
-  topo.size == num_courses ? topo : []
+  ans.size == num_courses ? ans : []
 end

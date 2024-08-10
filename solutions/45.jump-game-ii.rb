@@ -1,26 +1,19 @@
-#
-# @lc app=leetcode id=45 lang=ruby
-#
-# [45] Jump Game II
-#
-
-# @lc code=start
 # @param {Integer[]} nums
 # @return {Integer}
 def jump(nums)
-    left = 0
-    right = 0
-    cnt = 0
-    while right < nums.length - 1
-      cnt += 1
-      farthest = 0
-      for i in left..right
-        farthest = [farthest, i + nums[i]].max
+  cur = 0
+  ne = 0
+  step = 0
+  nums.each.with_index do |n, i|
+      break if cur >= nums.size-1
+      ne = max(ne, n+i)
+      if cur == i
+          cur = ne
+          step += 1
       end
-      left = right + 1
-      right = farthest
-    end
-    cnt
+  end
+  step
 end
-# @lc code=end
 
+def max(*a)=a.max
+# @lc code=end
