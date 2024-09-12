@@ -226,7 +226,7 @@
   String, 分两种情况：字符串长度相等 或 相差 1。 找出第一个不同的位置，根据两种情况 分别比较之后子串是否相等
 - [162.find-peak-element](./solutions/162.find-peak-element.js) #BS \
   Binary Search 非标准变种， 注意 i<j 和 j = m 变化
-- [163.missing-ranges ](./solutions/163.missing-ranges.js) #Array \
+- [163.missing-ranges ](./solutions/163.missing-ranges.js) #Array #区间 \
   [premium] array, 注意边界条件
 - [164.maximum-gap](./solutions/164.maximum-gap.js) #Bucket \
   [Bucket Sort, 3:00](https://www.youtube.com/watch?v=YPTqKIgVk-k) 桶排（线性）性能前提是数字均匀分布，数组能均匀映射到各个桶内, 本题大数据分布`1 <= nums.length <= 105, 0 <= nums[i] <= 109`， 桶排性能比较好。\
@@ -300,7 +300,7 @@
 - [248.strobogrammatic-number-iii ](./solutions/248.strobogrammatic-number-iii.java) #DFS \
   hard，不难，利用 247solution 直接求解
 - [249.group-shifted-strings ](./solutions/249.group-shifted-strings.java) \
-  自造 hashcode
+  Hash, (c - s.charCodeAt(0) + 26) % 26
 - [251.flatten-2d-vecto ](./solutions/251.flatten-2d-vector.java) \
   内外指针
 - [253.meeting-rooms-ii ](./solutions/253.meeting-rooms-ii.js) #Greedy #Stack \
@@ -459,6 +459,8 @@
   关键 计算岛屿点坐标与自己基点坐标差， 利用 set 去重
 - [715.range-module](715.range-module.java) #SegmentTree \
   hard! 标准的线段树实现
+- [723.candy-crush](solutions/723.candy-crush.js) \
+  模拟 消消乐
 - [739.daily-temperatures](739.daily-temperatures.java) #Monotonic \
   同[496.next-greater-element-i](496.next-greater-element-i.java)
 - [741.cherry-pickup](741.cherry-pickup.rb) #DP \
