@@ -1,7 +1,7 @@
 /**
- * 
- * Given an array of meeting time intervals intervals where intervals[i] = [starti, endi], 
- * return the minimum number of conference rooms required.} intervals 
+ *
+ * Given an array of meeting time intervals intervals where intervals[i] = [starti, endi],
+ * return the minimum number of conference rooms required.} intervals
 
 Example 1:
 
@@ -43,4 +43,27 @@ var minMeetingRooms = function (intervals) {
     max = Math.max(max, count);
   }
   return max;
+};
+
+/**
+ * @param {number[][]} intervals
+ * @return {number}
+ */
+var minMeetingRooms = function (intervals) {
+  const inouts = [];
+  intervals.forEach(([s, e]) => {
+    inouts[s] ||= 0;
+    inouts[e] ||= 0;
+    inouts[s] += 1;
+    inouts[e] -= 1;
+  });
+
+  let maxCnt = 0;
+  let curCnt = 0;
+  inouts.forEach((cnt) => {
+    if (!cnt) return;
+    curCnt += cnt;
+    maxCnt = Math.max(maxCnt, curCnt);
+  });
+  return maxCnt;
 };
