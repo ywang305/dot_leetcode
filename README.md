@@ -303,8 +303,11 @@
   Hash, (c - s.charCodeAt(0) + 26) % 26
 - [251.flatten-2d-vecto ](./solutions/251.flatten-2d-vector.java) \
   内外指针
-- [253.meeting-rooms-ii ](./solutions/253.meeting-rooms-ii.js) #Greedy #Stack \
-  建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观）
+- [252.meeting-rooms](./solutions/252.meeting-rooms.rb) #区间 \
+  进出计数 - 不必排序， time O(n)
+- [253.meeting-rooms-ii ](./solutions/253.meeting-rooms-ii.js) #Greedy #Stack #区间 \
+  建立有序数组 starts， ends. 需要的会议室仅和(任意)start/end 前后关系决定， 不必要 start/end 必须来自同一 meeting （大局观）\
+  也可以不排序直接使用 252 计数法
 - [254.factor-combinations ](./solutions/254.factor-combinations.java) #DFS \
   经典吃吐，但有变化（不易想到）
 - [255.verify-preorder-sequence-in-binary-search-tree ](255.verify-preorder-sequence-in-binary-search-tree.java) #DFS #Tree \
@@ -450,6 +453,8 @@
   PreSum + Freq 优化
 - [588.design-in-memory-file-system](./solutions/588.design-in-memory-file-system.java) #Trie \
   hard, but not hard with Trie
+- [616.add-bold-tag-in-string](solutions/616.add-bold-tag-in-string.js) #区间 \
+  墨迹题， 区间去重合并
 - [652.find-duplicate-subtrees](solutions/652.find-duplicate-subtrees.rb) #Tree \
   遍历记录 fingerprint，常规 DFS + 哈希表运用题
 - [684.redundant-connection](./solutions/684.redundant-connection.js) #DFS #UnionFind #Topo \
@@ -508,6 +513,7 @@
   Kruskal 算法 - 添加最小边，直到森林形成 🌲 结构, 思想就是 UnionFind - union
 - [1249.minimum-remove-to-make-valid-parentheses](./solutions/1249.minimum-remove-to-make-valid-parentheses.java) #Stack \
   括号题
+- [1272.remove-interval](solutions/1272.remove-interval.rb) #区间 \
 - [1257.smallest-common-region](solutions/1257.smallest-common-region.rb) #Tree \
   236-最小祖先变种
 - [1258.synonymous-sentences](solutions/1258.synonymous-sentences.rb) #Trie #DFS \
