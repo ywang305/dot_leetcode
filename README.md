@@ -427,6 +427,8 @@
 
 - [402.remove-k-digits](./solutions/402.remove-k-digits.rb) #Monotonic \
   对于两个数 123a456 和 123b456，如果 a > b， 那么数字 123a456 大于 数字 123b456。 123[a or b]456, a 的取舍在于 a>b?, 重复这个过程 123a[b or d]46, b 的取舍...
+- [439.ternary-expression-parser](solutions/439.ternary-expression-parser.rb) #Stack #DFS \
+  2 ways: (1) 栈，为了不必考虑嵌套，巧妙利用从后向前； (2) 递归, 构成一个完整三元表达式就是 split_cnt == qmark_cnt
 - [438.find-all-anagrams-in-a-string](solutions/438.find-all-anagrams-in-a-string.rb) #双指针 \
 
 - [449.serialize-and-deserialize-bst](./solutions/449.serialize-and-deserialize-bst.java) #Tree #BS \
