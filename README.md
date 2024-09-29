@@ -434,6 +434,8 @@
   因为 BST 所以可以二分搜索 rootVal 的分界点（如 lowerBound 或 higherBound ） [前序遍历与 BST 特性（含二分优化）](https://leetcode.cn/problems/serialize-and-deserialize-bst/solution/by-ac_oier-ncwn/)
 - [472.concatenated-words](./solutions/472.concatenated-words.java) #Trie \
   hard! Trie + DFS, [另外也可以用 hashset 替代 Trie](https://leetcode.com/submissions/detail/738625181/)
+- [484.find-permutation](solutions/484.find-permutation.js) #Stack \
+  经典的栈，此栈用于记录‘D'的个数
 - [487.max-consecutive-ones-ii](solutions/487.max-consecutive-ones-ii.js) #双指针 \
   其实这个题目等价于：给定一个区间，该区间中最多只能包含 1 个 0，求出该区间的最大长度。如果题目是这样给的，相信对滑动窗口比较熟悉的 xd 们就能一眼看出这是可以用滑动窗口解决的问题。 -
   套用频率模版
