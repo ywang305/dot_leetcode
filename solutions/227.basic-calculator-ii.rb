@@ -1,9 +1,9 @@
 # @param {String} s
 # @return {Integer}
 def calculate(s)
-  s = s.gsub(/\s+/, '')
-  ops = []
   nums = []
+  ops = []
+  priority = { '+' => 1, '-' => 1, '*' => 2, '/' => 2 }
   i = 0
   while i < s.size
     c = s[i]
@@ -16,25 +16,25 @@ def calculate(s)
       end
       nums << num
       i -= 1
-
-      if ['/', '*'].any?(ops.last)
-        op = ops.pop
-        n1, n2 = nums.pop(2)
-        nums << (op == '*' ? n1 * n2 : n1 / n2)
-      end
-    else
+    when '+', '-', '*', '/'
+      nums << basic_calc(ops.pop, *nums.pop(2)) until ops.empty? || priority[ops.last] < priority[c]
       ops << c
-      nums << 0 if i == 0
     end
     i += 1
   end
-
-  # now ops should only contains '-' or '+'
-  ops.each do |op|
-    n1, n2 = nums.shift(2)
-    nums.unshift(op == '+' ? n1 + n2 : n1 - n2)
-  end
-  nums.first
+  nums << basic_calc(ops.pop, *nums.pop(2)) until ops.empty?
+  nums[0]
 end
 
-calculate('1+1-1')
+def basic_calc(op, a, b)
+  case op
+  when '+'
+    a + b
+  when '-'
+    a - b
+  when '*'
+    a * b
+  when '/'
+    a / b
+  end
+end

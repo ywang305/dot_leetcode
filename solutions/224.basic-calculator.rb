@@ -1,44 +1,47 @@
 # @param {String} s
 # @return {Integer}
 def calculate(s)
-  s = s.gsub(/\s+/, '')
-  ops = []
+  s = s.gsub(/\s+/, '') # no space, needed by a checker below s[i - 1] == '('
   nums = []
+  ops = []
+  priority = { '(' => 0, ')' => 0, '+' => 1, '-' => 1 }
   i = 0
-  while i < s.length
+  while i < s.size
     c = s[i]
     case c
-    when '('
-      ops << c
-    when '+', '-'
-      nums << 0 if i == 0 || s[i - 1] == '(' # need adapt (+.. to (0+..
-      ops << c
-    when ')'
-      cur_ops = []
-      cur_ops.unshift(ops.pop) until ops.last == '('
-      cur_nums = nums.pop(cur_ops.size + 1)
-      nums << basic_cal(cur_nums, cur_ops)
-      ops.pop # pop matched '('
     when /\d/
       num = 0
-      while i < s.length && is_digit(s[i])
+      while i < s.size && s[i].match(/\d/)
         num = num * 10 + s[i].to_i
         i += 1
       end
-      i -= 1
       nums << num
+      i -= 1
+    when ')'
+      nums << basic_calc(ops.pop, *nums.pop(2)) until ops.last == '('
+      ops.pop # rid of '('
+    when '('
+      ops << c
+    when '-', '+'
+      nums << basic_calc(ops.pop, *nums.pop(2)) until ops.empty? || priority[ops.last] < priority[c]
+      nums << 0 if i == 0 || s[i - 1] == '(' # need adapt (+.. to (0+..
+      ops << c
     end
     i += 1
   end
-  basic_cal(nums, ops)
+  nums << basic_calc(ops.pop, *nums.pop(2)) until ops.empty?
+  nums[0]
 end
 
-def basic_cal(nums, ops) # basic means ops are only + -
-  ops.each do |op| # cal (a-b+c...) from left to right
-    n1, n2 = nums.shift(2)
-    nums.unshift(op == '+' ? n1 + n2 : n1 - n2)
+def basic_calc(op, a, b)
+  case op
+  when '+'
+    a + b
+  when '-'
+    a - b
+  when '*'
+    a * b
+  when '/'
+    a / b
   end
-  nums.first
 end
-
-def is_digit(x) = x =~ /\d/

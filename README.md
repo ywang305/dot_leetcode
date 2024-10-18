@@ -273,10 +273,10 @@
   理解 min(上, 左, 左上) + 1
 - [222.count-complete-tree-nodes](./solutions/222.count-complete-tree-nodes.java) #Tree \
   有难度，技巧，工整简洁 [利用完全二叉树的性质优化](https://leetcode.cn/problems/count-complete-tree-nodes/solution/by-xiaochengtongxue_-guv3/)
-- [224.basic-calculator](./solutions/224.basic-calculator.rb) #Stack \
-  hard! 双栈，given +，-，（，）， 考虑 op 左右括号; ruby 版本更清晰简洁， 仅在')'进行清算， 符合直觉
-- [227.basic-calculator-ii](./solutions/227.basic-calculator-ii.rb) #Stack \
-  双栈， given +,-,\*,/, 考虑 op 优先级； 思路和 224 类似，ruby 版清晰
+- [224.basic-calculator](./solutions/224.basic-calculator.rb) #Stack #计算器系列 \
+  hard! 双栈+优先级，given +，-，（，）， 考虑 op 左右括号; ruby 版本更清晰简洁， 仅在')'进行清算， 符合直觉
+- [227.basic-calculator-ii](./solutions/227.basic-calculator-ii.rb) #Stack #计算器系列 \
+  双栈+优先级， given +,-,\*,/ ， 772 模版
 - [231.power-of-two](./solutions/231.power-of-two.rb) #bit \
   easy, n & (n-1) 会去掉一个最低位的 1
 - [233.number-of-digit-one](./solutions/233.number-of-digit-one.py) #贡献值 \
@@ -475,6 +475,8 @@
   hard! 三维 DP （官方题解）
 - [746.min-cost-climbing-stairs](solutions/746.min-cost-climbing-stairs.rb) #DP \
   简单 爬楼梯系列
+- [772.basic-calculator-iii](solutions/772.basic-calculator-iii.js) #Stack #计算器系列 \
+  hard! including '+ - \* / ( )' , 双栈+优先级
 - [787.cheapest-flights-within-k-stops](solutions/787.cheapest-flights-within-k-stops.rb) #DFS \
   有条件最短路径问题。 dfs + memo 遍历图
 - [828.count-unique-characters-of-all-substrings-of-a-given-string](./solutions/828.count-unique-characters-of-all-substrings-of-a-given-string.java) #DP #String #贡献值 \
