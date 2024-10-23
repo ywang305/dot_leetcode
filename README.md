@@ -187,7 +187,7 @@
   经典 DP[i]： s[0, i)是否可以分割, 设初始[0,0)空字符串 true
 - [140.word-break-ii](./solutions/140.word-break-ii.js) #DFS \
   经典 DFS, 吃吐
-- [146.lru-cache](./solutions/146.lru-cache.js) #设计 \
+- [146.lru-cache](./solutions/146.lru-cache.js) #设计 #双端链表 \
   JS Map 是有序 hash, 每次 get/set 都先删除再加入
 - [152.maximum-product-subarray](./solutions/152.maximum-product-subarray.js) #DP \
   easy DP
@@ -527,6 +527,8 @@
   Trie + DFS , Trie's startsWith 有变化， 增加了一个 dfs_search, 当 startsWith 满足时，调用 dfs_search 搜索前缀尾节点（current node）之后的 3 个单词(isEnd)
 - [1301](1301.number-of-paths-with-max-score.java) #DP \
   经典路径 DP
+- [1429.first-unique-number](solutions/1429.first-unique-number.rb) #双端链表 \
+  LRU 系列, 这里 insert to tail for order ( LRU 是 insert to head for latest )
 - [1567.maximum-length-of-subarray-with-positive-product]./solutions/1567.maximum-length-of-subarray-with-positive-product.java) #DP \
   正/负 两个状态 层层递推 [思路](https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/solution/dong-tai-gui-hua-by-jiao-chun-peng-vjqi/) \
   也可以用 DFS
