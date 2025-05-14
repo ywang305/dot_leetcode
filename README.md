@@ -452,6 +452,8 @@
   Trie 变种,对每组构造一个能统计节点频数的字典树，uniq 根据 freq 找出最大前缀； 从首字母开始搜索，如果节点频数大于 1，就说明存在该前缀在同组中存在其他单词会导致混淆，就继续找更长的前缀，直到节点频数等于 1 为止
 - [545.boundary-of-binary-tree ](./solutions/545.boundary-of-binary-tree.java) #Tree \
   tree 边界分三种情况分别 DFS
+- [549.binary-tree-longest-consecutive-sequence-ii](solutions/549.binary-tree-longest-consecutive-sequence-ii.js) #Tree \
+  在298题的基础上 这道题 增加了可能上升 和可能下降的要求, 并且是二叉树中任意一条 路径 而非一定经过 根节点
 - [560.subarray-sum-equals-k](solutions/560.subarray-sum-equals-k.rb) #PreSum \
   PreSum + Freq 优化
 - [588.design-in-memory-file-system](./solutions/588.design-in-memory-file-system.java) #Trie \
